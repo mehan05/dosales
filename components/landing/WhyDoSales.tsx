@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 
-const LandingContent = () => {
+const WhyDoSales = () => {
   return (
-    <section className=" rounded-tr-[15%] rounded-tl-[15%] bg-gradient-to-b from-[#F0F9FF] to-[#F0F9FF] to-30% py-24 px-4 overflow-hidden mt-12">
+    <section className=" rounded-tr-[15%] rounded-tl-[15%] bg-linear-to-b from-[#F0F9FF] to-[#F0F9FF] to-30% py-24 px-4 overflow-hidden mt-12">
       {/* Top statistics section */}
       <div className="max-w-6xl mx-auto flex flex-col items-center mb-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full text-center mb-16">
@@ -51,7 +51,7 @@ const LandingContent = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="relative w-full rounded-[40px] overflow-hidden border-2 border-primary-blue/30 bg-slate-50/30">
           <Image 
-            src="/assets/whydosales.png" 
+            src="/assets/svg/whyDoSales.svg" 
             alt="Why DoSales Features" 
             width={1400} 
             height={800}
@@ -64,4 +64,4 @@ const LandingContent = () => {
   );
 };
 
-export default LandingContent;
+export default WhyDoSales;
