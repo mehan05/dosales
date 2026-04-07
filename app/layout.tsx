@@ -61,8 +61,11 @@ const satoshi = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "DoSales - Stop Chasing Leads!",
+  title: "DoSales",
   description: "Automated Outreach and Lead Qualification",
+  icons: {
+    icon: "/assets/svg/logo.svg",
+  },
 };
 
 export default function RootLayout({
