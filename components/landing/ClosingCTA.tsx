@@ -17,8 +17,11 @@ const ClosingCTA = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10 text-center">
+        
         {/* Badge Area */}
         <div className="flex items-center justify-center gap-4 mb-8">
+          <div>
+            
           <Image 
             src="/assets/svg/platformSectionLine.svg" 
             alt="Line decoration" 
@@ -26,9 +29,11 @@ const ClosingCTA = () => {
             height={5} 
             className="w-12 md:w-24 h-0.5 object-contain scale-x-125" 
           />
-          <span className="px-5 py-1.5 mr-[30px]  ml-[30px] rounded-full border border-primary-blue/20 bg-dashboard-bg/50 text-primary-blue text-sm font-medium tracking-wide shadow-[0_0_20px_rgba(0,133,201,0.1)]">
+          </div>
+          <div className="px-5 py-1 bg-gradient-to-r from-[#D7F2FF] to-[#F2FAFF] text-[#006699] text-md font-medium rounded-full border border-[#C2E8FF] mb-10 ">
             Upgrade your Leads
-          </span>
+          </div>
+          <div>
           <Image 
             src="/assets/svg/platformSectionLine.svg" 
             alt="Line decoration" 
@@ -36,6 +41,8 @@ const ClosingCTA = () => {
             height={2} 
             className="w-12 md:w-24 h-0.5 object-contain rotate-180 scale-x-125 "  
           />
+
+          </div>
         </div>
 
         {/* Heading */}

@@ -85,7 +85,7 @@ const RealPainPoints = () => {
 
         {/* Left Content */}
         <div className="relative w-full lg:w-[45%] px-8 lg:px-24 py-16 lg:py-32 flex flex-col items-start gap-8 z-10">
-          <div className="px-4 py-1 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] to-90% text-xs font-bold rounded-full border border-blue-100 mb-6 uppercase tracking-wider text-primary-blue">
+          <div className="px-5 py-1 bg-gradient-to-r from-[#D7F2FF] to-[#F2FAFF] text-[#006699] text-md font-medium rounded-full border border-[#C2E8FF] mb-10 ">
             Real Pain Points
           </div>
 

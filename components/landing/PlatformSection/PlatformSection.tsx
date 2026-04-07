@@ -1,12 +1,10 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { HiArrowRight } from 'react-icons/hi2';
-import Funnel from './Funnel';
-import Step1Search from './Step1Search';
-import Step2Enrichment from './Step2Enrichment';
-import Step3Outreach from './Step3Outreach';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import { HiArrowRight } from "react-icons/hi2";
+import Funnel from "./Funnel";
 
 const PlatformSection = () => {
   const [activeStep, setActiveStep] = useState(1);
@@ -16,20 +14,21 @@ const PlatformSection = () => {
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto relative">
-          
           {/* Badge */}
-          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-sm font-semibold mb-8 border border-blue-100/50">
+         <div className="px-5 py-1 bg-gradient-to-r from-[#D7F2FF] to-[#F2FAFF] text-[#006699] text-md font-medium rounded-full border border-[#C2E8FF] mb-10 ">
             Platform
           </div>
 
           {/* Headline */}
           <h1 className="text-4xl font-semibold text-[#030712] leading-[1.1] mb-8 tracking-tight">
-            An Automated Funnel that turns your ICP to Booked Meetings in 3 steps
+            An Automated Funnel that turns your ICP to Booked Meetings in 3
+            steps
           </h1>
 
           {/* Subheadline */}
           <p className="text-md text-[#4A5565] font-medium max-w-2xl mb-12 leading-relaxed">
-            Define your ICP and DoSales AI handles discovery, outreach, and qualification automatically.
+            Define your ICP and DoSales AI handles discovery, outreach, and
+            qualification automatically.
           </p>
 
           {/* Button */}
@@ -42,7 +41,6 @@ const PlatformSection = () => {
 
       {/* Two-Column Section */}
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 mt-32 items-center">
-        
         {/* Left Column: Funnel */}
         <div className="flex flex-col items-center">
           <Funnel activeStep={activeStep} onStepClick={setActiveStep} />
@@ -51,7 +49,7 @@ const PlatformSection = () => {
         {/* Right Column: Dynamic UI Card */}
         <div className="relative group min-h-125">
           <div className="absolute -inset-4 bg-linear-to-tr from-blue-100/20 to-transparent rounded-[40px] blur-2xl group-hover:bg-blue-100/40 transition-colors" />
-          
+
           <AnimatePresence mode="wait">
             <motion.div
               key={activeStep}
@@ -60,9 +58,34 @@ const PlatformSection = () => {
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
             >
-              {activeStep === 1 && <Step1Search />}
-              {activeStep === 2 && <Step2Enrichment />}
-              {activeStep === 3 && <Step3Outreach />}
+              {activeStep === 1 && (
+                <Image
+                  src="/assets/svg/platformSection/designAndDiscover.svg"
+                  alt="Define & Discover"
+                  width={598}
+                  height={526}
+                  className="w-full h-auto drop-shadow-xl"
+                  priority
+                />
+              )}
+              {activeStep === 2 && (
+                <Image
+                  src="/assets/svg/platformSection/enrich.svg"
+                  alt="Enrich and Qualify"
+                  width={598}
+                  height={526}
+                  className="w-full h-auto drop-shadow-xl"
+                />
+              )}
+              {activeStep === 3 && (
+                <Image
+                  src="/assets/svg/platformSection/searchAndConvert.svg"
+                  alt="Research & Convert"
+                  width={598}
+                  height={526}
+                  className="w-full h-auto drop-shadow-xl"
+                />
+              )}
             </motion.div>
           </AnimatePresence>
         </div>

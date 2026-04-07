@@ -40,7 +40,7 @@ const WhyDoSales = () => {
       {/* Why DoSales Section */}
       <div className='rounded-tr-[25%] rounded-tl-[25%] bg-linear-to-b from-[#F0F9FF] to-[#F0F9FF] to-30% pt-14'>
         <div className="max-w-7xl mx-auto flex flex-col items-center mb-16 ">
-          <div className="px-4 py-1 bg-gradient-to-r from-[#C5E7F7] to-[#F4F9FB] to-70% text-xs font-bold rounded-full border border-blue-100 mb-6 uppercase tracking-wider">
+              <div className="px-5 py-1 bg-gradient-to-r from-[#D7F2FF] to-[#F2FAFF] text-[#006699] text-md font-medium rounded-full border border-[#C2E8FF] mb-10 ">
             Why DoSales
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-text-main text-center max-w-4xl tracking-tight leading-tight">
