@@ -34,7 +34,7 @@ const PlatformSection = () => {
           {/* Button */}
           <button className="bg-[#0085C9] max-w-[250px] text-white px-5 py-4 rounded-xl font-bold text-sm shadow-xl shadow-blue-600/20 transition-all active:scale-95 group flex items-center gap-2">
             Setup your Sales Engine
-            <HiArrowRight className="group-hover:translate-x-1 transition-transform" />
+          
           </button>
         </div>
       </div>

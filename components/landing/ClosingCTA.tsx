@@ -17,32 +17,14 @@ const ClosingCTA = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10 text-center">
-        
+
         {/* Badge Area */}
-        <div className="flex items-center justify-center gap-4 mb-8">
-          <div>
-            
-          <Image 
-            src="/assets/svg/platformSectionLine.svg" 
-            alt="Line decoration" 
-            width={500} 
-            height={5} 
-            className="w-12 md:w-24 h-0.5 object-contain scale-x-125" 
-          />
-          </div>
-          <div className="px-5 py-1 bg-gradient-to-r from-[#D7F2FF] to-[#F2FAFF] text-[#006699] text-md font-medium rounded-full border border-[#C2E8FF] mb-10 ">
+        <div className="flex items-center justify-center gap-6 mb-12 w-full max-w-5xl mx-auto px-4">
+          <div className="flex-1 h-0.5 bg-linear-to-l from-[#81D4FA] to-transparent opacity-60" />
+          <div className="px-8 py-2 bg-linear-to-r from-[#D7F2FF] to-[#F2FAFF] text-[#006699] text-sm lg:text-md font-medium rounded-full border border-[#C2E8FF] shadow-[0_8px_30px_rgba(186,230,253,0.5)] whitespace-nowrap">
             Upgrade your Leads
           </div>
-          <div>
-          <Image 
-            src="/assets/svg/platformSectionLine.svg" 
-            alt="Line decoration" 
-            width={96} 
-            height={2} 
-            className="w-12 md:w-24 h-0.5 object-contain rotate-180 scale-x-125 "  
-          />
-
-          </div>
+          <div className="flex-1 h-0.5 bg-linear-to-r from-[#81D4FA] to-transparent opacity-60" />
         </div>
 
         {/* Heading */}

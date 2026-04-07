@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { FaLinkedinIn, FaInstagram, FaXTwitter } from 'react-icons/fa6';
+import { FaLinkedin, FaInstagram, FaXTwitter } from 'react-icons/fa6';
 
 const Footer = () => {
   return (
@@ -54,9 +54,9 @@ const Footer = () => {
           {/* CTA & Socials */}
           <div className="space-y-10">
             {/* Early Access Card */}
-            <div className="bg-white rounded-4xl p-4 flex items-center gap-5 shadow-sm hover:shadow-md transition-shadow cursor-pointer group">
-              <div className="w-16 h-16 bg-text-main rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                <div className="relative w-8 h-8 invert brightness-0">
+            <div className="bg-white rounded-[32px] p-5 flex items-center gap-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer group w-full lg:w-[380px]">
+              <div className="w-[84px] h-[84px] bg-text-main rounded-[24px] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                <div className="relative w-12 h-12 invert brightness-0">
                   <Image 
                     src="/assets/doSalesLogo.svg" 
                     alt="Logo" 
@@ -65,22 +65,22 @@ const Footer = () => {
                   />
                 </div>
               </div>
-              <span className="text-xl font-bold text-text-main leading-tight">
+              <span className="text-[26px] font-bold text-text-main leading-[1.1]">
                 Apply for early<br/>access
               </span>
             </div>
 
             {/* Social Links */}
-            <div className="bg-white rounded-[50px] px-8 py-4 flex items-center gap-6 w-fit shadow-sm">
-              <span className="text-[#667085] font-medium whitespace-nowrap">Follow us on</span>
-              <div className="flex items-center gap-5">
-                <a href="#" className="text-text-main hover:text-primary-blue transition-colors text-xl">
-                  <FaLinkedinIn />
+            <div className="bg-white rounded-[24px] px-8 py-5 flex items-center justify-between w-full lg:w-[380px] shadow-sm">
+              <span className="text-[#667085] text-lg font-medium whitespace-nowrap">Follow us on</span>
+              <div className="flex items-center gap-6">
+                <a href="#" className="text-text-main hover:text-primary-blue transition-colors text-2xl">
+                  <FaLinkedin />
                 </a>
-                <a href="#" className="text-text-main hover:text-primary-blue transition-colors text-xl">
+                <a href="#" className="text-text-main hover:text-primary-blue transition-colors text-2xl">
                   <FaInstagram />
                 </a>
-                <a href="#" className="text-text-main hover:text-primary-blue transition-colors text-xl">
+                <a href="#" className="text-text-main hover:text-primary-blue transition-colors text-2xl">
                   <FaXTwitter />
                 </a>
               </div>

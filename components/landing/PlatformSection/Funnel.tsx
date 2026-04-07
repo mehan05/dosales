@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 interface FunnelProps {
   activeStep: number;
@@ -15,7 +15,13 @@ interface FunnelProps {
 
 const ACTIVE_FRONT_GRAD = (id: string) => (
   <>
-    <linearGradient id={`activeFront_${id}`} x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient
+      id={`activeFront_${id}`}
+      x1="0%"
+      y1="0%"
+      x2="100%"
+      y2="100%"
+    >
       <stop offset="0%" stopColor="#0EA5E9" />
       <stop offset="94%" stopColor="#0284C7" />
     </linearGradient>
@@ -28,13 +34,19 @@ const ACTIVE_FRONT_GRAD = (id: string) => (
 
 const INACTIVE_FRONT_GRAD = (id: string) => (
   <>
-    <linearGradient id={`inactiveFront_${id}`} x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stopColor="#CBD5E1" stopOpacity="0.4" />
-      <stop offset="100%" stopColor="#94A3B8" stopOpacity="1" />
+    <linearGradient
+      id={`inactiveFront_${id}`}
+      x1="0%"
+      y1="0%"
+      x2="100%"
+      y2="100%"
+    >
+      <stop offset="0%" stopColor="#FFFFFF" />
+      <stop offset="100%" stopColor="#B1D6EF" />
     </linearGradient>
     <linearGradient id={`inactiveTop_${id}`} x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stopColor="#E2E8F0" />
-      <stop offset="94%" stopColor="#CBD5E1" />
+      <stop offset="0%" stopColor="#FFFFFF" />
+      <stop offset="100%" stopColor="#B1D6EF" />
     </linearGradient>
   </>
 );
@@ -52,29 +64,45 @@ interface Step3DBoxProps {
   frontPath: string;
   // Top face path (thin top)
   topPath: string;
+  fontSize?: number;
 }
 
 const Step3DBox: React.FC<Step3DBoxProps> = ({
-  label, isActive, onClick, widthClass = 'w-full', gradId,
-  vbW, frontPath, topPath
+  label,
+  isActive,
+  onClick,
+  widthClass = "w-full",
+  gradId,
+  vbW,
+  frontPath,
+  topPath,
+  fontSize = 18,
 }) => {
-  const frontFill = isActive ? `url(#activeFront_${gradId})` : `url(#inactiveFront_${gradId})`;
-  const topFill = isActive ? `url(#activeTop_${gradId})` : `url(#inactiveTop_${gradId})`;
-  const textFill = isActive ? 'white' : '#030712';
+  const frontFill = isActive
+    ? `url(#activeFront_${gradId})`
+    : `url(#inactiveFront_${gradId})`;
+  const topFill = isActive
+    ? `url(#activeTop_${gradId})`
+    : `url(#inactiveTop_${gradId})`;
+  const textFill = isActive ? "white" : "#030712";
 
   return (
     <motion.div
       className={`relative ${widthClass} cursor-pointer`}
       onClick={onClick}
       animate={{ y: isActive ? -6 : 0 }}
-      transition={{ duration: 0.3, ease: 'easeOut' }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
     >
       {/* Combined 3D SVG: top sliver + front face */}
       {/* viewBox height = 7 (top) + 86 (front) = 93 total */}
       <svg
         viewBox={`0 0 ${vbW} 93`}
         className="w-full h-full overflow-visible"
-        style={{ filter: isActive ? 'drop-shadow(0 12px 24px rgba(2,106,162,0.35))' : 'drop-shadow(0 4px 8px rgba(0,0,0,0.08))' }}
+        style={{
+          filter: isActive
+            ? "drop-shadow(0 12px 24px rgba(2,106,162,0.35))"
+            : "drop-shadow(0 4px 8px rgba(0,0,0,0.08))",
+        }}
         preserveAspectRatio="xMidYMid meet"
       >
         <defs>
@@ -93,7 +121,7 @@ const Step3DBox: React.FC<Step3DBoxProps> = ({
           y={7 + 43} // center of front face (7 offset + 86/2)
           textAnchor="middle"
           fill={textFill}
-          fontSize="18"
+          fontSize={fontSize}
           fontWeight="700"
           fontFamily="Satoshi, sans-serif"
           dominantBaseline="middle"
@@ -115,7 +143,6 @@ const Funnel: React.FC<FunnelProps> = ({ activeStep, onStepClick }) => {
 
   return (
     <div className="w-full max-w-lg relative flex flex-col items-center gap-3">
-
       {/* Step 1: Define & Discover (widest) */}
       <Step3DBox
         label="1.  Define & Discover"
@@ -142,6 +169,7 @@ const Funnel: React.FC<FunnelProps> = ({ activeStep, onStepClick }) => {
         vbW={515}
         topPath="M515 7 L483.176 0 H31.8205 L0 7 H515Z"
         frontPath="M515 7 L483.176 93 H31.8205 L0 7 H515Z"
+        fontSize={18 / 0.85}
       />
 
       {/* Step 3: Research & Convert (70% width) */}
@@ -155,10 +183,11 @@ const Funnel: React.FC<FunnelProps> = ({ activeStep, onStepClick }) => {
         vbW={515}
         topPath="M515 7 L483.176 0 H31.8205 L0 7 H515Z"
         frontPath="M515 7 L483.176 93 H31.8205 L0 7 H515Z"
+        fontSize={18 / 0.7}
       />
 
       <div className="mt-10 text-center">
-        <p className="text-sm font-bold text-gray-400 tracking-[0.2em] uppercase">
+        <p className="text-sm font-bold text-[#030712] tracking-[0.2em] uppercase">
           DOSALES AI AUTOMATED FUNNEL
         </p>
       </div>

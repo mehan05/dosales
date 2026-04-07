@@ -164,7 +164,7 @@ const WaterfallSection = () => {
         </div>
 
         {/* Center Logo – sits at the arc origin (bottom-center) */}
-        <div className="absolute bottom-[-5] left-1/2 -translate-x-1/2 translate-y-1/2 z-[100]">
+        <div className="absolute bottom-[-5] left-1/2 -translate-x-1/2 translate-y-1/2 z-100">
           <img
             src="/assets/svg/waterfallSectionLogo.svg"
             alt="DoSales"
