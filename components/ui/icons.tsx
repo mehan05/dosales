@@ -31,7 +31,7 @@ export const BuildingIcon = ({ size = 24, ...props }: IconProps) => (
     height={size} 
     viewBox="0 0 24 24" 
     fill="none" 
-    stroke="currentColor" i
+    stroke="currentColor" 
     strokeWidth="2" 
     strokeLinecap="round" 
     strokeLinejoin="round" 
