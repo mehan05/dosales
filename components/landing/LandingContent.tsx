@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const LandingContent = () => {
   return (
-    <section className=" rounded-tr-[15%] rounded-tl-[15%] bg-gradient-to-b from-[#F0F9FF] to-[#F0F9FF] to-30% py-24 px-4 overflow-hidden mt-12">
+    <section className="  py-24 px-4 overflow-hidden mt-12">
       {/* Top statistics section */}
       <div className="max-w-6xl mx-auto flex flex-col items-center mb-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full text-center mb-16">
@@ -38,7 +38,7 @@ const LandingContent = () => {
       </div>
 
       {/* Why DoSales Section */}
-      <div className="max-w-7xl mx-auto flex flex-col items-center mb-16 ">
+      <div className="max-w-7xl mx-auto flex flex-col items-center mb-16 border-2 border-red-500 ">
         <div className="px-4 py-1 bg-blue-50 text-primary-blue text-xs font-bold rounded-full border border-blue-100 mb-6 uppercase tracking-wider">
           Why DoSales
         </div>

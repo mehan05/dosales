@@ -11,9 +11,9 @@ export default function Home() {
       <Hero />
       <LeadsImage />
       <WhyDoSales />
-      <RealPainPoints />
       <WaterfallSection />
       <DiscoverySection />
+      <RealPainPoints />
     </main>
   );
 }
