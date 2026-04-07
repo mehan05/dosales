@@ -31,7 +31,13 @@ const WaterfallSection = () => {
           <img
             src="/assets/svg/radarbg.svg"
             alt="Radar Background"
-            className="absolute w-full bottom-[-510]  pointer-events-none z-0"
+            className="hidden xs:block absolute w-full bottom-[-510]  pointer-events-none z-0"
+            style={{ height: "200%" }}
+          />
+          <img
+            src="/assets/svg/radarbgMobile.svg"
+            alt="Radar Background Mobile"
+            className="block xs:hidden absolute w-full bottom-[-510]  pointer-events-none z-0"
             style={{ height: "200%" }}
           />
 

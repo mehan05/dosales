@@ -12,7 +12,7 @@ const Hero = () => {
       <GridBackground className="text-white z-0" />
       <Navbar />
 
-      <section className="relative pt-20 pb-12 overflow-hidden z-10">app
+      <section className="relative pt-20 xs:pb-12 pb-4 overflow-hidden z-10">
         {/* Background Grid - already handled by GridBackground above */}
 
         <div className="container mx-auto px-4 relative z-10 text-center">

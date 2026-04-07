@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const WhyDoSales = () => {
   return (
-    <section className="  py-24 px-4 overflow-hidden mt-12">
+    <section className="xs:py-24 py-12 px-4 overflow-hidden xs:mt-12 mt-4">
       {/* Top statistics section */}
       <div className="max-w-6xl mx-auto flex flex-col items-center mb-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full text-center mb-16 ">
@@ -56,7 +56,15 @@ const WhyDoSales = () => {
               alt="Why DoSales Features" 
               width={1400} 
               height={800}
-              className="w-full h-auto block"
+              className="hidden xs:block w-full h-auto"
+              priority
+            />
+            <Image 
+              src="/assets/svg/whyDoSalesMobile.svg" 
+              alt="Why DoSales Features Mobile" 
+              width={426} 
+              height={800}
+              className="block xs:hidden w-full h-auto"
               priority
             />
           </div>

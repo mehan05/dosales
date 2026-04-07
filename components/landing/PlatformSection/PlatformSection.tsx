@@ -10,7 +10,7 @@ const PlatformSection = () => {
   const [activeStep, setActiveStep] = useState(1);
 
   return (
-    <section className="relative py-32 bg-linear-to-b from-white to-blue-50/40 overflow-hidden font-sans">
+    <section className="relative pt-16 pb-3 xs:pb-32 xs:pt-32 sm:pb-10  bg-linear-to-b from-white to-blue-50/40 overflow-hidden font-sans">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto relative">
@@ -34,20 +34,19 @@ const PlatformSection = () => {
           {/* Button */}
           <button className="bg-[#0085C9] max-w-[250px] text-white px-5 py-4 rounded-xl font-bold text-sm shadow-xl shadow-blue-600/20 transition-all active:scale-95 group flex items-center gap-2">
             Setup your Sales Engine
-          
           </button>
         </div>
       </div>
 
       {/* Two-Column Section */}
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 mt-32 items-center">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 mt-12 xs:mt-32 items-center">
         {/* Left Column: Funnel */}
         <div className="flex flex-col items-center">
           <Funnel activeStep={activeStep} onStepClick={setActiveStep} />
         </div>
 
         {/* Right Column: Dynamic UI Card */}
-        <div className="relative group min-h-125">
+        <div className="relative group min-h-50 xs:min-h-125">
           <div className="absolute -inset-4 bg-linear-to-tr from-blue-100/20 to-transparent rounded-[40px] blur-2xl group-hover:bg-blue-100/40 transition-colors" />
 
           <AnimatePresence mode="wait">

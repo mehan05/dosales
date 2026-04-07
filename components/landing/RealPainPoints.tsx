@@ -79,7 +79,7 @@ const testimonialData = [
 
 const RealPainPoints = () => {
   return (
-    <div className="px-4 py-12 w-full overflow-hidden">
+    <div className="px-4 py-6 xs:py-5 w-full overflow-hidden">
       <section className="relative max-w-[1700px]  mx-auto rounded-[40px] min-h-[800px] flex flex-col lg:flex-row items-center overflow-hidden bg-dashboard-bg py-12 lg:py-0 border border-dashboard-outline/50 shadow-sm">
         <GridBackground className="text-black overflow-hidden" />
 

@@ -9,6 +9,7 @@
   --color-early-access: #DFFEEA;
   --color-heading: #026AA2;
   --color-text-main: #030712;
+  --breakpoint-xs: 427px;
 }
 
 :root {

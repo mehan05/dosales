@@ -46,7 +46,17 @@ export const Radar = ({ className }: { className?: string }) => {
       <img
         src="/assets/svg/radarbg.svg"
         alt="Radar Background"
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-160 h-160 max-w-none pointer-events-none"
+        className="hidden xs:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-160 h-160 max-w-none pointer-events-none"
+        style={{ 
+          mixBlendMode: "screen",
+          WebkitMaskImage: "radial-gradient(circle at center, black 30%, transparent 80%)",
+          maskImage: "radial-gradient(circle at center, black 30%, transparent 80%)"
+        }}
+      />
+      <img
+        src="/assets/svg/radarbgMobile.svg"
+        alt="Radar Background Mobile"
+        className="block xs:hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-160 h-160 max-w-none pointer-events-none"
         style={{ 
           mixBlendMode: "screen",
           WebkitMaskImage: "radial-gradient(circle at center, black 30%, transparent 80%)",

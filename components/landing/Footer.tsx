@@ -71,7 +71,7 @@ const Footer = () => {
             </div>
 
             {/* Social Links */}
-            <div className="bg-white rounded-[24px] px-8 py-5 flex items-center justify-between w-full lg:w-[380px] shadow-sm">
+            <div className="bg-white rounded-[24px] px-8 py-5 flex gap-2  items-center justify-between w-full lg:w-[380px] shadow-sm">
               <span className="text-[#667085] text-lg font-medium whitespace-nowrap">Follow us on</span>
               <div className="flex items-center gap-6">
                 <a href="#" className="text-text-main hover:text-primary-blue transition-colors text-2xl">

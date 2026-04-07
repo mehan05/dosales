@@ -24,8 +24,18 @@ const Navbar = () => {
         <a href="#" className="text-[#030712] font-medium hover:text-[#0085C9]">PRICING</a>
       </div>
 
-      <button className="relative z-50 bg-[#030712] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#1f2937] transition-colors">
+      <button className="hidden xs:block relative z-50 bg-[#030712] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#1f2937] transition-colors">
         Schedule a Demo
+      </button>
+
+      <button className="xs:hidden relative z-50 p-1">
+        <Image
+          src="/assets/svg/hamburgerIcon.svg"
+          alt="Menu"
+          width={30}
+          height={30}
+          className="w-8 h-8"
+        />
       </button>
     </nav>
   );
