@@ -107,7 +107,7 @@ const RealPainPoints = () => {
         </div>
 
         {/* Right Content - Dark Container */}
-        <div className="relative w-full lg:w-[55%] pt-12 lg:pt-0 z-10 pl-4 lg:pl-10 relative flex items-center shrink-0">
+        <div className="relative w-full lg:w-[55%] pt-12 lg:pt-0 z-10 pl-4 lg:pl-10 flex items-center shrink-0 overflow-hidden">
           <div className="bg-[#0B0C0E] w-full min-w-[300px] lg:min-w-[1200px] rounded-l-[40px] p-6 lg:p-10 border-4 border-r-0 border-white shadow-2xl h-[700px] flex items-center">
             <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-4 w-full h-full max-h-full overflow-hidden">
               {testimonialData.map((testimonial, index) => (

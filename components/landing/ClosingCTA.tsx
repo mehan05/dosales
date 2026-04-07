@@ -5,7 +5,7 @@ const ClosingCTA = () => {
   return (
     <section className="relative pt-0 pb-20 xs:py-24 overflow-hidden bg-white">
       {/* Background SVG and Glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-screen h-100 pointer-events-none select-none overflow-hidden">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-100 pointer-events-none select-none overflow-hidden">
         <Image 
           src="/assets/svg/upgradeYourLeadsBgImage.png" 
           alt="" 

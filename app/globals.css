@@ -24,10 +24,14 @@
   --font-sans: var(--font-sans);
 }
 
+html,
 body {
   font-family: var(--font-sans);
   color: var(--color-text-main);
   background-color: var(--background);
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
 }
 
 

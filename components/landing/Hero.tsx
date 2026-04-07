@@ -5,7 +5,7 @@ import GridBackground from "../ui/GridBackground";
 
 const Hero = () => {
   return (
-    <div className="relative bg-gradient-to-br from-[#A2DFFB] to-[#f4f9fe] to-25% ">
+    <div className="relative bg-gradient-to-br from-[#A2DFFB] to-[#f4f9fe] to-25% overflow-hidden">
       {/* Top right white shade */}
       <div className="absolute top-[-20%] right-[-10%] w-[60%] h-150 bg-white rounded-full blur-[200px] opacity-60 pointer-events-none z-0" />
       

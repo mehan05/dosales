@@ -1,16 +1,6 @@
 "use client";
 import React from "react";
 import { Radar, IconContainer } from "../ui/radar-effect";
-import {
-  HiDatabase,
-  HiOfficeBuilding,
-  HiUserGroup,
-  HiMail,
-  HiGlobeAlt,
-  HiLibrary,
-  HiOutlineStatusOnline,
-  HiOutlineDesktopComputer,
-} from "react-icons/hi";
 
 const WaterfallSection = () => {
   return (
@@ -31,13 +21,13 @@ const WaterfallSection = () => {
           <img
             src="/assets/svg/radarbg.svg"
             alt="Radar Background"
-            className="hidden xs:block absolute w-full bottom-[-510]  pointer-events-none z-0"
+            className="hidden xs:block absolute w-full top-0 left-0 pointer-events-none z-0"
             style={{ height: "200%" }}
           />
           <img
             src="/assets/svg/radarbgMobile.svg"
             alt="Radar Background Mobile"
-            className="block xs:hidden absolute w-full bottom-[-510]  pointer-events-none z-0"
+            className="block xs:hidden absolute w-full top-0 left-0 pointer-events-none z-0"
             style={{ height: "200%" }}
           />
 
@@ -58,8 +48,9 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<HiOutlineStatusOnline className="h-5 w-5 text-bg-pale" />}
+              icon={<img src="/assets/svg/radar/Frame 49.svg" alt="Status" className="w-full h-full" />}
               delay={0.1}
+              noContainer={true}
             />
           </div>
 
@@ -73,8 +64,9 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<HiMail className="h-5 w-5 text-bg-pale" />}
+              icon={<img src="/assets/svg/radar/Frame 50.svg" alt="Mail" className="w-full h-full" />}
               delay={0.2}
+              noContainer={true}
             />
           </div>
 
@@ -88,8 +80,9 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<HiGlobeAlt className="h-5 w-5 text-bg-pale" />}
+              icon={<img src="/assets/svg/radar/Frame 51.svg" alt="Globe" className="w-full h-full" />}
               delay={0.3}
+              noContainer={true}
             />
           </div>
 
@@ -103,8 +96,9 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<HiLibrary className="h-5 w-5 text-bg-pale" />}
+              icon={<img src="/assets/svg/radar/Frame 52.svg" alt="Library" className="w-full h-full" />}
               delay={0.4}
+              noContainer={true}
             />
           </div>
 
@@ -118,8 +112,9 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<HiOutlineDesktopComputer className="h-5 w-5 text-bg-pale" />}
+              icon={<img src="/assets/svg/radar/Frame 53.svg" alt="Desktop" className="w-full h-full" />}
               delay={0.5}
+              noContainer={true}
             />
           </div>
 
@@ -133,8 +128,9 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<HiUserGroup className="h-5 w-5 text-bg-pale" />}
+              icon={<img src="/assets/svg/radar/Frame 54.svg" alt="People" className="w-full h-full" />}
               delay={0.6}
+              noContainer={true}
             />
           </div>
 
@@ -148,8 +144,9 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<HiDatabase className="h-5 w-5 text-bg-pale" />}
+              icon={<img src="/assets/svg/radar/Frame 55.svg" alt="Database" className="w-full h-full" />}
               delay={0.7}
+              noContainer={true}
             />
           </div>
 
@@ -163,8 +160,9 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<HiOfficeBuilding className="h-5 w-5 text-bg-pale" />}
+              icon={<img src="/assets/svg/radar/Frame 57.svg" alt="Building" className="w-full h-full" />}
               delay={0.8}
+              noContainer={true}
             />
           </div>
         </div>
