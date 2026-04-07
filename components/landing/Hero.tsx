@@ -5,11 +5,14 @@ import GridBackground from "../ui/GridBackground";
 
 const Hero = () => {
   return (
-    <div className="relative">
-      <GridBackground className="text-[#d7d7d7]" />
+    <div className="relative bg-gradient-to-br from-[#A2DFFB] to-[#f4f9fe] to-25% ">
+      {/* Top right white shade */}
+      <div className="absolute top-[-20%] right-[-10%] w-[60%] h-150 bg-white rounded-full blur-[200px] opacity-60 pointer-events-none z-0" />
+      
+      <GridBackground className="text-white z-0" />
       <Navbar />
 
-      <section className="relative pt-20 pb-12 overflow-hidden ">
+      <section className="relative pt-20 pb-12 overflow-hidden z-10">
         {/* Background Grid - already handled by GridBackground above */}
 
         <div className="container mx-auto px-4 relative z-10 text-center">
@@ -50,15 +53,12 @@ const Hero = () => {
             </button>
           </div>
           <p className="text-s text-[#4A5565] mb-12">Get Free Early Access</p>
-          <div className="z-[1000px]">
+          <div className="relative z-10">
             <LeadsImage />
           </div>
         </div>
 
-        <div 
-          className="absolute right-0 top-0  min-w-0 bg-linear-to-br from-[#5176FC] to-[#F0F9FF]"
-          style={{ opacity: 0.2 }}
-        />
+       
       </section>
     </div>
   );
