@@ -19,7 +19,6 @@ export const Circle = ({ className, children, idx, ...rest }: any) => {
 };
 
 export const Radar = ({ className }: { className?: string }) => {
-  const circles = new Array(8).fill(1);
   return (
     <div
       className={twMerge(
@@ -43,18 +42,17 @@ export const Radar = ({ className }: { className?: string }) => {
       >
         <div className="relative z-40 h-px w-full bg-linear-to-r from-transparent via-sky-600 to-transparent" />
       </div>
-      {/* Concentric circles */}
-      {circles.map((_, idx) => (
-        <Circle
-          style={{
-            height: `${(idx + 1) * 5}rem`,
-            width: `${(idx + 1) * 5}rem`,
-            border: `1px solid rgba(71, 85, 105, ${1 - (idx + 1) * 0.1})`,
-          }}
-          key={`circle-${idx}`}
-          idx={idx}
-        />
-      ))}
+      {/* Radar Background SVG */}
+      <img
+        src="/assets/svg/radarbg.svg"
+        alt="Radar Background"
+        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-160 h-160 max-w-none pointer-events-none"
+        style={{ 
+          mixBlendMode: "screen",
+          WebkitMaskImage: "radial-gradient(circle at center, black 30%, transparent 80%)",
+          maskImage: "radial-gradient(circle at center, black 30%, transparent 80%)"
+        }}
+      />
     </div>
   );
 };
@@ -82,11 +80,13 @@ export const IconContainer = ({
           </svg>
         )}
       </div>
-      <div className="hidden rounded-md px-2 py-1 md:block">
-        <div className="text-center text-xs font-bold text-slate-400">
-          {text || "Web Development"}
+      {text != null && text !== "" && (
+        <div className="hidden rounded-md px-2 py-1 md:block">
+          <div className="text-center text-xs font-bold text-slate-400">
+            {text}
+          </div>
         </div>
-      </div>
+      )}
     </motion.div>
   );
 };
