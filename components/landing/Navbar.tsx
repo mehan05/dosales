@@ -1,10 +1,17 @@
+import Image from 'next/image';
 import React from 'react';
 
 const Navbar = () => {
   return (
     <nav className="flex items-center justify-between px-8 py-6  mx-auto w-full">
       <div className="flex items-center gap-2">
-        <div className="w-8 h-8 bg-[#0085C9] rounded-lg"></div>
+        <Image
+            src="/assets/svg/logo.svg"
+            alt="Logo"
+            width={32}
+            height={32}
+            className='w-8 h-8'
+        />
         <span className="text-2xl font-bold text-[#030712]">DoSales</span>
       </div>
       
