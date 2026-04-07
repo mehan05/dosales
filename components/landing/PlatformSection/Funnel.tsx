@@ -123,7 +123,7 @@ const Step3DBox: React.FC<Step3DBoxProps> = ({
           fill={textFill}
           fontSize={fontSize}
           fontWeight="700"
-          fontFamily="Satoshi, sans-serif"
+          fontFamily="var(--font-satoshi), sans-serif"
           dominantBaseline="middle"
           className="select-none"
         >

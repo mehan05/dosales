@@ -21,7 +21,7 @@ const WhyDoSales = () => {
           </div>
         </div>
 
-        <button className="bg-black text-white px-7 py-4 rounded-xl font-bold text-sm hover:bg-gray-900 transition-all shadow-lg active:scale-95 mb-6">
+        <button className="bg-black text-white px-5 py-4 rounded-xl font-bold text-sm hover:bg-gray-900 transition-all shadow-lg active:scale-95 mb-6">
           REGISTER NOW
         </button>
 
@@ -40,7 +40,7 @@ const WhyDoSales = () => {
       {/* Why DoSales Section */}
       <div className='rounded-tr-[25%] rounded-tl-[25%] bg-linear-to-b from-[#F0F9FF] to-[#F0F9FF] to-30% pt-14'>
         <div className="max-w-7xl mx-auto flex flex-col items-center mb-16 ">
-              <div className="px-5 py-1 bg-gradient-to-r from-[#D7F2FF] to-[#F2FAFF] text-[#006699] text-md font-medium rounded-full border border-[#C2E8FF] mb-10 ">
+          <div className="px-6 py-2 bg-gradient-to-r from-[#D6EFFF] to-[#F5FBFF] text-[#006699] text-md font-medium rounded-full border-2 border-white shadow-[0_0_15px_rgba(0,102,153,0.1)] mb-10 ">
             Why DoSales
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-text-main text-center max-w-4xl tracking-tight leading-tight">

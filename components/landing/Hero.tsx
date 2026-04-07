@@ -12,12 +12,12 @@ const Hero = () => {
       <GridBackground className="text-white z-0" />
       <Navbar />
 
-      <section className="relative pt-20 pb-12 overflow-hidden z-10">
+      <section className="relative pt-20 pb-12 overflow-hidden z-10">app
         {/* Background Grid - already handled by GridBackground above */}
 
         <div className="container mx-auto px-4 relative z-10 text-center">
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-5xl font-extrabold text-[#026AA2] mb-6 tracking-tight">
+          <h1 className="text-4xl md:text-5xl font-semibold  text-[#026AA2] mb-6 tracking-tight">
             Stop Chasing Leads!
           </h1>
 
@@ -38,7 +38,7 @@ const Hero = () => {
           {/* Early Access Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#DFFEEA] rounded-full text-sm font-medium text-emerald-800 mb-8">
             <span className="flex h-2 w-2 rounded-full bg-emerald-500"></span>
-            Early Access Live - Limited Spots available
+            <span className="text-[#030712]">Early Access Live </span> - Limited Spots available
           </div>
 
           {/* Lead Capture Form */}
@@ -48,7 +48,7 @@ const Hero = () => {
               placeholder="praveen@calibraint.com"
               className="flex-1 px-4 py-3 outline-none text-[#364153] w-full"
             />
-            <button className="bg-[#0085C9] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#006ca3] transition-colors whitespace-nowrap">
+            <button className="bg-[#0085C9] text-white px-4 py-3 rounded-xl text-sm hover:bg-[#006ca3] transition-colors whitespace-nowrap">
               REGISTER NOW
             </button>
           </div>
