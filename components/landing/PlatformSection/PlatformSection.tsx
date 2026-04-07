@@ -23,17 +23,17 @@ const PlatformSection = () => {
           </div>
 
           {/* Headline */}
-          <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 leading-[1.1] mb-8 tracking-tight">
+          <h1 className="text-4xl font-semibold text-[#030712] leading-[1.1] mb-8 tracking-tight">
             An Automated Funnel that turns your ICP to Booked Meetings <span className="text-blue-600/90">in 3 steps</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl text-gray-500 font-medium max-w-2xl mb-12 leading-relaxed">
+          <p className="text-md text-[#4A5565] font-medium max-w-2xl mb-12 leading-relaxed">
             Define your ICP and DoSales AI handles discovery, outreach, and qualification automatically.
           </p>
 
           {/* Button */}
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl font-bold text-lg shadow-xl shadow-blue-600/20 transition-all active:scale-95 group flex items-center gap-2">
+          <button className="bg-[#0085C9] max-w-[250px] text-white px-5 py-4 rounded-xl font-bold text-sm shadow-xl shadow-blue-600/20 transition-all active:scale-95 group flex items-center gap-2">
             Setup your Sales Engine
             <HiArrowRight className="group-hover:translate-x-1 transition-transform" />
           </button>

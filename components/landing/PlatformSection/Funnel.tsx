@@ -28,9 +28,9 @@ const ACTIVE_FRONT_GRAD = (id: string) => (
 
 const INACTIVE_FRONT_GRAD = (id: string) => (
   <>
-    <linearGradient id={`inactiveFront_${id}`} x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stopColor="#CBD5E1" />
-      <stop offset="94%" stopColor="#94A3B8" />
+    <linearGradient id={`inactiveFront_${id}`} x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#CBD5E1" stopOpacity="0.4" />
+      <stop offset="100%" stopColor="#94A3B8" stopOpacity="1" />
     </linearGradient>
     <linearGradient id={`inactiveTop_${id}`} x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stopColor="#E2E8F0" />
@@ -60,7 +60,7 @@ const Step3DBox: React.FC<Step3DBoxProps> = ({
 }) => {
   const frontFill = isActive ? `url(#activeFront_${gradId})` : `url(#inactiveFront_${gradId})`;
   const topFill = isActive ? `url(#activeTop_${gradId})` : `url(#inactiveTop_${gradId})`;
-  const textFill = isActive ? 'white' : '#64748B';
+  const textFill = isActive ? 'white' : '#030712';
 
   return (
     <motion.div

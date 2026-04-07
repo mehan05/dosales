@@ -92,10 +92,10 @@ const WaterfallSection = () => {
         <div className="px-6 py-2 bg-[linear-gradient(90deg,rgba(0,133,201,0.2)_0%,rgba(30,64,175,0.2)_100%)] text-bg-pale text-xs font-bold rounded-full border border-blue-500/30 mb-8 uppercase tracking-[0.2em] backdrop-blur-sm">
           Waterfall Enrichment
         </div>
-        <h2 className="text-4xl lg:text-6xl font-bold text-white mb-8 tracking-tight leading-tight">
-          Chains 10+ data providers, <span className="text-primary-blue">85%+</span> match rates
+        <h2 className="text-4xl lg:text-6xl bg-gradient-to-r from-[#FFFFFF] to-[#FFFFFFB2] bg-clip-text text-transparent  mb-4 tracking-tight leading-tight">
+          Chains 10+ data providers, 85%  match rates
         </h2>
-        <p className="text-[#94A3B8] text-lg lg:text-xl leading-relaxed max-w-2xl font-medium">
+        <p className="text-[#94A3B8] text-md lg:text-md leading-relaxed max-w-2xl font-thin">
           We don't rely on a single source. DoSales waterfalls through 10+ data providers to 
           verify emails, phones, and company intel across MENA and Southeast Asia.
         </p>

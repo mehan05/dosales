@@ -26,7 +26,7 @@ const ClosingCTA = () => {
             height={5} 
             className="w-12 md:w-24 h-0.5 object-contain scale-x-125" 
           />
-          <span className="px-5 py-1.5 rounded-full border border-primary-blue/20 bg-dashboard-bg/50 text-primary-blue text-sm font-medium tracking-wide shadow-[0_0_20px_rgba(0,133,201,0.1)]">
+          <span className="px-5 py-1.5 mr-[30px]  ml-[30px] rounded-full border border-primary-blue/20 bg-dashboard-bg/50 text-primary-blue text-sm font-medium tracking-wide shadow-[0_0_20px_rgba(0,133,201,0.1)]">
             Upgrade your Leads
           </span>
           <Image 
@@ -34,17 +34,17 @@ const ClosingCTA = () => {
             alt="Line decoration" 
             width={96} 
             height={2} 
-            className="w-12 md:w-24 h-0.5 object-contain rotate-180 scale-x-125"  
+            className="w-12 md:w-24 h-0.5 object-contain rotate-180 scale-x-125 "  
           />
         </div>
 
         {/* Heading */}
-        <h2 className="text-4xl md:text-6xl font-bold text-text-main mb-10 max-w-4xl mx-auto leading-[1.1]">
+        <h2 className="text-5xl font-bold text-text-main mb-10 max-w-4xl mx-auto leading-[1.1]">
           Start closing in emerging <br className="hidden md:block" /> markets today
         </h2>
 
         {/* Button */}
-        <button className="bg-text-main text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#1f2937] transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 active:translate-y-0">
+        <button className="bg-text-main text-white px-4 py-4 rounded-xl font-bold text-sm hover:bg-[#1f2937] transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 active:translate-y-0">
           Get Early Access
         </button>
       </div>

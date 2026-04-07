@@ -192,13 +192,13 @@ const DiscoverySection = () => {
 
         {/* Right Side: Content */}
         <div className="flex flex-col items-start lg:col-span-4">
-          <div className="bg-[#E0F2FE] text-[#0369A1] rounded-full px-5 py-1.5 text-xs font-bold mb-10 tracking-wide">
+          <div className="px-4 py-1 bg-gradient-to-r from-[#C5E7F7] to-[#F4F9FB] to-70% text-xs font-bold rounded-full border border-blue-100 mb-6 uppercase tracking-wider">
             AI Outbound Agent
           </div>
-          <h2 className="text-5xl md:text-6xl font-black text-slate-900 mb-8 leading-[1.1] tracking-tight">
-            From Ideal Prospects to Booked Meetings <span className="text-slate-400">— Automatically</span>
+          <h2 className="text-5xl text-6xl font-semibold text-slate-900 mb-4 leading-[1.1] tracking-tight">
+            From Ideal Prospects to Booked Meetings <span className='text-md'>—</span> Automatically
           </h2>
-          <p className="text-lg text-slate-500 font-medium leading-relaxed italic">
+          <p className="text-lg text-[#4A5565] font-light leading-relaxed ">
             From ICP targeting to follow-ups, DoSales handles the entire outbound process. So your team spends time closing, not chasing.
           </p>
         </div>

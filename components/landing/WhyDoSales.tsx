@@ -6,22 +6,22 @@ const WhyDoSales = () => {
     <section className="  py-24 px-4 overflow-hidden mt-12">
       {/* Top statistics section */}
       <div className="max-w-6xl mx-auto flex flex-col items-center mb-24">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full text-center mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full text-center mb-16 ">
           <div className="flex flex-col gap-2">
-            <h3 className="text-4xl lg:text-5xl font-black text-primary-blue tracking-tighter">50 LEADS/MO</h3>
-            <p className="text-gray-400 font-bold text-sm tracking-widest">FREE FOREVER</p>
+            <h3 className="text-4xl lg:text-5xl font-[500] text-[#026AA2] tracking-tighter ">50 LEADS/MO</h3>
+            <p className="text-[#4A5565]  text-sm tracking-widest">FREE FOREVER</p>
           </div>
           <div className="flex flex-col gap-2">
-            <h3 className="text-4xl lg:text-5xl font-black text-primary-blue tracking-tighter">2 MIN</h3>
-            <p className="text-gray-400 font-bold text-sm tracking-widest">SETUP</p>
+            <h3 className="text-4xl lg:text-5xl font-[500] text-[#026AA2] tracking-tighter">2 MIN</h3>
+            <p className="text-[#4A5565]  text-sm tracking-widest">SETUP</p>
           </div>
           <div className="flex flex-col gap-2">
-            <h3 className="text-4xl lg:text-5xl font-black text-primary-blue tracking-tighter">NO CARD</h3>
-            <p className="text-gray-400 font-bold text-sm tracking-widest">REQUIRED</p>
+            <h3 className="text-4xl lg:text-5xl font-[500] text-[#026AA2] tracking-tighter">NO CARD</h3>
+            <p className="text-[#4A5565]  text-sm tracking-widest">REQUIRED</p>
           </div>
         </div>
 
-        <button className="bg-black text-white px-10 py-4 rounded-xl font-bold text-sm hover:bg-gray-900 transition-all shadow-lg active:scale-95 mb-6">
+        <button className="bg-black text-white px-7 py-4 rounded-xl font-bold text-sm hover:bg-gray-900 transition-all shadow-lg active:scale-95 mb-6">
           REGISTER NOW
         </button>
 
@@ -40,7 +40,7 @@ const WhyDoSales = () => {
       {/* Why DoSales Section */}
       <div className='rounded-tr-[25%] rounded-tl-[25%] bg-linear-to-b from-[#F0F9FF] to-[#F0F9FF] to-30% pt-14'>
         <div className="max-w-7xl mx-auto flex flex-col items-center mb-16 ">
-          <div className="px-4 py-1 bg-blue-50 text-primary-blue text-xs font-bold rounded-full border border-blue-100 mb-6 uppercase tracking-wider">
+          <div className="px-4 py-1 bg-gradient-to-r from-[#C5E7F7] to-[#F4F9FB] to-70% text-xs font-bold rounded-full border border-blue-100 mb-6 uppercase tracking-wider">
             Why DoSales
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-text-main text-center max-w-4xl tracking-tight leading-tight">
