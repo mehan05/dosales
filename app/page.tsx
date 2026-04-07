@@ -5,7 +5,7 @@ import DiscoverySection from "@/components/landing/DiscoverySection";
 import WaterfallSection from "@/components/landing/WaterfallSection";
 import RealPainPoints from "@/components/landing/RealPainPoints";
 import PlatformSection from "@/components/landing/PlatformSection/PlatformSection";
-import Footer from "@/components/landing/Footer";
+import ClosingCTA from "@/components/landing/ClosingCTA";
 
 export default function Home() {
   return (
@@ -17,6 +17,7 @@ export default function Home() {
       <DiscoverySection />
       <RealPainPoints />
       <PlatformSection />
+      <ClosingCTA />
     </main>
   );
 }
