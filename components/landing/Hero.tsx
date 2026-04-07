@@ -1,15 +1,16 @@
 import React from "react";
 import LeadsImage from "./LeadsImage";
 import Navbar from "./Navbar";
+import GridBackground from "../ui/GridBackground";
 
 const Hero = () => {
   return (
-    <div className="grid-bg">
-              <Navbar />
+    <div className="relative">
+      <GridBackground className="text-[#d7d7d7]" />
+      <Navbar />
 
       <section className="relative pt-20 pb-12 overflow-hidden ">
-        {/* Background Grid */}
-        <div className="absolute inset-0  opacity-30 pointer-events-none"></div>
+        {/* Background Grid - already handled by GridBackground above */}
 
         <div className="container mx-auto px-4 relative z-10 text-center">
           {/* Main Heading */}
@@ -18,7 +19,7 @@ const Hero = () => {
           </h1>
 
           {/* Sub-heading */}
-          <h2 className="text-3xl md:text-4xl font-[500]  text-[#030712] max-w-4xl mx-auto mb-8 leading-relaxed">
+          <h2 className="text-3xl md:text-4xl font-medium  text-[#030712] max-w-4xl mx-auto mb-8 leading-relaxed">
             Turn your Ideal Customer Profile into a <br />
             Qualified pipeline with{" "}
             <span className="text-[#030712] font-extrabold">Automated Outreach</span>

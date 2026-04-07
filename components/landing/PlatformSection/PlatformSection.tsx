@@ -24,7 +24,7 @@ const PlatformSection = () => {
 
           {/* Headline */}
           <h1 className="text-4xl font-semibold text-[#030712] leading-[1.1] mb-8 tracking-tight">
-            An Automated Funnel that turns your ICP to Booked Meetings <span className="text-blue-600/90">in 3 steps</span>
+            An Automated Funnel that turns your ICP to Booked Meetings in 3 steps
           </h1>
 
           {/* Subheadline */}

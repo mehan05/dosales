@@ -1,5 +1,6 @@
 import React from "react";
 import TestimonialCard from "./TestimonialCard";
+import GridBackground from "../ui/GridBackground";
 
 const testimonialData = [
   {
@@ -80,12 +81,11 @@ const RealPainPoints = () => {
   return (
     <div className="px-4 py-12 w-full overflow-hidden">
       <section className="relative max-w-[1700px]  mx-auto rounded-[40px] min-h-[800px] flex flex-col lg:flex-row items-center overflow-hidden bg-dashboard-bg py-12 lg:py-0 border border-dashboard-outline/50 shadow-sm">
-        {/* Grid Background Layer */}
-        <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
+        <GridBackground className="text-black overflow-hidden" />
 
         {/* Left Content */}
-        <div className="w-full lg:w-[45%] px-8 lg:px-24 py-16 lg:py-32 flex flex-col items-start gap-8 z-10">
-          <div className="px-4 py-1 bg-gradient-to-r from-[#C5E7F7] to-[#F4F9FB] to-90% text-xs font-bold rounded-full border border-blue-100 mb-6 uppercase tracking-wider text-[#0085C9]">
+        <div className="relative w-full lg:w-[45%] px-8 lg:px-24 py-16 lg:py-32 flex flex-col items-start gap-8 z-10">
+          <div className="px-4 py-1 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] to-90% text-xs font-bold rounded-full border border-blue-100 mb-6 uppercase tracking-wider text-primary-blue">
             Real Pain Points
           </div>
 
@@ -107,7 +107,7 @@ const RealPainPoints = () => {
         </div>
 
         {/* Right Content - Dark Container */}
-        <div className="w-full lg:w-[55%] pt-12 lg:pt-0 z-10 pl-4 lg:pl-10 relative flex items-center shrink-0">
+        <div className="relative w-full lg:w-[55%] pt-12 lg:pt-0 z-10 pl-4 lg:pl-10 relative flex items-center shrink-0">
           <div className="bg-[#0B0C0E] w-full min-w-[300px] lg:min-w-[1200px] rounded-l-[40px] p-6 lg:p-10 border-4 border-r-0 border-white shadow-2xl h-[700px] flex items-center">
             <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-4 w-full h-full max-h-full overflow-hidden">
               {testimonialData.map((testimonial, index) => (
