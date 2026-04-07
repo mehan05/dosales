@@ -43,25 +43,50 @@ const testimonialData = [
     company: "Tabby",
     content: "We've burned through Apollo and ZoomInfo licenses. The UAE Fintech data is a graveyard — wrong emails, outdated titles, companies that pivoted two years ago.",
     avatar: "https://i.pravatar.cc/150?u=cristofer"
+  },
+  {
+    name: "Ahmad Zain",
+    role: "Director of Sales",
+    company: "Noon",
+    content: "We've burned through Apollo and ZoomInfo licenses. The UAE Fintech data is a graveyard — wrong emails, outdated titles, companies that pivoted two years ago.",
+    avatar: "https://i.pravatar.cc/150?u=ahmad"
+  },
+  {
+    name: "Sarah Chen",
+    role: "VP Growth",
+    company: "Grab",
+    content: "We've burned through Apollo and ZoomInfo licenses. The UAE Fintech data is a graveyard — wrong emails, outdated titles, companies that pivoted two years ago.",
+    avatar: "https://i.pravatar.cc/150?u=sarah"
+  },
+  {
+    name: "Omar Farooq",
+    role: "Head of Sales",
+    company: "Careem",
+    content: "We've burned through Apollo and ZoomInfo licenses. The UAE Fintech data is a graveyard — wrong emails, outdated titles, companies that pivoted two years ago.",
+    avatar: "https://i.pravatar.cc/150?u=omar"
   }
 ];
 
 const RealPainPoints = () => {
   return (
-    <section className="relative min-h-[800px] flex flex-col lg:flex-row items-center overflow-hidden bg-linear-to-br from-dashboard-bg to-white py-12 lg:py-0">
-      {/* Grid Background Layer */}
-      <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
-      
-      {/* Left Content */}
-      <div className="w-full lg:w-1/2 px-8 lg:px-24 py-16 lg:py-32 flex flex-col items-start gap-8 z-10">
-        <div className="px-4 py-1.5 bg-white/50 backdrop-blur-sm border border-bg-pale rounded-full">
-          <span className="text-primary-blue text-sm font-bold tracking-tight">Real Pain Points</span>
-        </div>
+    <div className="px-4 py-12 w-full overflow-hidden">
+      <section className="relative max-w-[1700px]  mx-auto rounded-[40px] min-h-[800px] flex flex-col lg:flex-row items-center overflow-hidden bg-dashboard-bg py-12 lg:py-0 border border-dashboard-outline/50 shadow-sm">
+        {/* Grid Background Layer */}
+        <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
         
-        <div className="flex flex-col gap-6 max-w-lg">
-          <h2 className="text-5xl lg:text-7xl font-bold text-text-main leading-[0.95] tracking-tight">
-            Existing tools weren't built for emerging markets
-          </h2>
+        {/* Left Content */}
+        <div className="w-full lg:w-[45%] px-8 lg:px-24 py-16 lg:py-32 flex flex-col items-start gap-8 z-10">
+          <div className="px-5 py-1.5 bg-white/60 backdrop-blur-sm border border-white/80 rounded-full shadow-xs">
+            <span className="text-primary-blue text-sm font-bold tracking-tight">Real Pain Points</span>
+          </div>
+          
+          <div className="flex flex-col gap-6 max-w-lg">
+            <h2 className="text-[44px] lg:text-[64px] font-semibold text-text-main leading-[1.1] tracking-tight">
+              Existing tools<br />
+              weren't built<br />
+              for emerging<br />
+              markets
+            </h2>
           <p className="text-gray-600 text-lg leading-relaxed font-medium">
             Hear from sales leaders who've burned through Apollo, ZoomInfo, and Cognism trying to sell into MENA and Southeast Asia.
           </p>
@@ -69,9 +94,9 @@ const RealPainPoints = () => {
       </div>
 
       {/* Right Content - Dark Container */}
-      <div className="w-full lg:w-1/2 px-4 lg:px-12 py-12 lg:py-24 z-10">
-        <div className="bg-[#0B0C0E] w-full rounded-[40px] p-4 lg:p-8 border-4 border-white inline-block shadow-2xl overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="w-full lg:w-[55%] pt-12 lg:pt-0 z-10 pl-4 lg:pl-10 relative flex items-center shrink-0">
+        <div className="bg-[#0B0C0E] w-full min-w-[300px] lg:min-w-[1200px] rounded-l-[40px] p-6 lg:p-10 border-4 border-r-0 border-white shadow-2xl h-[700px] flex items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-4 w-full h-full max-h-full overflow-hidden">
             {testimonialData.map((testimonial, index) => (
               <TestimonialCard
                 key={index}
@@ -81,7 +106,8 @@ const RealPainPoints = () => {
           </div>
         </div>
       </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

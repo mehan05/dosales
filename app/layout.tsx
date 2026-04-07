@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/landing/Navbar";
+import Footer from "@/components/landing/Footer";
 
 export const metadata: Metadata = {
   title: "DoSales - Stop Chasing Leads!",
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-white">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
