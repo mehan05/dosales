@@ -38,7 +38,7 @@ const LandingContent = () => {
       </div>
 
       {/* Why DoSales Section */}
-      <div className="max-w-7xl mx-auto flex flex-col items-center mb-16 border-2 border-red-500 ">
+      <div className="max-w-7xl mx-auto flex flex-col items-center mb-16">
         <div className="px-4 py-1 bg-blue-50 text-primary-blue text-xs font-bold rounded-full border border-blue-100 mb-6 uppercase tracking-wider">
           Why DoSales
         </div>

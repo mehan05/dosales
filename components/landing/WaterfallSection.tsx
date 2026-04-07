@@ -25,13 +25,8 @@ const WaterfallSection = () => {
           <Radar className="absolute bottom-0 opacity-40" />
         </div>
 
-        {/* Central Logo */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-100 translate-y-1/2">
-          <div className="w-20 h-20 rounded-full bg-primary-blue border-4 border-[#020617] flex items-center justify-center shadow-[0_0_30px_rgba(0,133,201,0.5)]">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 5C11.7157 5 5 11.7157 5 20C5 28.2843 11.7157 35 20 35C28.2843 35 35 28.2843 35 20C35 11.7157 28.2843 5 20 5ZM25.5 22.5L20 28L14.5 22.5H18V13.5H22V22.5H25.5Z" fill="white"/>
-            </svg>
-          </div>
+        <div className="absolute bottom-[-12%] left-1/2 -translate-x-1/2 z-100 translate-y-1/2">
+          <img src="/assets/svg/waterfallSectionLogo.svg" alt="" />
         </div>
 
         {/* Icons placed in a radial pattern */}
@@ -58,14 +53,7 @@ const WaterfallSection = () => {
             />
         </div>
 
-        {/* Top / Center area */}
-        <div className="absolute top-[5%] left-1/2 -translate-x-1/2">
-            <IconContainer 
-              icon={<HiOutlineStatusOnline className="h-6 w-6 text-bg-pale" />} 
-              text="Broadcast" 
-              delay={0.1}
-            />
-        </div>
+
         <div className="absolute bottom-[20%] left-[48%] -translate-x-1/2">
             <IconContainer 
               icon={<HiOutlineDesktopComputer className="h-6 w-6 text-bg-pale" />} 
