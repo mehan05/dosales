@@ -12,19 +12,19 @@ const Navbar = () => {
             height={32}
             className='w-8 h-8'
         />
-        <span className="text-2xl font-bold text-text-main">DoSales</span>
+        <span className="text-[22px] font-bold text-text-main">DoSales</span>
       </div>
       
       <div className="hidden md:flex items-center gap-8">
-        <div className="flex items-center gap-1 cursor-pointer text-text-main font-medium hover:text-primary-blue">
+        <div className="flex items-center gap-1 cursor-pointer text-[16px] font-medium hover:text-primary-blue">
           FEATURES
           <span className="text-[10px]">▼</span>
         </div>
-        <a href="#" className="text-text-main font-medium hover:text-primary-blue">ABOUT</a>
-        <a href="#" className="text-text-main font-medium hover:text-primary-blue">PRICING</a>
+        <a href="#" className="text-[16px] font-medium hover:text-primary-blue">ABOUT</a>
+        <a href="#" className="text-[16px] font-medium hover:text-primary-blue">PRICING</a>
       </div>
 
-      <button className="hidden xs:block relative z-50 bg-text-main text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-slate-800 transition-colors">
+      <button className="hidden xs:flex relative z-50 bg-text-main text-white w-40 h-[51px] items-center justify-center gap-2.5 p-5 rounded-[10px] font-semibold hover:bg-slate-800 transition-colors text-[14px]">
         Schedule a Demo
       </button>
 
