@@ -60,12 +60,13 @@ const WhyDoSales = () => {
       </div>
 
       {/* Why DoSales Section */}
-      <div className="rounded-tl-[220px] rounded-tr-[220px] xs:rounded-tl-[700.4px] xs:rounded-tr-[700.4px] bg-linear-to-b from-blue-ghost to-blue-ghost to-30% pt-14">
+      <div className="rounded-tl-[220px] rounded-tr-[220px] xs:rounded-tl-[200.4px] xs:rounded-tr-[200.4px] bg-linear-to-b from-blue-ghost to-blue-ghost to-30% pt-14">
         <div className="max-w-7xl mx-auto flex flex-col items-center mb-16 ">
-          <div className="w-31 h-8 px-3.5 py-1.25 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-10">
+          <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-10">
+            {" "}
             Why DoSales
           </div>
-          <h2 className="text-[48px] lg:text-[48px] font-bold text-text-main text-center max-w-4xl tracking-tight leading-tight">
+          <h2 className="text-[48px] !lg:text-[52px] font-bold text-text-main text-center max-w-4xl tracking-tight leading-tight">
             Existing tools weren't built for your markets
           </h2>
         </div>
@@ -75,17 +76,35 @@ const WhyDoSales = () => {
           <div className="relative w-full rounded-[40px] overflow-hidden border border-primary-blue/10 bg-white/50 backdrop-blur-sm">
             {/* Card Accent Borders & Dividers handled within sections */}
 
+            {/* Extended Vertical divider - Spans entire container */}
+            <div
+              className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 hidden md:block z-10"
+              style={{
+                background: "linear-gradient(to bottom, #88BFF7, #EFF9FE)",
+                opacity: 1,
+              }}
+            />
 
             <div className="grid grid-cols-1 md:grid-cols-2 relative h-full">
-              {/* Vertical divider - Perfectly centered between cards */}
-              <div 
-                className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 hidden md:block z-10"
-                style={{ backgroundImage: 'url("/assets/svg/Vertical Divider.svg")', backgroundSize: '100% 100%' }}
+              {/* Top side horizontal divider */}
+              <div
+                className="absolute w-1/2 left-1/2 -translate-x-1/2 top-0 h-px hidden md:block z-10"
+                style={{
+                  background: "linear-gradient(to right, #88BFF7, #EFF9FE)",
+                  opacity: 0.86,
+                }}
               />
 
               {/* Card 1: Regional Dominance */}
               <div className="flex flex-col p-8 md:p-12 relative">
-
+                {/* Left side stroke line */}
+                <div
+                  className="absolute inset-y-0 left-0 w-px hidden md:block z-10"
+                  style={{
+                    background: "linear-gradient(to bottom, #88BFF7, #EFF9FE)",
+                    opacity: 1,
+                  }}
+                />
 
                 <div className="flex-1 flex items-center justify-center mb-10 h-64">
                   <Image
@@ -110,8 +129,14 @@ const WhyDoSales = () => {
 
               {/* Card 2: Vertical Intelligence */}
               <div className="flex flex-col p-8 md:p-12 relative">
-
-
+                {/* Right side stroke line */}
+                <div
+                  className="absolute inset-y-0 right-0 w-px hidden md:block z-10"
+                  style={{
+                    background: "linear-gradient(to bottom, #88BFF7, #EFF9FE)",
+                    opacity: 1,
+                  }}
+                />
                 <div className="flex-1 flex items-center justify-center mb-10 h-64">
                   <Image
                     src="/assets/svg/whyDoSales/verifyIntelligence.svg"
@@ -134,14 +159,26 @@ const WhyDoSales = () => {
               </div>
             </div>
 
+            {/* Middle horizontal divider - Separates top row from AI Autonomy */}
+            <div
+              className="relative h-px w-full hidden md:block z-10"
+              style={{
+                background: "linear-gradient(to right, #88BFF7, #EFF9FE)",
+                opacity: 0.86,
+              }}
+            />
+
             {/* Card 3: AI Autonomy (Refined Size) */}
-
-
-
             <div className="flex flex-col md:flex-row p-6 md:p-10 items-center relative overflow-hidden">
-
-
-              <div className="md:w-[60%] flex items-center justify-center mb-8 md:mb-0 h-64 md:h-80">
+              {/* Right side stroke line */}
+              <div
+                className="absolute inset-y-0 right-0 w-px hidden md:block z-10"
+                style={{
+                  background: "linear-gradient(to bottom, #88BFF7, #EFF9FE)",
+                  opacity: 1,
+                }}
+              />
+              <div className="md:w-[50%] flex items-center justify-center mb-8 md:mb-0 h-64 md:h-80">
                 <Image
                   src="/assets/svg/whyDoSales/aiAutonomy.svg"
                   alt="AI Autonomy"
@@ -150,6 +187,14 @@ const WhyDoSales = () => {
                   className="w-full h-auto max-w-[320px] md:max-w-162.5 scale-105 md:scale-110"
                 />
               </div>
+              {/* Bottom side horizontal divider */}
+              <div
+                className="absolute w-1/2 left-1/2 -translate-x-1/2 bottom-0 h-px hidden md:block z-10"
+                style={{
+                  background: "linear-gradient(to right, #88BFF7, #EFF9FE)",
+                  opacity: 0.86,
+                }}
+              />
               <div className="md:w-[40%] md:pl-12">
                 <h3 className="text-3xl font-bold text-heading mb-4 tracking-tight">
                   AI Autonomy

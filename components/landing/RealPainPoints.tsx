@@ -129,13 +129,13 @@ const RealPainPoints = () => {
         </div>
 
         {/* Left Content */}
-        <div className="relative w-full lg:w-[45%] px-8 lg:px-24 pb-8 lg:pt-10 lg:pb-32 flex flex-col items-start  z-10 lg:self-start">
+        <div className="relative w-full lg:w-[45%] px-12 lg:px-24 pb-8 lg:pt-10 lg:pb-32 flex flex-col items-start  z-10 lg:self-start">
           <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-10">
             Real Pain Points
           </div>
 
           <div className="flex flex-col gap-6 max-w-[436px]">
-            <h2 className="text-[38px] lg:text-[38px] font-semibold text-text-main leading-[1.1] tracking-tight">
+            <h2 className="text-[38px] lg:text-[52px] font-semibold text-text-main leading-[1.1] tracking-tight">
               Existing tools
               <br />
               weren't built
@@ -152,7 +152,7 @@ const RealPainPoints = () => {
         </div>
 
         {/* Right Content - Dark Container with Horizontal Carousel */}
-        <div className="relative w-full lg:w-[1044px] pt-12 lg:pt-0 z-10 px-4 lg:px-0 lg:pl-10 flex lg:items-end shrink-0 overflow-hidden lg:h-full">
+        <div className="relative w-full lg:w-[1044px] pt-12  mb-10 lg:pt-0 z-10 px-4 lg:px-0 lg:pl-10 flex lg:items-end shrink-0 overflow-hidden lg:h-full">
 
              <div className="bg-slate-950 w-full min-w-[300px] lg:min-w-[1200px] rounded-l-[40px] p-6 lg:p-10 border-4 border-r-0 border-white shadow-2xl h-[700px] flex flex-col justify-center gap-6 overflow-hidden">
             <MarqueeRow items={row1} duration={40} />
