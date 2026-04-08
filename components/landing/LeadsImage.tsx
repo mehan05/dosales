@@ -47,6 +47,7 @@ const LeadsImage = () => {
           </div>
         </div>
       </motion.div>
+
     </section>
   );
 };

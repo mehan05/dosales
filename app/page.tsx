@@ -10,9 +10,7 @@ import ClosingCTA from "@/components/landing/ClosingCTA";
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <div className="bg-gradient-to-br from-bg-pale to-blue-ghost to-20%">
-        <Hero />
-      </div>
+      <Hero />
       <WhyDoSales />
       <WaterfallSection />
       <DiscoverySection />

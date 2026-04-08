@@ -5,8 +5,10 @@ const WhyDoSales = () => {
   return (
     <section className="relative xs:pt-4 xs:pb-24 py-4 overflow-hidden xs:mt-0 mt-0 ">
       <div className="absolute inset-0 bg-gradient-to-t from-bg-pale to-blue-ghost to-50% -z-10" />
+      {/* Top edge white blur for section blending - subtilized to prevent dimming content */}
+      <div className="absolute top-0 left-0 right-0 h-40 bg-linear-to-b from-white/60 via-white/20 to-transparent pointer-events-none z-0" />
       {/* Top statistics section */}
-      <div className="max-w-6xl mx-auto px-4 flex flex-col items-center mb-24">
+      <div className="max-w-6xl mx-auto px-4 flex flex-col items-center mb-24 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full text-center mb-16 ">
           <div className="flex flex-col gap-2">
             <h3 className="text-[32px] font-[500] text-heading tracking-tighter ">
