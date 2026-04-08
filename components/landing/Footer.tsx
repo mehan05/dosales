@@ -7,7 +7,7 @@ import { FaLinkedin, FaInstagram, FaXTwitter } from 'react-icons/fa6';
 const Footer = () => {
   return (
     <footer className="py-20 px-6">
-      <div className="max-w-425 mx-auto bg-[#F2F9FD] rounded-[48px] p-6 sm:p-12 md:p-20">
+      <div className="max-w-425 mx-auto bg-bg-footer rounded-[48px] p-6 sm:p-12 md:p-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           
           {/* Logo & Description */}
@@ -23,7 +23,7 @@ const Footer = () => {
               </div>
               <span className="text-2xl font-bold text-text-main">DoSales</span>
             </div>
-            <p className="text-[#667085] text-sm leading-relaxed max-w-60">
+            <p className="text-slate-medium text-sm leading-relaxed max-w-60">
               AI-powered sales intelligence for emerging markets. Verified B2B data across MENA and Southeast Asia.
             </p>
           </div>
@@ -32,11 +32,11 @@ const Footer = () => {
           <div>
             <h3 className="text-text-main font-bold mb-6">Product</h3>
             <ul className="space-y-4">
-              <li><a href="#" className="text-[#667085] hover:text-primary-blue transition-colors text-lg">Lead Database</a></li>
-              <li><a href="#" className="text-[#667085] hover:text-primary-blue transition-colors text-lg">AI Prospecting</a></li>
-              <li><a href="#" className="text-[#667085] hover:text-primary-blue transition-colors text-lg">Data Enrichment</a></li>
-              <li><a href="#" className="text-[#667085] hover:text-primary-blue transition-colors text-lg">CRM Sync</a></li>
-              <li><a href="#" className="text-[#667085] hover:text-primary-blue transition-colors text-lg">Market Intelligence</a></li>
+              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-lg">Lead Database</a></li>
+              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-lg">AI Prospecting</a></li>
+              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-lg">Data Enrichment</a></li>
+              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-lg">CRM Sync</a></li>
+              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-lg">Market Intelligence</a></li>
             </ul>
           </div>
 
@@ -44,10 +44,10 @@ const Footer = () => {
           <div>
             <h3 className="text-text-main font-bold mb-6">Company</h3>
             <ul className="space-y-4">
-              <li><a href="#" className="text-[#667085] hover:text-primary-blue transition-colors text-lg">About</a></li>
-              <li><a href="#" className="text-[#667085] hover:text-primary-blue transition-colors text-lg">Careers</a></li>
-              <li><a href="#" className="text-[#667085] hover:text-primary-blue transition-colors text-lg">Contact</a></li>
-              <li><a href="#" className="text-[#667085] hover:text-primary-blue transition-colors text-lg">Partners</a></li>
+              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-lg">About</a></li>
+              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-lg">Careers</a></li>
+              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-lg">Contact</a></li>
+              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-lg">Partners</a></li>
             </ul>
           </div>
 
@@ -72,7 +72,7 @@ const Footer = () => {
 
             {/* Social Links */}
             <div className="bg-white rounded-[24px] px-4 sm:px-8 py-4 sm:py-5 flex gap-2 items-center justify-between w-full lg:w-[380px] shadow-sm">
-              <span className="text-[#667085] text-base sm:text-lg font-medium">Follow us on</span>
+              <span className="text-slate-medium text-base sm:text-lg font-medium">Follow us on</span>
               <div className="flex items-center gap-3 sm:gap-6">
                 <a href="#" className="text-text-main hover:text-primary-blue transition-colors text-xl sm:text-2xl">
                   <FaLinkedin />
@@ -89,14 +89,14 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-20 pt-12 border-t border-[#DDEEF9] flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-[#98A2B3] text-sm">
+        <div className="mt-20 pt-12 border-t border-border-footer flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-slate-light text-sm">
             © 2026 — Copyright. All Rights reserved
           </p>
           <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3 sm:gap-8">
-            <a href="#" className="text-[#667085] hover:text-primary-blue transition-colors text-sm font-medium">Privacy policy</a>
-            <a href="#" className="text-[#667085] hover:text-primary-blue transition-colors text-sm font-medium">Terms of service</a>
-            <a href="#" className="text-[#667085] hover:text-primary-blue transition-colors text-sm font-medium">Cookie Settings</a>
+            <a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-sm font-medium">Privacy policy</a>
+            <a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-sm font-medium">Terms of service</a>
+            <a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-sm font-medium">Cookie Settings</a>
           </div>
         </div>
       </div>

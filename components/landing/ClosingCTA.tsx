@@ -20,11 +20,11 @@ const ClosingCTA = () => {
 
         {/* Badge Area */}
         <div className="flex items-center justify-center gap-6 mb-12 w-full max-w-5xl mx-auto px-4">
-          <div className="flex-1 h-0.5 bg-linear-to-l from-[#81D4FA] to-transparent opacity-60" />
-          <div className="px-6 py-2 bg-gradient-to-r from-[#D6EFFF] to-[#F5FBFF] text-[#006699] text-md font-medium rounded-full border-2 border-white shadow-[0_0_15px_rgba(0,102,153,0.1)]">
+          <div className="flex-1 h-0.5 bg-linear-to-l from-sky-light to-transparent opacity-60" />
+          <div className="px-6 py-2 bg-gradient-to-r from-blue-highlight to-bg-light-blue text-blue-deep text-md font-medium rounded-full border-2 border-white shadow-[0_0_15px_var(--color-blue-shadow)]">
             Upgrade your Leads
           </div>
-          <div className="flex-1 h-0.5 bg-linear-to-r from-[#81D4FA] to-transparent opacity-60" />
+          <div className="flex-1 h-0.5 bg-linear-to-r from-sky-light to-transparent opacity-60" />
         </div>
 
         {/* Heading */}
@@ -33,7 +33,7 @@ const ClosingCTA = () => {
         </h2>
 
         {/* Button */}
-        <button className="bg-text-main text-white px-4 py-4 rounded-xl font-bold text-sm hover:bg-[#1f2937] transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 active:translate-y-0">
+        <button className="bg-text-main text-white px-4 py-4 rounded-xl font-bold text-sm hover:bg-slate-800 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 active:translate-y-0">
           Get Early Access
         </button>
       </div>

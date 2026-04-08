@@ -4,9 +4,9 @@ import { Radar, IconContainer } from "../ui/radar-effect";
 
 const WaterfallSection = () => {
   return (
-    <section className="relative w-full bg-[#020617] py-24 px-4 overflow-hidden min-h-200 flex flex-col items-center justify-center">
+    <section className="relative w-full bg-dark-navy py-24 px-4 overflow-hidden min-h-200 flex flex-col items-center justify-center">
       {/* Background radial glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,rgba(0,133,201,0.15),transparent_70%)] pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,var(--color-blue-shadow),transparent_70%)] pointer-events-none"></div>
 
       <div className="relative w-full max-w-5xl mx-auto mb-12">
         <div
@@ -48,7 +48,7 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<img src="/assets/svg/radar/Frame 49.svg" alt="Status" className="w-full h-full" />}
+              icon={<img src="/assets/svg/radar/status.svg" alt="Status" className="w-full h-full" />}
               delay={0.1}
               noContainer={true}
             />
@@ -64,7 +64,7 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<img src="/assets/svg/radar/Frame 50.svg" alt="Mail" className="w-full h-full" />}
+              icon={<img src="/assets/svg/radar/mail.svg" alt="Mail" className="w-full h-full" />}
               delay={0.2}
               noContainer={true}
             />
@@ -80,7 +80,7 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<img src="/assets/svg/radar/Frame 51.svg" alt="Globe" className="w-full h-full" />}
+              icon={<img src="/assets/svg/radar/globe.svg" alt="Globe" className="w-full h-full" />}
               delay={0.3}
               noContainer={true}
             />
@@ -96,7 +96,7 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<img src="/assets/svg/radar/Frame 52.svg" alt="Library" className="w-full h-full" />}
+              icon={<img src="/assets/svg/radar/library.svg" alt="Library" className="w-full h-full" />}
               delay={0.4}
               noContainer={true}
             />
@@ -112,7 +112,7 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<img src="/assets/svg/radar/Frame 53.svg" alt="Desktop" className="w-full h-full" />}
+              icon={<img src="/assets/svg/radar/desktop.svg" alt="Desktop" className="w-full h-full" />}
               delay={0.5}
               noContainer={true}
             />
@@ -128,7 +128,7 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<img src="/assets/svg/radar/Frame 54.svg" alt="People" className="w-full h-full" />}
+              icon={<img src="/assets/svg/radar/people.svg" alt="People" className="w-full h-full" />}
               delay={0.6}
               noContainer={true}
             />
@@ -144,7 +144,7 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<img src="/assets/svg/radar/Frame 55.svg" alt="Database" className="w-full h-full" />}
+              icon={<img src="/assets/svg/radar/database.svg" alt="Database" className="w-full h-full" />}
               delay={0.7}
               noContainer={true}
             />
@@ -160,7 +160,7 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<img src="/assets/svg/radar/Frame 57.svg" alt="Building" className="w-full h-full" />}
+              icon={<img src="/assets/svg/radar/building.svg" alt="Building" className="w-full h-full" />}
               delay={0.8}
               noContainer={true}
             />
@@ -179,13 +179,13 @@ const WaterfallSection = () => {
 
       {/* Content Section */}
       <div className="relative z-10 flex flex-col items-center text-center max-w-4xl mt-24">
-        <div className="px-6 py-2 bg-[linear-gradient(90deg,rgba(0,133,201,0.2)_0%,rgba(30,64,175,0.2)_100%)] text-bg-pale text-xs font-bold rounded-full border border-blue-500/30 mb-8 uppercase tracking-[0.2em] backdrop-blur-sm">
+        <div className="px-6 py-2 bg-[linear-gradient(90deg,var(--color-blue-translucent)_0%,var(--color-indigo-translucent)_100%)] text-bg-pale text-xs font-bold rounded-full border border-blue-500/30 mb-8 uppercase tracking-[0.2em] backdrop-blur-sm">
           Waterfall Enrichment
         </div>
-        <h2 className="text-4xl lg:text-6xl bg-gradient-to-r from-[#FFFFFF] to-[#FFFFFFB2] bg-clip-text text-transparent  mb-4 tracking-tight leading-tight">
+        <h2 className="text-4xl lg:text-6xl bg-gradient-to-r from-pure-white to-white-muted bg-clip-text text-transparent  mb-4 tracking-tight leading-tight">
           Chains 10+ data providers, 85% match rates
         </h2>
-        <p className="text-[#94A3B8] text-md lg:text-md leading-relaxed max-w-2xl font-thin">
+        <p className="text-slate-muted text-md lg:text-md leading-relaxed max-w-2xl font-thin">
           We don't rely on a single source. DoSales waterfalls through 10+ data
           providers to verify emails, phones, and company intel across MENA and
           Southeast Asia.

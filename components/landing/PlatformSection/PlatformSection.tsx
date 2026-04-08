@@ -15,24 +15,24 @@ const PlatformSection = () => {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto relative">
           {/* Badge */}
-          <div className="px-6 py-2 bg-gradient-to-r from-[#D6EFFF] to-[#F5FBFF] text-[#006699] text-md font-medium rounded-full border-2 border-white shadow-[0_0_15px_rgba(0,102,153,0.1)] mb-10 ">
+          <div className="px-6 py-2 bg-gradient-to-r from-blue-highlight to-bg-light-blue text-blue-deep text-md font-medium rounded-full border-2 border-white shadow-[0_0_15px_var(--color-blue-shadow)] mb-10 ">
             Platform
           </div>
 
           {/* Headline */}
-          <h1 className="text-4xl font-semibold text-[#030712] leading-[1.1] mb-8 tracking-tight">
+          <h1 className="text-4xl font-semibold text-text-main leading-[1.1] mb-8 tracking-tight">
             An Automated Funnel that turns your ICP to Booked Meetings in 3
             steps
           </h1>
 
           {/* Subheadline */}
-          <p className="text-md text-[#4A5565] font-medium max-w-2xl mb-12 leading-relaxed">
+          <p className="text-md text-slate-dark font-medium max-w-2xl mb-12 leading-relaxed">
             Define your ICP and DoSales AI handles discovery, outreach, and
             qualification automatically.
           </p>
 
           {/* Button */}
-          <button className="bg-[#0085C9] max-w-[250px] text-white px-5 py-4 rounded-xl font-bold text-sm shadow-xl shadow-blue-600/20 transition-all active:scale-95 group flex items-center gap-2">
+          <button className="bg-primary-blue max-w-[250px] text-white px-5 py-4 rounded-xl font-bold text-sm shadow-xl shadow-blue-600/20 transition-all active:scale-95 group flex items-center gap-2">
             Setup your Sales Engine
           </button>
         </div>

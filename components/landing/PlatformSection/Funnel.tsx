@@ -22,12 +22,12 @@ const ACTIVE_FRONT_GRAD = (id: string) => (
       x2="100%"
       y2="100%"
     >
-      <stop offset="0%" stopColor="#0EA5E9" />
-      <stop offset="94%" stopColor="#0284C7" />
+      <stop offset="0%" stopColor="var(--color-sky-main)" />
+      <stop offset="94%" stopColor="var(--color-sky-dark)" />
     </linearGradient>
     <linearGradient id={`activeTop_${id}`} x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stopColor="#38BDF8" />
-      <stop offset="94%" stopColor="#7DD3FC" />
+      <stop offset="0%" stopColor="var(--color-sky-accent)" />
+      <stop offset="94%" stopColor="var(--color-sky-pale)" />
     </linearGradient>
   </>
 );
@@ -41,12 +41,12 @@ const INACTIVE_FRONT_GRAD = (id: string) => (
       x2="100%"
       y2="100%"
     >
-      <stop offset="0%" stopColor="#FFFFFF" />
-      <stop offset="100%" stopColor="#B1D6EF" />
+      <stop offset="0%" stopColor="var(--color-pure-white)" />
+      <stop offset="100%" stopColor="var(--color-blue-soft)" />
     </linearGradient>
     <linearGradient id={`inactiveTop_${id}`} x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stopColor="#FFFFFF" />
-      <stop offset="100%" stopColor="#B1D6EF" />
+      <stop offset="0%" stopColor="var(--color-pure-white)" />
+      <stop offset="100%" stopColor="var(--color-blue-soft)" />
     </linearGradient>
   </>
 );
@@ -84,7 +84,7 @@ const Step3DBox: React.FC<Step3DBoxProps> = ({
   const topFill = isActive
     ? `url(#activeTop_${gradId})`
     : `url(#inactiveTop_${gradId})`;
-  const textFill = isActive ? "white" : "#030712";
+  const textFill = isActive ? "white" : "var(--color-text-main)";
 
   return (
     <motion.div
@@ -100,8 +100,8 @@ const Step3DBox: React.FC<Step3DBoxProps> = ({
         className="w-full h-full overflow-visible"
         style={{
           filter: isActive
-            ? "drop-shadow(0 12px 24px rgba(2,106,162,0.35))"
-            : "drop-shadow(0 4px 8px rgba(0,0,0,0.08))",
+            ? "drop-shadow(0 12px 24px var(--color-shadow-heading))"
+            : "drop-shadow(0 4px 8px var(--color-shadow-subtle))",
         }}
         preserveAspectRatio="xMidYMid meet"
       >
@@ -187,7 +187,7 @@ const Funnel: React.FC<FunnelProps> = ({ activeStep, onStepClick }) => {
       />
 
       <div className="mt-10 text-center">
-        <p className="text-sm font-bold text-[#030712] tracking-[0.2em] uppercase">
+        <p className="text-sm font-bold text-text-main tracking-[0.2em] uppercase">
           DOSALES AI AUTOMATED FUNNEL
         </p>
       </div>

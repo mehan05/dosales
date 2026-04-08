@@ -20,7 +20,7 @@ const DashboardPreview = () => {
             {/* Sidebar Mockup */}
             <aside className="w-72 bg-white border-r border-blue-50/50 p-8 hidden md:flex flex-col gap-8">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-8 h-8 rounded-lg shadow-sm bg-[linear-gradient(135deg,#5176FC_0%,#9333EA_100%)]"></div>
+                <div className="w-8 h-8 rounded-lg shadow-sm bg-[linear-gradient(135deg,var(--color-bg-vivid)_0%,var(--color-purple-main)_100%)]"></div>
                 <span className="font-extrabold text-lg tracking-tight">DoSales</span>
               </div>
               
@@ -71,7 +71,7 @@ const DashboardPreview = () => {
             {/* Main Content Mockup */}
             <main className="flex-1 p-12 bg-white relative overflow-hidden">
               {/* Right side gradient overlay */}
-              <div className="absolute top-0 right-0 w-[40%] h-full bg-[linear-gradient(to_left,rgba(240,249,255,1)_0%,rgba(162,223,251,0.05)_100%)] pointer-events-none"></div>
+              <div className="absolute top-0 right-0 w-[40%] h-full bg-[linear-gradient(to_left,var(--color-blue-ghost)_0%,rgba(162,223,251,0.05)_100%)] pointer-events-none"></div>
               
               <div className="relative z-10">
               <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-12 gap-6">
@@ -114,7 +114,7 @@ const DashboardPreview = () => {
                 </div>
               </div>
 
-              <div className="bg-white rounded-3xl border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] overflow-hidden">
+              <div className="bg-white rounded-3xl border border-gray-100 shadow-[0_10px_30px_var(--color-shadow-ultra-light)] overflow-hidden">
                 <div className="overflow-x-auto">
                   <table className="w-full text-left border-collapse">
                     <thead>

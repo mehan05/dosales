@@ -85,7 +85,7 @@ const RealPainPoints = () => {
 
         {/* Left Content */}
         <div className="relative w-full lg:w-[45%] px-8 lg:px-24 py-16 lg:py-32 flex flex-col items-start gap-8 z-10">
-          <div className="px-6 py-2 bg-gradient-to-r from-[#D6EFFF] to-[#F5FBFF] text-[#006699] text-md font-medium rounded-full border-2 border-white shadow-[0_0_15px_rgba(0,102,153,0.1)] mb-10 ">
+          <div className="px-6 py-2 bg-gradient-to-r from-blue-highlight to-bg-light-blue text-blue-deep text-md font-medium rounded-full border-2 border-white shadow-[0_0_15px_var(--color-blue-shadow)] mb-10 ">
             Real Pain Points
           </div>
 
@@ -99,7 +99,7 @@ const RealPainPoints = () => {
               <br />
               markets
             </h2>
-            <p className="text-[#4A5565] text-md leading-relaxed font-medium">
+            <p className="text-slate-dark text-md leading-relaxed font-medium">
               Hear from sales leaders who've burned through Apollo, ZoomInfo,
               and Cognism trying to sell into MENA and Southeast Asia.
             </p>
@@ -108,7 +108,7 @@ const RealPainPoints = () => {
 
         {/* Right Content - Dark Container */}
         <div className="relative w-full lg:w-[55%] pt-12 lg:pt-0 z-10 pl-4 lg:pl-10 flex items-center shrink-0 overflow-hidden">
-          <div className="bg-[#0B0C0E] w-full min-w-[300px] lg:min-w-[1200px] rounded-l-[40px] p-6 lg:p-10 border-4 border-r-0 border-white shadow-2xl h-[700px] flex items-center">
+          <div className="bg-slate-950 w-full min-w-[300px] lg:min-w-[1200px] rounded-l-[40px] p-6 lg:p-10 border-4 border-r-0 border-white shadow-2xl h-[700px] flex items-center">
             <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-4 w-full h-full max-h-full overflow-hidden">
               {testimonialData.map((testimonial, index) => (
                 <TestimonialCard key={index} {...testimonial} />

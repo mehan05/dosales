@@ -36,12 +36,12 @@ const DiscoverySearchCard = ({ onRunDiscovery, isMobile = false }: { onRunDiscov
     <div className="flex flex-wrap items-center gap-3 mt-auto">
       <button 
         onClick={onRunDiscovery}
-        className="bg-[#0085C9] text-white px-6 py-3 rounded-xl font-bold text-[10px] xs:text-xs flex items-center gap-2 hover:bg-[#0071ad] transition-all shadow-lg shadow-blue-500/20 active:scale-95 whitespace-nowrap"
+        className="bg-primary-blue text-white px-6 py-3 rounded-xl font-bold text-[10px] xs:text-xs flex items-center gap-2 hover:bg-blue-deeper transition-all shadow-lg shadow-blue-500/20 active:scale-95 whitespace-nowrap"
       >
         <HiSparkles className="text-sm" />
         RUN DISCOVERY
       </button>
-      <button className="bg-[#1E293B] text-white px-4 py-3 rounded-xl font-bold text-[10px] xs:text-xs flex items-center gap-2 hover:bg-slate-800 transition-all active:scale-95">
+      <button className="bg-slate-900 text-white px-4 py-3 rounded-xl font-bold text-[10px] xs:text-xs flex items-center gap-2 hover:bg-slate-800 transition-all active:scale-95">
         0 <HiChevronDown />
       </button>
       <button className="bg-white text-slate-600 border border-slate-200 px-6 py-3 rounded-xl font-bold text-[10px] xs:text-xs flex items-center gap-2 hover:bg-slate-50 transition-all active:scale-95 whitespace-nowrap">
@@ -72,7 +72,7 @@ const LeadsCard = ({ onBack, isMobile = false }: { onBack?: () => void, isMobile
             Shown <span className="text-slate-900">25</span> <HiChevronDown />
           </div>
           <div className="flex bg-slate-50 border border-slate-100 rounded-lg p-1">
-            <button className="p-1.5 bg-[#0085C9] text-white rounded-md shadow-sm">
+            <button className="p-1.5 bg-primary-blue text-white rounded-md shadow-sm">
               <HiCreditCard className="text-sm" />
             </button>
             <button className="p-1.5 text-slate-400">
@@ -105,7 +105,7 @@ const LeadsCard = ({ onBack, isMobile = false }: { onBack?: () => void, isMobile
                   <p className="text-[10px] text-slate-400">{lead.size}</p>
                 </td>
                 <td className="py-4 text-center">
-                  <span className="inline-block px-3 py-1 bg-blue-50 text-[#0085C9] rounded-full text-[10px] font-black tracking-wider uppercase">
+                  <span className="inline-block px-3 py-1 bg-blue-50 text-primary-blue rounded-full text-[10px] font-black tracking-wider uppercase">
                     {lead.tier}
                   </span>
                 </td>
@@ -183,13 +183,13 @@ const DiscoverySection = () => {
 
         {/* Right Side: Content */}
         <div className="flex flex-col items-start lg:col-span-4 max-w-2xl lg:max-w-none">
-          <div className="px-5 py-2 xs:px-6 xs:py-2 bg-gradient-to-r from-[#D6EFFF] to-[#F5FBFF] text-[#006699] text-sm xs:text-md font-medium rounded-full border-2 border-white shadow-[0_0_15px_rgba(0,102,153,0.1)] mb-8 xs:mb-10 whitespace-nowrap">
+          <div className="px-5 py-2 xs:px-6 xs:py-2 bg-gradient-to-r from-blue-highlight to-bg-light-blue text-blue-deep text-sm xs:text-md font-medium rounded-full border-2 border-white shadow-[0_0_15px_var(--color-blue-shadow)] mb-8 xs:mb-10 whitespace-nowrap">
             AI Outbound Agent
           </div>
           <h2 className="text-3xl xs:text-5xl lg:text-6xl font-semibold text-slate-900 mb-4 xs:mb-6 leading-[1.1] tracking-tight">
             From Ideal Prospects to Booked Meetings <span className='text-md'>—</span> Automatically
           </h2>
-          <p className="text-base xs:text-lg text-[#4A5565] font-light leading-relaxed">
+          <p className="text-base xs:text-lg text-slate-dark font-light leading-relaxed">
             From ICP targeting to follow-ups, DoSales handles the entire outbound process. So your team spends time closing, not chasing.
           </p>
         </div>
