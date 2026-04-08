@@ -42,17 +42,17 @@ const Hero = () => {
           </div>
 
           {/* Lead Capture Form */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto mb-4 bg-white p-1.5 rounded-xl shadow-lg border border-gray-100">
+          <div className="flex items-center justify-between max-w-[420px] mx-auto mb-4 bg-white p-1.5 rounded-2xl shadow-lg border border-gray-100">
             <input
               type="email"
               placeholder="praveen@calibraint.com"
-              className="flex-1 px-4 py-3 outline-none text-slate-input w-full"
+              className="flex-1 px-4 py-2.5 outline-none text-slate-input w-full text-sm sm:text-base bg-transparent"
             />
-            <button className="bg-primary-blue text-white px-4 py-3 rounded-xl text-sm hover:bg-blue-dark transition-colors whitespace-nowrap">
+            <button className="bg-primary-blue text-white px-5 py-2.5 rounded-[14px] text-xs sm:text-sm font-bold hover:bg-blue-dark transition-colors whitespace-nowrap shadow-sm">
               REGISTER NOW
             </button>
           </div>
-          <p className="text-s text-slate-dark mb-12">Get Free Early Access</p>
+          <p className="text-s text-slate-dark mb-12 italic">Get Free Early Access</p>
           <div className="relative z-10">
             <LeadsImage />
           </div>

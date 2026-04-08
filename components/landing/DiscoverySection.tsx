@@ -105,37 +105,37 @@ const LeadsCard = ({ onBack, isMobile = false }: { onBack?: () => void, isMobile
         </div>
       </div>
 
-      <div className="flex-1 overflow-x-auto">
+      <div className="flex-1 overflow-x-auto border border-slate-100 rounded-3xl overflow-hidden shadow-sm">
         <table className="w-full min-w-[500px] xs:min-w-0">
-          <thead>
+          <thead className="bg-slate-50/50">
             <tr className="border-b border-slate-100">
-              <th className="text-left py-3 text-[10px] font-bold text-slate-400 uppercase tracking-widest">Name / Title</th>
-              <th className="text-left py-3 text-[10px] font-bold text-slate-400 uppercase tracking-widest">Company</th>
-              <th className="text-left py-3 text-[10px] font-bold text-slate-400 uppercase tracking-widest text-center">Tier</th>
-              <th className="text-left py-3 text-[10px] font-bold text-slate-400 uppercase tracking-widest text-center">Score</th>
-              <th className="py-3"></th>
+              <th className="text-left py-4 px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">Name / Title</th>
+              <th className="text-left py-4 px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">Company</th>
+              <th className="text-left py-4 px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest text-center">Tier</th>
+              <th className="text-left py-4 px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest text-center">Score</th>
+              <th className="py-4 px-4"></th>
             </tr>
           </thead>
           <tbody className="divide-y divide-slate-50">
             {leads.map((lead, idx) => (
               <tr key={idx} className="group hover:bg-slate-50/50 transition-colors">
-                <td className="py-4">
+                <td className="py-4 px-4">
                   <p className="text-sm font-bold text-slate-800 whitespace-nowrap">{lead.name}</p>
                   <p className="text-[10px] text-slate-400">{lead.title}</p>
                 </td>
-                <td className="py-4">
+                <td className="py-4 px-4">
                   <p className="text-sm font-bold text-slate-800 whitespace-nowrap">{lead.company}</p>
                   <p className="text-[10px] text-slate-400">{lead.size}</p>
                 </td>
-                <td className="py-4 text-center">
+                <td className="py-4 px-4 text-center">
                   <span className="inline-block px-3 py-1 bg-blue-50 text-primary-blue rounded-full text-[10px] font-black tracking-wider uppercase">
                     {lead.tier}
                   </span>
                 </td>
-                <td className="py-4 text-center">
+                <td className="py-4 px-4 text-center">
                   <span className="text-sm font-black text-emerald-500">{lead.score}</span>
                 </td>
-                <td className="py-4 text-right">
+                <td className="py-4 px-4 text-right">
                   <HiArrowRight className="inline-block text-slate-300 group-hover:text-slate-400 transition-colors cursor-pointer" />
                 </td>
               </tr>

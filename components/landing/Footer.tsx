@@ -108,13 +108,13 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-20 pt-12 border-t border-border-footer flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="mt-20 pt-12 border-t border-border-footer flex flex-col xs:flex-row justify-between items-start xs:items-center gap-6">
           <p className="text-slate-light text-sm">
             © 2026 — Copyright. All Rights reserved
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3 sm:gap-8">
+          <div className="grid grid-cols-2 xs:flex xs:flex-wrap items-center gap-x-6 gap-y-4 xs:gap-8 w-full xs:w-auto">
             <a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-sm font-medium">Privacy policy</a>
-            <a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-sm font-medium">Terms of service</a>
+            <a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-sm font-medium text-right xs:text-left">Terms of service</a>
             <a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-sm font-medium">Cookie Settings</a>
           </div>
         </div>

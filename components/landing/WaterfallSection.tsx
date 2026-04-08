@@ -11,10 +11,12 @@ const WaterfallSection = () => {
       <div className="relative w-full max-w-5xl mx-auto mb-12">
         <div
           className="relative w-full overflow-hidden"
-          style={{ 
+          style={{
             aspectRatio: "2 / 1",
-            WebkitMaskImage: "radial-gradient(ellipse at bottom, black 40%, transparent 80%)",
-            maskImage: "radial-gradient(ellipse at bottom, black 40%, transparent 80%)"
+            WebkitMaskImage:
+              "radial-gradient(ellipse at bottom, black 40%, transparent 80%)",
+            maskImage:
+              "radial-gradient(ellipse at bottom, black 40%, transparent 80%)",
           }}
         >
           <style>{`
@@ -26,13 +28,14 @@ const WaterfallSection = () => {
               animation: rotate-radar 10s linear infinite;
             }
           `}</style>
-          
+
           {/* Radar Sweep Line (180-degree semicircle sweep) */}
-          <div 
+          <div
             className="animate-radar-rotate absolute top-full left-1/2 w-[200%] aspect-square pointer-events-none z-20"
             style={{
-              background: "conic-gradient(from -30deg at 50% 50%, transparent 0deg, rgba(59, 130, 246, 0.1) 10deg, rgba(59, 130, 246, 0.6) 25deg, rgba(59, 130, 246, 1) 30deg, transparent 30.1deg)",
-              mixBlendMode: "plus-lighter"
+              background:
+                "conic-gradient(from -30deg at 50% 50%, transparent 0deg, rgba(59, 130, 246, 0.1) 10deg, rgba(59, 130, 246, 0.6) 25deg, rgba(59, 130, 246, 1) 30deg, transparent 30.1deg)",
+              mixBlendMode: "plus-lighter",
             }}
           />
 
@@ -73,7 +76,13 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<img src="/assets/svg/radar/status.svg" alt="Status" className="w-full h-full" />}
+              icon={
+                <img
+                  src="/assets/svg/radar/status.svg"
+                  alt="Status"
+                  className="w-full h-full"
+                />
+              }
               delay={0.1}
               noContainer={true}
               showSparkle={true}
@@ -92,7 +101,13 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<img src="/assets/svg/radar/mail.svg" alt="Mail" className="w-full h-full" />}
+              icon={
+                <img
+                  src="/assets/svg/radar/mail.svg"
+                  alt="Mail"
+                  className="w-full h-full"
+                />
+              }
               delay={0.2}
               noContainer={true}
               showSparkle={true}
@@ -111,7 +126,13 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<img src="/assets/svg/radar/globe.svg" alt="Globe" className="w-full h-full" />}
+              icon={
+                <img
+                  src="/assets/svg/radar/globe.svg"
+                  alt="Globe"
+                  className="w-full h-full"
+                />
+              }
               delay={0.3}
               noContainer={true}
               showSparkle={true}
@@ -130,7 +151,13 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<img src="/assets/svg/radar/library.svg" alt="Library" className="w-full h-full" />}
+              icon={
+                <img
+                  src="/assets/svg/radar/library.svg"
+                  alt="Library"
+                  className="w-full h-full"
+                />
+              }
               delay={0.4}
               noContainer={true}
               showSparkle={true}
@@ -149,7 +176,13 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<img src="/assets/svg/radar/desktop.svg" alt="Desktop" className="w-full h-full" />}
+              icon={
+                <img
+                  src="/assets/svg/radar/desktop.svg"
+                  alt="Desktop"
+                  className="w-full h-full"
+                />
+              }
               delay={0.5}
               noContainer={true}
               showSparkle={true}
@@ -168,7 +201,13 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<img src="/assets/svg/radar/people.svg" alt="People" className="w-full h-full" />}
+              icon={
+                <img
+                  src="/assets/svg/radar/people.svg"
+                  alt="People"
+                  className="w-full h-full"
+                />
+              }
               delay={0.6}
               noContainer={true}
               showSparkle={true}
@@ -187,7 +226,13 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<img src="/assets/svg/radar/database.svg" alt="Database" className="w-full h-full" />}
+              icon={
+                <img
+                  src="/assets/svg/radar/database.svg"
+                  alt="Database"
+                  className="w-full h-full"
+                />
+              }
               delay={0.7}
               noContainer={true}
               showSparkle={true}
@@ -206,7 +251,13 @@ const WaterfallSection = () => {
             }}
           >
             <IconContainer
-              icon={<img src="/assets/svg/radar/building.svg" alt="Building" className="w-full h-full" />}
+              icon={
+                <img
+                  src="/assets/svg/radar/building.svg"
+                  alt="Building"
+                  className="w-full h-full"
+                />
+              }
               delay={0.8}
               noContainer={true}
               showSparkle={true}
@@ -228,10 +279,10 @@ const WaterfallSection = () => {
 
       {/* Content Section */}
       <div className="relative z-10 flex flex-col items-center text-center max-w-4xl mt-24">
-        <div className="px-6 py-2 bg-[linear-gradient(90deg,var(--color-blue-translucent)_0%,var(--color-indigo-translucent)_100%)] text-bg-pale text-xs font-bold rounded-full border border-blue-500/30 mb-8 uppercase tracking-[0.2em] backdrop-blur-sm">
+        <div className="px-10 py-3.5 bg-linear-to-r from-[#0D4763] to-[#060C12] text-white text-[28px] font-semibold rounded-full border border-[#1E3A4C] mb-10 shadow-2xl tracking-wide">
           Waterfall Enrichment
         </div>
-        <h2 className="text-4xl lg:text-6xl bg-gradient-to-r from-pure-white to-white-muted bg-clip-text text-transparent  mb-4 tracking-tight leading-tight">
+        <h2 className="text-4xl lg:text-6xl bg-gradient-to-r from-pure-white to-white-muted bg-clip-text text-transparent mb-4 tracking-tight leading-tight">
           Chains 10+ data providers, 85% match rates
         </h2>
         <p className="text-slate-muted text-md lg:text-md leading-relaxed max-w-2xl font-thin">
