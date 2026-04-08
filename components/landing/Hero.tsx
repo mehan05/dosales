@@ -22,7 +22,7 @@ const Hero = () => {
           </h1>
 
           {/* Sub-heading */}
-          <h2 className="text-[32px] md:text-4xl font-medium text-text-main max-w-4xl mx-auto mb-6 leading-[1.1] md:leading-relaxed">
+          <h2 className="text-[32px] md:text-4xl font-medium text-text-main max-w-4xl mx-auto mb-6 leading-[1.5] md:leading-relaxed">
             Turn your Ideal Customer Profile into a <br className="hidden md:block" />
             Qualified pipeline with{" "}
             <span className="text-text-main font-extrabold">Automated Outreach</span>
