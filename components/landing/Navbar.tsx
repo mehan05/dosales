@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import React, { useState } from 'react';
-import { IoClose, IoChevronDown } from 'react-icons/io5';
+import { IoCloseOutline, IoChevronDown } from 'react-icons/io5';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
@@ -48,7 +48,7 @@ const Navbar = () => {
 
             <button onClick={toggleMenu} className="md:hidden relative z-50 p-1 cursor-pointer">
                 {isOpen ? (
-                    <IoClose size={32} className="text-text-main" />
+                    <IoCloseOutline size={32} />
                 ) : (
                     <Image
                         src="/assets/svg/hamburgerIcon.svg"
@@ -68,15 +68,15 @@ const Navbar = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.2, ease: "easeOut" }}
-                        className="absolute top-full left-0 right-0 z-110 bg-white shadow-2xl flex flex-col md:hidden border-t border-gray-100"
+                        className="absolute top-18 left-0 right-0 z-110 bg-white shadow-2xl flex flex-col md:hidden border-t border-gray-100"
                     >
                         {/* Menu Items */}
-                        <div className="flex-1 flex flex-col px-8 py-8 gap-8">
+                        <div className="flex-1 flex flex-col px-8 py-6 gap-8">
                             {navLinks.map((link) => (
                                 <div key={link.name} className="flex items-center justify-between w-full">
                                     <a 
                                         href={link.href}
-                                        className="text-[16px]  text-text-main tracking-wide"
+                                        className="text-[16px] font-medium text-text-main tracking-wide"
                                         onClick={() => setIsOpen(false)}
                                     >
                                         {link.name}

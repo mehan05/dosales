@@ -153,11 +153,11 @@ export const IconContainer = ({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.95 }}
             transition={{ duration: 0.15, ease: "easeOut" }}
-            className="absolute bottom-full mb-6 left-1/2 -translate-x-1/2 w-56 p-4 rounded-2xl bg-[#0B1219]/95 backdrop-blur-md border border-slate-800 shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-100 pointer-events-none"
+            className="absolute bottom-full mb-6 left-1/2 -translate-x-1/2 w-64 p-5 rounded-[1.25rem] bg-[#0B1219] border border-slate-700 shadow-[0_25px_60px_rgba(0,0,0,0.8)] z-100 pointer-events-none"
           >
             <div className="relative z-10">
-              <h4 className="text-white text-[15px] font-bold mb-1.5 tracking-tight">{popupTitle}</h4>
-              <p className="text-slate-400 text-[13px] leading-snug font-medium">{popupDescription}</p>
+              <h4 className="text-white text-[16px] font-bold mb-1.5 tracking-tight">{popupTitle}</h4>
+              <p className="text-white/90 text-[14px] leading-relaxed font-medium">{popupDescription}</p>
             </div>
             {/* Small arrow/tail for the popup */}
             <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-[#0B1219] border-r border-b border-slate-800 rotate-45"></div>

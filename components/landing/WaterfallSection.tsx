@@ -20,82 +20,96 @@ const WaterfallSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,var(--color-blue-shadow),transparent_70%)] pointer-events-none"></div>
 
       <div className="relative w-full max-w-5xl mx-auto">
-        <div
-          className="relative w-full overflow-hidden"
-          style={{
-            aspectRatio: "2 / 1",
-            WebkitMaskImage:
-              "radial-gradient(ellipse at bottom, black 40%, transparent 80%)",
-            maskImage:
-              "radial-gradient(ellipse at bottom, black 40%, transparent 80%)",
-          }}
-        >
-          <style>{`
-            @keyframes rotate-radar {
-              from { transform: translate(-50%, -50%) rotate(-90deg); }
-              to { transform: translate(-50%, -50%) rotate(90deg); }
-            }
-            .animate-radar-rotate {
-              animation: rotate-radar 10s linear infinite;
-            }
-          `}</style>
-
-          {/* Radar Sweep Line (180-degree semicircle sweep) */}
-          <div
-            className="animate-radar-rotate absolute top-full left-1/2 w-[200%] aspect-square pointer-events-none z-20"
+        <div className="relative w-full overflow-hidden" style={{ aspectRatio: "2 / 1" }}>
+          
+          {/* Masked Background Layer */}
+          <div 
+            className="absolute inset-0 pointer-events-none"
             style={{
-              background:
-                "conic-gradient(from -1deg at 50% 50%, transparent 0deg, rgba(59, 130, 246, 0.4) 1deg, transparent 1.2deg)",
+              WebkitMaskImage: "radial-gradient(ellipse at bottom, black 40%, transparent 80%)",
+              maskImage: "radial-gradient(ellipse at bottom, black 40%, transparent 80%)",
             }}
-          />
+          >
+            <style>{`
+              @keyframes rotate-radar {
+                from { transform: translate(-50%, -50%) rotate(-90deg); }
+                to { transform: translate(-50%, -50%) rotate(90deg); }
+              }
+              .animate-radar-rotate {
+                animation: rotate-radar 10s linear infinite;
+              }
+            `}</style>
 
-          {/* Radar Background – full SVG circle clipped to top semicircle */}
-          <img
-            src="/assets/svg/radarbg.svg"
-            alt="Radar Background"
-            className="hidden xs:block absolute w-full top-0 left-0 pointer-events-none z-0"
-            style={{ height: "200%" }}
-          />
-          <img
-            src="/assets/svg/radarbgMobile.svg"
-            alt="Radar Background Mobile"
-            className="block xs:hidden absolute w-full top-0 left-0 pointer-events-none z-0"
-            style={{ height: "200%" }}
-          />
+            {/* Radar Sweep Line (180-degree semicircle sweep) */}
+            <div
+              className="animate-radar-rotate absolute top-full left-1/2 w-[200%] aspect-square z-20"
+              style={{
+                background:
+                  "conic-gradient(from -1deg at 50% 50%, transparent 0deg, rgba(59, 130, 246, 0.4) 1deg, transparent 1.2deg)",
+              }}
+            />
+
+            {/* Radar Background – full SVG circle clipped to top semicircle */}
+            <img
+              src="/assets/svg/radarbg.svg"
+              alt="Radar Background"
+              className="hidden xs:block absolute w-full top-0 left-0 z-0"
+              style={{ height: "200%" }}
+            />
+            <img
+              src="/assets/svg/radarbgMobile.svg"
+              alt="Radar Background Mobile"
+              className="block xs:hidden absolute w-full top-0 left-0 z-0"
+              style={{ height: "200%" }}
+            />
+          </div>
+
+          {/* Vertical Guide & Intersection Dots */}
+          <div className="absolute left-1/2 bottom-0 w-px h-full border-l border-dashed border-blue-500/20 pointer-events-none z-5" style={{ transform: "translateX(-50%)" }}></div>
+          {[22, 45, 68, 91].map((bottomPct) => (
+            <div
+              key={bottomPct}
+              className="absolute left-1/2 w-1.5 h-1.5 rounded-full bg-blue-400/60 shadow-[0_0_8px_white] pointer-events-none z-10"
+              style={{
+                bottom: `${bottomPct}%`,
+                transform: "translate(-50%, 50%)",
+              }}
+            />
+          ))}
 
 
 
-          {/* Antenna */}
+          {/* Signal (Antenna) - Arc 4 */}
           <div
             className="absolute z-10"
             style={{
-              left: "50%",
-              bottom: "88%",
+              left: "44%",
+              bottom: "92%",
               transform: "translate(-50%, 50%)",
             }}
           >
             <IconContainer
               icon={
                 <img
-                  src="/assets/svg/radar/status.svg"
-                  alt="Status"
+                  src="/assets/svg/radar/network.svg"
+                  alt="Signal"
                   className="w-full h-full"
                 />
               }
               delay={0.1}
               noContainer={true}
               showSparkle={true}
-              sparkleDelay={getSparkleDelay(50, 88)}
+              sparkleDelay={getSparkleDelay(44, 92)}
               sparkleDuration={RADAR_DURATION}
             />
           </div>
 
-          {/* Mail */}
+          {/* Mail (Envelope) - Arc 4 */}
           <div
-            className="absolute z-10"
+            className="absolute z-10 "
             style={{
-              left: "70.6%",
-              bottom: "58.9%",
+              left: "77%",
+              bottom: "60%",
               transform: "translate(-50%, 50%)",
             }}
           >
@@ -110,144 +124,19 @@ const WaterfallSection = () => {
               delay={0.2}
               noContainer={true}
               showSparkle={true}
-              sparkleDelay={getSparkleDelay(70.6, 58.9)}
+              sparkleDelay={getSparkleDelay(77, 70)}
               sparkleDuration={RADAR_DURATION}
               popupTitle="Email Verify"
               popupDescription="Validates email addresses for accuracy and deliverability"
             />
           </div>
 
-          {/* Globe */}
+          {/* Building (Office) - Arc 2 */}
           <div
-            className="absolute z-10"
+            className="absolute z-10 "
             style={{
-              left: "73.1%",
-              bottom: "29.9%",
-              transform: "translate(-50%, 50%)",
-            }}
-          >
-            <IconContainer
-              icon={
-                <img
-                  src="/assets/svg/radar/globe.svg"
-                  alt="Globe"
-                  className="w-full h-full"
-                />
-              }
-              delay={0.3}
-              noContainer={true}
-              showSparkle={true}
-              sparkleDelay={getSparkleDelay(73.1, 29.9)}
-              sparkleDuration={RADAR_DURATION}
-            />
-          </div>
-
-          {/* Library */}
-          <div
-            className="absolute z-10"
-            style={{
-              left: "88%",
-              bottom: "24.7%",
-              transform: "translate(-50%, 50%)",
-            }}
-          >
-            <IconContainer
-              icon={
-                <img
-                  src="/assets/svg/radar/library.svg"
-                  alt="Library"
-                  className="w-full h-full"
-                />
-              }
-              delay={0.4}
-              noContainer={true}
-              showSparkle={true}
-              sparkleDelay={getSparkleDelay(88, 24.7)}
-              sparkleDuration={RADAR_DURATION}
-            />
-          </div>
-
-          {/* Desktop */}
-          <div
-            className="absolute z-10"
-            style={{
-              left: "50%",
-              bottom: "36%",
-              transform: "translate(-50%, 50%)",
-            }}
-          >
-            <IconContainer
-              icon={
-                <img
-                  src="/assets/svg/radar/desktop.svg"
-                  alt="Desktop"
-                  className="w-full h-full"
-                />
-              }
-              delay={0.5}
-              noContainer={true}
-              showSparkle={true}
-              sparkleDelay={getSparkleDelay(50, 36)}
-              sparkleDuration={RADAR_DURATION}
-            />
-          </div>
-
-          {/* People */}
-          <div
-            className="absolute z-10"
-            style={{
-              left: "30.7%",
-              bottom: "45.9%",
-              transform: "translate(-50%, 50%)",
-            }}
-          >
-            <IconContainer
-              icon={
-                <img
-                  src="/assets/svg/radar/people.svg"
-                  alt="People"
-                  className="w-full h-full"
-                />
-              }
-              delay={0.6}
-              noContainer={true}
-              showSparkle={true}
-              sparkleDelay={getSparkleDelay(30.7, 45.9)}
-              sparkleDuration={RADAR_DURATION}
-            />
-          </div>
-
-          {/* Database */}
-          <div
-            className="absolute z-10"
-            style={{
-              left: "16.6%",
-              bottom: "34.1%",
-              transform: "translate(-50%, 50%)",
-            }}
-          >
-            <IconContainer
-              icon={
-                <img
-                  src="/assets/svg/radar/database.svg"
-                  alt="Database"
-                  className="w-full h-full"
-                />
-              }
-              delay={0.7}
-              noContainer={true}
-              showSparkle={true}
-              sparkleDelay={getSparkleDelay(16.6, 34.1)}
-              sparkleDuration={RADAR_DURATION}
-            />
-          </div>
-
-          {/* Building */}
-          <div
-            className="absolute z-10"
-            style={{
-              left: "28.5%",
-              bottom: "9.1%",
+              left: "32%",
+              bottom: "22%",
               transform: "translate(-50%, 50%)",
             }}
           >
@@ -259,10 +148,136 @@ const WaterfallSection = () => {
                   className="w-full h-full"
                 />
               }
+              delay={0.3}
+              noContainer={true}
+              showSparkle={true}
+              sparkleDelay={getSparkleDelay(32, 22)}
+              sparkleDuration={RADAR_DURATION}
+            />
+          </div>
+
+          {/* Bank (Library) - Arc 3 */}
+          <div
+            className="absolute z-10 "
+            style={{
+              left: "81%",
+              bottom: "32%",
+              transform: "translate(-50%, 50%)",
+            }}
+          >
+            <IconContainer
+              icon={
+                <img
+                  src="/assets/svg/radar/house.svg"
+                  alt="Bank"
+                  className="w-full h-full"
+                />
+              }
+              delay={0.4}
+              noContainer={true}
+              showSparkle={true}
+              sparkleDelay={getSparkleDelay(81, 32)}
+              sparkleDuration={RADAR_DURATION}
+            />
+          </div>
+
+          {/* Monitor (Shield) - Arc 2 */}
+          <div
+            className="absolute z-10"
+            style={{
+              left: "49%",
+              bottom: "40%",
+              transform: "translate(-50%, 50%)",
+            }}
+          >
+            <IconContainer
+              icon={
+                <img
+                  src="/assets/svg/radar/display.svg"
+                  alt="Monitor"
+                  className="w-full h-full"
+                />
+              }
+              delay={0.5}
+              noContainer={true}
+              showSparkle={true}
+              sparkleDelay={getSparkleDelay(49, 40)}
+              sparkleDuration={RADAR_DURATION}
+            />
+          </div>
+
+          {/* People (Group) - Arc 3 */}
+          <div
+            className="absolute z-10"
+            style={{
+              left: "26%",
+              bottom: "54%",
+              transform: "translate(-50%, 50%)",
+              
+            }}
+          >
+            <IconContainer
+              icon={
+                <img
+                  src="/assets/svg/radar/people.svg"
+                  alt="People"
+                  className="w-full h-full "
+                />
+              }
+              delay={0.6}
+              noContainer={true}
+              showSparkle={true}
+              sparkleDelay={getSparkleDelay(26, 54)}
+              sparkleDuration={RADAR_DURATION}
+            />
+          </div>
+
+          {/* Database (Cylinder) - Arc 4 */}
+          <div
+            className="absolute z-10 border-2 border-b-cyan-400-500 "
+            style={{
+              left: "8%",
+              bottom: "28%",
+              transform: "translate(-50%, 50%)",
+            }}
+          >
+            <IconContainer
+              icon={
+                <img
+                  src="/assets/svg/radar/database.svg"
+                  alt="Database"
+                  className="w-full h-full "
+                />
+              }
+              delay={0.7}
+              noContainer={true}
+              showSparkle={true}
+              sparkleDelay={getSparkleDelay(8, 28)}
+              sparkleDuration={RADAR_DURATION}
+            />
+          </div>
+
+          {/* Globe (World) - Arc 2 */}
+          <div
+            className="absolute z-10 "
+            style={{
+              left: "67%",
+              bottom: "42%",
+              transform: "translate(-50%, 50%)",
+            }}
+          >
+            <IconContainer
+              icon={
+                <img
+                  src="/assets/svg/radar/globe.svg"
+                  alt="Globe"
+                  className="w-full h-full"
+                />
+              }
               delay={0.8}
               noContainer={true}
               showSparkle={true}
-              sparkleDelay={getSparkleDelay(28.5, 9.1)}
+              sparkleDelay={getSparkleDelay(67, 42)}
               sparkleDuration={RADAR_DURATION}
             />
           </div>
