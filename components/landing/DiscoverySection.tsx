@@ -313,21 +313,8 @@ const DiscoverySection = () => {
       ref={sectionRef}
       className="py-12 xs:py-24 bg-white overflow-hidden"
     >
-      <div className="max-w-[1700px] mx-auto px-4 xs:px-6 grid grid-cols-1 lg:grid-cols-12 items-center gap-12 lg:gap-16">
-        {/* left Side: Content */}
-        <div className="flex flex-col items-start lg:col-span-4 max-w-2xl lg:max-w-none">
-          <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-10">
-            AI Outbound Agent
-          </div>
-          <h2 className="text-[36px] xs:text-[36px] lg:text-[36px] font-semibold text-slate-900 mb-4 xs:mb-6 leading-[1.1] tracking-tight">
-            From Ideal Prospects to Booked Meetings{" "}
-            <span className="text-md">—</span> Automatically
-          </h2>
-          <p className="text-base xs:text-lg text-slate-dark font-light leading-relaxed">
-            From ICP targeting to follow-ups, DoSales handles the entire
-            outbound process. So your team spends time closing, not chasing.
-          </p>
-        </div>
+      <div className="max-w-[1600px] mx-auto px-4 xs:px-10 grid grid-cols-1 lg:grid-cols-12 items-start gap-12 lg:gap-16">
+        
 
         {/* right Side: Card UI */}
         <div className="relative lg:col-span-8 w-full">
@@ -376,6 +363,21 @@ const DiscoverySection = () => {
               </AnimatePresence>
             </div>
           </div>
+        </div>
+
+
+        {/* left Side: Content */}
+        <div className="flex flex-col items-start lg:col-span-4 max-w-2xl lg:max-w-none">
+          <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-10">
+            AI Outbound Agent
+          </div>
+          <h2 className="lg:text-[52px] text-[36px] lg:leading-[1.5] font-semibold text-slate-900 mb-4 xs:mb-6  tracking-tight">
+            From Ideal Prospects to Booked Meetings - Automatically{" "}
+          </h2>
+          <p className="text-base xs:text-[16px]  text-slate-dark font-light ">
+            From ICP targeting to follow-ups, DoSales handles the entire
+            outbound process. So your team spends time closing, not chasing.
+          </p>
         </div>
       </div>
     </section>

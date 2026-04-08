@@ -45,8 +45,7 @@ const WaterfallSection = () => {
             className="animate-radar-rotate absolute top-full left-1/2 w-[200%] aspect-square pointer-events-none z-20"
             style={{
               background:
-                "conic-gradient(from -1deg at 50% 50%, transparent 0deg, rgba(59, 130, 246, 1) 1deg, transparent 1.2deg)",
-              mixBlendMode: "plus-lighter",
+                "conic-gradient(from -1deg at 50% 50%, transparent 0deg, rgba(59, 130, 246, 0.4) 1deg, transparent 1.2deg)",
             }}
           />
 

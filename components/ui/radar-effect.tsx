@@ -40,7 +40,7 @@ export const Radar = ({ className }: { className?: string }) => {
         style={{ transformOrigin: "right center" }}
         className="animate-radar-spin absolute right-1/2 top-1/2 z-40 flex h-1.25 w-100 items-end justify-center overflow-hidden"
       >
-   <div className="relative z-40 h-px w-full bg-linear-to-r from-transparent via-sky-500/50 to-transparent scale-y-50" />      </div>
+   <div className="relative z-40 h-px w-full bg-linear-to-r from-transparent via-sky-500/20 to-transparent scale-y-50" />      </div>
       {/* Radar Background SVG */}
       <img
         src="/assets/svg/radarbg.svg"

@@ -75,8 +75,8 @@ const WhyDoSales = () => {
         </div>
 
         {/* Features Illustration Recreated in JSX */}
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="relative w-full rounded-[40px] overflow-hidden border border-primary-blue/10 bg-white/50 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4">from-blue-ghost
+          <div className="relative w-full rounded-[40px] overflow-hidden border border-primary-blue/10 bg-blue-ghost backdrop-blur-sm">
             {/* Card Accent Borders & Dividers handled within sections */}
 
             {/* Extended Vertical divider - Spans entire container */}
