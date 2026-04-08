@@ -8,7 +8,7 @@ const WaterfallSection = () => {
       {/* Background radial glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,var(--color-blue-shadow),transparent_70%)] pointer-events-none"></div>
 
-      <div className="relative w-full max-w-5xl mx-auto mb-12">
+      <div className="relative w-full max-w-5xl mx-auto">
         <div
           className="relative w-full overflow-hidden"
           style={{
@@ -34,7 +34,7 @@ const WaterfallSection = () => {
             className="animate-radar-rotate absolute top-full left-1/2 w-[200%] aspect-square pointer-events-none z-20"
             style={{
               background:
-                "conic-gradient(from -30deg at 50% 50%, transparent 0deg, rgba(59, 130, 246, 0.1) 10deg, rgba(59, 130, 246, 0.6) 25deg, rgba(59, 130, 246, 1) 30deg, transparent 30.1deg)",
+                "conic-gradient(from -1deg at 50% 50%, transparent 0deg, rgba(59, 130, 246, 1) 1deg, transparent 1.2deg)",
               mixBlendMode: "plus-lighter",
             }}
           />
@@ -53,18 +53,7 @@ const WaterfallSection = () => {
             style={{ height: "200%" }}
           />
 
-          {/*
-            Icons – perfectly synchronized with 180-degree clockwise sweep (10s period)
-            Range: Left (-90°) to Right (+90°). Total = 180°.
-            Exact Delays (CSS clockwise from Left):
-            Building (-67.1°)  = ( (-67.1 - (-90)) / 180 ) * 10 = 1.272s
-            Database (-45.6°)  = ( (-45.6 + 90) / 180 ) * 10 = 2.467s
-            People (-22.8°)    = ( (-22.8 + 90) / 180 ) * 10 = 3.733s
-            Antenna (0°)       = ( (0 + 90) / 180 ) * 10 = 5.0s
-            Mail (+19.3°)      = ( (19.3 + 90) / 180 ) * 10 = 6.072s
-            Globe (+37.7°)     = ( (37.7 + 90) / 180 ) * 10 = 7.094s
-            Library (+57.0°)   = ( (57.0 + 90) / 180 ) * 10 = 8.167s
-          */}
+
 
           {/* Antenna */}
           <div
@@ -86,7 +75,7 @@ const WaterfallSection = () => {
               delay={0.1}
               noContainer={true}
               showSparkle={true}
-              sparkleDelay={5.0}
+              sparkleDelay={3}
               sparkleDuration={10}
             />
           </div>
@@ -111,7 +100,7 @@ const WaterfallSection = () => {
               delay={0.2}
               noContainer={true}
               showSparkle={true}
-              sparkleDelay={6.072}
+              sparkleDelay={3}
               sparkleDuration={10}
             />
           </div>
@@ -272,20 +261,19 @@ const WaterfallSection = () => {
           <img
             src="/assets/svg/waterfallSectionLogo.svg"
             alt="DoSales"
-            className="w-16 h-16 md:w-20 md:h-20"
+            className="w-[80px] h-[80px] md:w-20 md:h-20"
           />
         </div>
       </div>
 
-      {/* Content Section */}
-      <div className="relative z-10 flex flex-col items-center text-center max-w-4xl mt-24">
-        <div className="px-10 py-3.5 bg-linear-to-r from-[#0D4763] to-[#060C12] text-white text-[28px] font-semibold rounded-full border border-[#1E3A4C] mb-10 shadow-2xl tracking-wide">
+      <div className="relative z-10 flex flex-col items-center text-center max-w-6xl mt-20">
+        <div className="px-5 py-2 bg-linear-to-r from-[#0D4763] to-[#060C12] max-w-[300px] text-white text-[16px] font-semibold rounded-full border border-[#1E3A4C] mb-10 shadow-2xl tracking-wide">
           Waterfall Enrichment
         </div>
-        <h2 className="text-4xl lg:text-6xl bg-gradient-to-r from-pure-white to-white-muted bg-clip-text text-transparent mb-4 tracking-tight leading-tight">
+        <h2 className="text-[48px] lg:text-6xl bg-gradient-to-r from-pure-white to-white-muted bg-clip-text text-transparent mb-4 tracking-tight leading-tight">
           Chains 10+ data providers, 85% match rates
         </h2>
-        <p className="text-slate-muted text-md lg:text-md leading-relaxed max-w-2xl font-thin">
+        <p className="text-slate-muted text-[16px] lg:text-[16px] leading-relaxed max-w-2xl font-thin">
           We don't rely on a single source. DoSales waterfalls through 10+ data
           providers to verify emails, phones, and company intel across MENA and
           Southeast Asia.

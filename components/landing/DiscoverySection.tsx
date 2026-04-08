@@ -80,6 +80,7 @@ const LeadsCard = ({ onBack, isMobile = false }: { onBack?: () => void, isMobile
     { name: 'David Kim', title: 'CEO', company: 'Axe Infinity', size: '201-500 Emps', tier: 'HOT', score: 94 },
     { name: 'Priya Nair', title: 'CFO', company: 'Axe Infinity', size: '201-500 Emps', tier: 'HOT', score: 89 },
     { name: 'Marcus Oei', title: 'Director of Engineering', company: 'Revolut Ltd.', size: 'Fintech & Digital Finance', tier: 'HOT', score: 86 },
+    { name: 'Priya Nair', title: 'CFO', company: 'Axe Infinity', size: '201-500 Emps', tier: 'HOT', score: 89 },
     { name: 'Zoe Serova', title: 'Head of Technology', company: 'Revolut Ltd.', size: 'Fintech & Digital Finance', tier: 'HOT', score: 74 },
   ];
 
@@ -225,7 +226,7 @@ const DiscoverySection = () => {
         
         {/* Left Side: Card UI */}
         <div className="relative lg:col-span-8 w-full">
-          <div className="relative rounded-[32px] xs:rounded-[40px] p-1.5 xs:p-5 bg-dashboard-outline/30 shadow-2xl transition-all border-4 xs:border-8 border-white w-full">
+          <div className="relative rounded-[32px] xs:rounded-[40px] p-1.5 xs:p-5 bg-dashboard-outline/30  transition-all border-4 xs:border-8 border-white w-full">
             <div className="bg-white rounded-[28px] xs:rounded-[32px] p-6 xs:p-8 border border-blue-50/50 min-h-[460px] xs:min-h-[500px] flex flex-col w-full overflow-hidden">
               <AnimatePresence mode="wait" initial={false}>
                 {!showLeads ? (
@@ -271,7 +272,7 @@ const DiscoverySection = () => {
 
         {/* Right Side: Content */}
         <div className="flex flex-col items-start lg:col-span-4 max-w-2xl lg:max-w-none">
-          <div className="px-5 py-2 xs:px-6 xs:py-2 bg-gradient-to-r from-blue-highlight to-bg-light-blue text-blue-deep text-sm xs:text-md font-medium rounded-full border-2 border-white shadow-[0_0_15px_var(--color-blue-shadow)] mb-8 xs:mb-10 whitespace-nowrap">
+          <div className="px-5 py-2 xs:px-6 xs:py-2 bg-gradient-to-r from-blue-highlight to-bg-light-blue text-blue-deep text-sm xs:text-md font-medium rounded-full border-2 border-white mb-8 xs:mb-10 whitespace-nowrap">
             AI Outbound Agent
           </div>
           <h2 className="text-3xl xs:text-5xl lg:text-6xl font-semibold text-slate-900 mb-4 xs:mb-6 leading-[1.1] tracking-tight">

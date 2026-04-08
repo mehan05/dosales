@@ -31,7 +31,7 @@ const PlatformSection = () => {
   };
 
   return (
-    <section className="relative pt-16 pb-3 xs:pb-32 xs:pt-32 sm:pb-10  bg-linear-to-b from-white to-blue-50/40 overflow-hidden font-sans">
+    <section className="relative pt-16 pb-12 xs:pb-32 xs:pt-32 sm:pb-24 bg-linear-to-b from-white via-blue-50/40 to-white overflow-hidden font-sans">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto relative">
@@ -41,13 +41,13 @@ const PlatformSection = () => {
           </div>
 
           {/* Headline */}
-          <h1 className="text-4xl font-semibold text-text-main leading-[1.1] mb-8 tracking-tight">
+          <h1 className="text-[52px] font-semibold text-text-main leading-[1.1] mb-8 tracking-tight">
             An Automated Funnel that turns your ICP to Booked Meetings in 3
             steps
           </h1>
 
           {/* Subheadline */}
-          <p className="text-md text-slate-dark font-medium max-w-2xl mb-12 leading-relaxed">
+          <p className="text-[16px] text-slate-dark font-medium max-w-md mb-8 leading-relaxed">
             Define your ICP and DoSales AI handles discovery, outreach, and
             qualification automatically.
           </p>
@@ -60,7 +60,7 @@ const PlatformSection = () => {
       </div>
 
       {/* Two-Column Section */}
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 mt-12 xs:mt-32 items-center">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 mt-12 xs:mt-20 items-center">
         {/* Left Column: Funnel */}
         <div className="flex flex-col items-center">
           <Funnel activeStep={activeStep} onStepClick={handleStepClick} />
