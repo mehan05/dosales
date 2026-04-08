@@ -7,7 +7,7 @@ import { FaLinkedin, FaInstagram, FaXTwitter } from 'react-icons/fa6';
 const Footer = () => {
   return (
     <footer className="py-20 px-6">
-      <div className="max-w-425 mx-auto bg-[#F2F9FD] rounded-[48px] p-12 md:p-20">
+      <div className="max-w-425 mx-auto bg-[#F2F9FD] rounded-[48px] p-6 sm:p-12 md:p-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           
           {/* Logo & Description */}
@@ -54,9 +54,9 @@ const Footer = () => {
           {/* CTA & Socials */}
           <div className="space-y-10">
             {/* Early Access Card */}
-            <div className="bg-white rounded-[32px] p-5 flex items-center gap-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer group w-full lg:w-[380px]">
-              <div className="w-[84px] h-[84px] bg-text-main rounded-[24px] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                <div className="relative w-12 h-12 invert brightness-0">
+            <div className="bg-white rounded-[32px] p-4 sm:p-5 flex items-center gap-4 sm:gap-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer group w-full lg:w-[380px]">
+              <div className="w-[64px] h-[64px] sm:w-[84px] sm:h-[84px] bg-text-main rounded-[24px] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                <div className="relative w-8 h-8 sm:w-12 sm:h-12 invert brightness-0">
                   <Image 
                     src="/assets/doSalesLogo.svg" 
                     alt="Logo" 
@@ -65,22 +65,22 @@ const Footer = () => {
                   />
                 </div>
               </div>
-              <span className="text-[26px] font-bold text-text-main leading-[1.1]">
+              <span className="text-xl sm:text-[26px] font-bold text-text-main leading-[1.1]">
                 Apply for early<br/>access
               </span>
             </div>
 
             {/* Social Links */}
-            <div className="bg-white rounded-[24px] px-8 py-5 flex gap-2  items-center justify-between w-full lg:w-[380px] shadow-sm">
-              <span className="text-[#667085] text-lg font-medium whitespace-nowrap">Follow us on</span>
-              <div className="flex items-center gap-6">
-                <a href="#" className="text-text-main hover:text-primary-blue transition-colors text-2xl">
+            <div className="bg-white rounded-[24px] px-4 sm:px-8 py-4 sm:py-5 flex gap-2 items-center justify-between w-full lg:w-[380px] shadow-sm">
+              <span className="text-[#667085] text-base sm:text-lg font-medium">Follow us on</span>
+              <div className="flex items-center gap-3 sm:gap-6">
+                <a href="#" className="text-text-main hover:text-primary-blue transition-colors text-xl sm:text-2xl">
                   <FaLinkedin />
                 </a>
-                <a href="#" className="text-text-main hover:text-primary-blue transition-colors text-2xl">
+                <a href="#" className="text-text-main hover:text-primary-blue transition-colors text-xl sm:text-2xl">
                   <FaInstagram />
                 </a>
-                <a href="#" className="text-text-main hover:text-primary-blue transition-colors text-2xl">
+                <a href="#" className="text-text-main hover:text-primary-blue transition-colors text-xl sm:text-2xl">
                   <FaXTwitter />
                 </a>
               </div>
@@ -93,7 +93,7 @@ const Footer = () => {
           <p className="text-[#98A2B3] text-sm">
             © 2026 — Copyright. All Rights reserved
           </p>
-          <div className="flex items-center gap-8">
+          <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3 sm:gap-8">
             <a href="#" className="text-[#667085] hover:text-primary-blue transition-colors text-sm font-medium">Privacy policy</a>
             <a href="#" className="text-[#667085] hover:text-primary-blue transition-colors text-sm font-medium">Terms of service</a>
             <a href="#" className="text-[#667085] hover:text-primary-blue transition-colors text-sm font-medium">Cookie Settings</a>
