@@ -15,15 +15,15 @@ const Hero = () => {
       <section className="relative pt-20 xs:pb-0 pb-4 overflow-hidden z-10">
         {/* Background Grid - already handled by GridBackground above */}
 
-        <div className="container mx-auto px-4 relative z-10 text-center">
+        <div className="container mx-auto px-4 relative z-10 text-center  lg:leading-relaxed">
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-4xl font-semibold  text-heading mb-6 tracking-tight">
+          <h1 className="text-4xl md:text-4xl font-semibold text-heading mb-4 tracking-tight">
             Stop Chasing Leads!
           </h1>
 
           {/* Sub-heading */}
-          <h2 className="text-[39px] md:text-4xl font-medium  text-text-main max-w-4xl mx-auto mb-8 leading-relaxed">
-            Turn your Ideal Customer Profile into a <br />
+          <h2 className="text-[32px] md:text-4xl font-medium text-text-main max-w-4xl mx-auto mb-6 leading-[1.1] md:leading-relaxed">
+            Turn your Ideal Customer Profile into a <br className="hidden md:block" />
             Qualified pipeline with{" "}
             <span className="text-text-main font-extrabold">Automated Outreach</span>
           </h2>

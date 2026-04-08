@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const WhyDoSales = () => {
   return (
-    <section className="xs:pt-12 xs:pb-24 py-12 px-4 overflow-hidden xs:mt-0 mt-0">
+    <section className="xs:pt-4 xs:pb-24 py-4 overflow-hidden xs:mt-0 mt-0">
       {/* Top statistics section */}
-      <div className="max-w-6xl mx-auto flex flex-col items-center mb-24">
+      <div className="max-w-6xl mx-auto px-4 flex flex-col items-center mb-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full text-center mb-16 ">
           <div className="flex flex-col gap-2">
             <h3 className="text-[32px] font-[500] text-heading tracking-tighter ">
@@ -60,8 +60,8 @@ const WhyDoSales = () => {
       </div>
 
       {/* Why DoSales Section */}
-      <div className="rounded-tl-[220px] rounded-tr-[220px] xs:rounded-tl-[200.4px] xs:rounded-tr-[200.4px] bg-linear-to-b from-blue-ghost to-blue-ghost to-30% pt-14">
-        <div className="max-w-7xl mx-auto flex flex-col items-center mb-16 ">
+      <div className="rounded-tl-[100px] rounded-tr-[100px] xs:rounded-tl-[200.4px] xs:rounded-tr-[200.4px] bg-linear-to-b from-blue-ghost to-blue-ghost to-30% pt-14 w-full">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col items-center mb-16 ">
           <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-10">
             {" "}
             Why DoSales
@@ -88,7 +88,7 @@ const WhyDoSales = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 relative h-full">
               {/* Top side horizontal divider */}
               <div
-                className="absolute w-1/2 left-1/2 -translate-x-1/2 top-0 h-px hidden md:block z-10"
+                className="absolute w-1/2 left-1/2 -translate-x-1/2 top-0 h-px z-10"
                 style={{
                   background: "linear-gradient(to right, #88BFF7, #EFF9FE)",
                   opacity: 0.86,
@@ -99,7 +99,7 @@ const WhyDoSales = () => {
               <div className="flex flex-col p-8 md:p-12 relative">
                 {/* Left side stroke line */}
                 <div
-                  className="absolute inset-y-0 left-0 w-px hidden md:block z-10"
+                  className="absolute inset-y-0 left-0 w-px z-10"
                   style={{
                     background: "linear-gradient(to bottom, #88BFF7, #EFF9FE)",
                     opacity: 1,
@@ -131,7 +131,7 @@ const WhyDoSales = () => {
               <div className="flex flex-col p-8 md:p-12 relative">
                 {/* Right side stroke line */}
                 <div
-                  className="absolute inset-y-0 right-0 w-px hidden md:block z-10"
+                  className="absolute inset-y-0 right-0 w-px z-10"
                   style={{
                     background: "linear-gradient(to bottom, #88BFF7, #EFF9FE)",
                     opacity: 1,
@@ -161,7 +161,7 @@ const WhyDoSales = () => {
 
             {/* Middle horizontal divider - Separates top row from AI Autonomy */}
             <div
-              className="relative h-px w-full hidden md:block z-10"
+              className="relative h-px w-full z-10"
               style={{
                 background: "linear-gradient(to right, #88BFF7, #EFF9FE)",
                 opacity: 0.86,
@@ -172,7 +172,7 @@ const WhyDoSales = () => {
             <div className="flex flex-col md:flex-row p-6 md:p-10 items-center relative overflow-hidden">
               {/* Right side stroke line */}
               <div
-                className="absolute inset-y-0 right-0 w-px hidden md:block z-10"
+                className="absolute inset-y-0 right-0 w-px z-10"
                 style={{
                   background: "linear-gradient(to bottom, #88BFF7, #EFF9FE)",
                   opacity: 1,
@@ -189,7 +189,7 @@ const WhyDoSales = () => {
               </div>
               {/* Bottom side horizontal divider */}
               <div
-                className="absolute w-1/2 left-1/2 -translate-x-1/2 bottom-0 h-px hidden md:block z-10"
+                className="absolute w-1/2 left-1/2 -translate-x-1/2 bottom-0 h-px z-10"
                 style={{
                   background: "linear-gradient(to right, #88BFF7, #EFF9FE)",
                   opacity: 0.86,

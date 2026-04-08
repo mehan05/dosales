@@ -81,9 +81,11 @@ const testimonialData = [
 const MarqueeRow = ({
   items,
   duration = 30,
+  direction = "marqueeRight",
 }: {
   items: typeof testimonialData;
   duration?: number;
+  direction?: "marqueeLeft" | "marqueeRight";
 }) => {
   const [isPaused, setIsPaused] = React.useState(false);
 
@@ -97,7 +99,7 @@ const MarqueeRow = ({
         className="flex gap-4 pr-4"
         style={{
           width: "fit-content",
-          animation: `marqueeLeft ${duration}s linear infinite`,
+          animation: `${direction} ${duration}s linear infinite`,
           animationPlayState: isPaused ? "paused" : "running",
           display: "inherit",
         }}
