@@ -112,6 +112,8 @@ const WaterfallSection = () => {
               showSparkle={true}
               sparkleDelay={getSparkleDelay(70.6, 58.9)}
               sparkleDuration={RADAR_DURATION}
+              popupTitle="Email Verify"
+              popupDescription="Validates email addresses for accuracy and deliverability"
             />
           </div>
 

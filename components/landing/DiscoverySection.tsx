@@ -317,7 +317,7 @@ const DiscoverySection = () => {
         
 
         {/* right Side: Card UI */}
-        <div className="relative lg:col-span-8 w-full">
+        <div className="relative lg:col-span-8 w-full order-2 lg:order-1">
           <div className="relative rounded-[32px] xs:rounded-[40px] p-1.5 xs:p-5 bg-dashboard-outline/30  transition-all border-4 xs:border-8 border-white w-full">
             <div className="bg-white rounded-[28px] xs:rounded-[32px] p-6 xs:p-8 border border-blue-50/50 min-h-[460px] xs:min-h-[500px] flex flex-col w-full overflow-hidden">
               <AnimatePresence mode="wait" initial={false}>
@@ -367,7 +367,7 @@ const DiscoverySection = () => {
 
 
         {/* left Side: Content */}
-        <div className="flex flex-col items-start lg:col-span-4 max-w-2xl lg:max-w-none">
+        <div className="flex flex-col items-start lg:col-span-4 max-w-2xl lg:max-w-none order-1 lg:order-2">
           <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-10">
             AI Outbound Agent
           </div>

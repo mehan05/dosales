@@ -1,7 +1,8 @@
 "use client";
-import { motion } from "framer-motion";
+
+import { motion, AnimatePresence } from "framer-motion";
 import { twMerge } from "tailwind-merge";
-import React from "react";
+import React, { useState } from "react";
 
 export const Circle = ({ className, children, idx, ...rest }: any) => {
   return (
@@ -124,6 +125,8 @@ export const IconContainer = ({
   showSparkle = false,
   sparkleDelay = 0,
   sparkleDuration = 4,
+  popupTitle,
+  popupDescription,
 }: {
   icon?: React.ReactNode;
   text?: string;
@@ -132,9 +135,36 @@ export const IconContainer = ({
   showSparkle?: boolean;
   sparkleDelay?: number;
   sparkleDuration?: number;
+  popupTitle?: string;
+  popupDescription?: string;
 }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div className="relative">
+    <div 
+      className="relative"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <AnimatePresence>
+        {isHovered && popupTitle && (
+          <motion.div
+            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 10, scale: 0.95 }}
+            transition={{ duration: 0.15, ease: "easeOut" }}
+            className="absolute bottom-full mb-6 left-1/2 -translate-x-1/2 w-56 p-4 rounded-2xl bg-[#0B1219]/95 backdrop-blur-md border border-slate-800 shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-100 pointer-events-none"
+          >
+            <div className="relative z-10">
+              <h4 className="text-white text-[15px] font-bold mb-1.5 tracking-tight">{popupTitle}</h4>
+              <p className="text-slate-400 text-[13px] leading-snug font-medium">{popupDescription}</p>
+            </div>
+            {/* Small arrow/tail for the popup */}
+            <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-[#0B1219] border-r border-b border-slate-800 rotate-45"></div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {showSparkle && (
         <SparkleWrapper delay={sparkleDelay} duration={sparkleDuration} />
       )}
@@ -142,7 +172,7 @@ export const IconContainer = ({
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.2, delay: delay ?? 0 }}
-        className="relative z-50 flex flex-col items-center justify-center space-y-2"
+        className="relative z-50 flex flex-col items-center justify-center space-y-2 cursor-pointer transition-transform duration-200 hover:scale-110"
       >
         <div className={twMerge(
           "flex items-center justify-center",
