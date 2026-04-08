@@ -122,8 +122,8 @@ const RealPainPoints = () => {
   const row3 = testimonialData.slice(6, 9);
 
   return (
-    <div className="px-4 py-6 xs:py-5 w-full overflow-hidden ">
-      <section className="relative max-w-[1700px] mx-auto rounded-[40px] h-auto lg:h-[898px] flex flex-col lg:flex-row items-center overflow-hidden bg-dashboard-bg py-12 lg:py-0 border border-dashboard-outline/50 shadow-sm ">
+    <div className="py-6 xs:py-5 w-full overflow-hidden ">
+      <section className="  relative w-full mx-auto rounded-[40px] h-auto lg:h-[898px] flex flex-col lg:flex-row items-center overflow-hidden bg-dashboard-bg py-12 lg:py-0 border border-dashboard-outline/50 shadow-sm ">
         <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-white/60 blur-[100px] rounded-full -translate-x-1/4 -translate-y-1/4 z-0 pointer-events-none" />
 
         <div className="absolute w-full h-full max-w-[436px] max-h-[430px] top-0 left-5 z-0">
@@ -156,7 +156,7 @@ const RealPainPoints = () => {
         {/* Right Content - Dark Container with Horizontal Carousel */}
         <div className="relative w-full lg:w-[1044px] pt-12  mb-10 lg:pt-0 z-10 px-4 lg:px-0 lg:pl-10 flex lg:items-end shrink-0 overflow-hidden lg:h-full">
 
-             <div className="bg-slate-950 w-full min-w-[300px] lg:min-w-[1200px] rounded-l-[40px] p-6 lg:p-10 border-4 border-r-0 border-white shadow-2xl h-[700px] flex flex-col justify-center gap-6 overflow-hidden">
+             <div className="bg-slate-950 w-full min-w-[300px] lg:min-w-[1200px] rounded-l-[40px] p-4 lg:p-10 border-4 border-r-0 border-white shadow-2xl h-[700px] flex flex-col justify-center gap-6 overflow-hidden">
             <MarqueeRow items={row1} duration={40} />
             <MarqueeRow items={row2} duration={35} />
             <MarqueeRow items={row3} duration={45} />

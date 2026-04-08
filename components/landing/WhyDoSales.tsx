@@ -3,7 +3,8 @@ import Image from "next/image";
 
 const WhyDoSales = () => {
   return (
-    <section className="xs:pt-4 xs:pb-24 py-4 overflow-hidden xs:mt-0 mt-0">
+    <section className="relative xs:pt-4 xs:pb-24 py-4 overflow-hidden xs:mt-0 mt-0 ">
+      <div className="absolute inset-0 bg-gradient-to-t from-bg-pale to-blue-ghost to-50% -z-10" />
       {/* Top statistics section */}
       <div className="max-w-6xl mx-auto px-4 flex flex-col items-center mb-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full text-center mb-16 ">

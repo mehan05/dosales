@@ -19,7 +19,7 @@ const LeadsImage = () => {
     <section ref={containerRef} className="xs:pb-4 pb-2 px-4 relative perspective-[1540px]">
       <motion.div 
         style={{ rotateX, scale, opacity }}
-        className="max-w-[1540px] mx-auto relative origin-top pt-2 pb-0"
+        className="max-w-[1540px] mx-auto relative origin-top pt-2 pb-5"
       >
         {/* Purple Background Blur Effect */}
         <div 
