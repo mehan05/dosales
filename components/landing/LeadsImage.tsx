@@ -23,7 +23,7 @@ const LeadsImage = () => {
       >
         {/* Purple Background Blur Effect */}
         <div 
-          className="absolute -right-50 top-20 -translate-y-1/2 w-170 h-[400px] bg-bg-vivid/30 rounded-full blur-[100px] pointer-events-none -z-10"
+          className="absolute -right-50 top-30 -translate-y-1/2 w-170 h-[400px] bg-bg-vivid/30 rounded-full blur-[100px] pointer-events-none -z-10"
         />
         
         <div className="relative w-full rounded-[48px] bg-white p-2.5 shadow-[0_20px_50px_var(--color-vivid-glow)]">

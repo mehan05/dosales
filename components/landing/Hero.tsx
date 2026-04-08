@@ -42,7 +42,7 @@ const Hero = () => {
           </div>
 
           {/* Lead Capture Form */}
-          <div className="flex items-center justify-between max-w-[420px] mx-auto mb-4 bg-white p-1.5 rounded-2xl shadow-lg border border-gray-100">
+          <div className="flex items-center justify-between max-w-[420px] mx-auto mb-4 bg-white p-1.5 rounded-2xl shadow-lg border border-gray-100 relative z-20">
             <input
               type="email"
               placeholder="praveen@calibraint.com"
