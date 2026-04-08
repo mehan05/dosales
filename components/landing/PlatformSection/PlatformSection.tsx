@@ -31,17 +31,18 @@ const PlatformSection = () => {
   };
 
   return (
-    <section className="relative pt-16 pb-12 xs:pb-32 xs:pt-32 sm:pb-24 bg-linear-to-b from-white via-blue-50/40 to-white overflow-hidden font-sans">
+    <section className="relative pt-16 pb-6 xs:pb-32 xs:pt-32 sm:pb-24 bg-linear-to-b from-white via-blue-50/40 to-white overflow-hidden font-sans">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto relative">
           {/* Badge */}
-          <div className="px-6 py-2 bg-gradient-to-r from-blue-highlight to-bg-light-blue text-blue-deep text-md font-medium rounded-full border-2 border-white shadow-[0_0_15px_var(--color-blue-shadow)] mb-10 ">
+          <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-10">
+
             Platform
           </div>
 
           {/* Headline */}
-          <h1 className="text-[52px] font-semibold text-text-main leading-[1.1] mb-8 tracking-tight">
+          <h1 className="text-[36px] font-semibold text-text-main leading-[1.1] mb-8 tracking-tight">
             An Automated Funnel that turns your ICP to Booked Meetings in 3
             steps
           </h1>

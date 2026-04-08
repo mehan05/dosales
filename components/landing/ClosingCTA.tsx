@@ -21,7 +21,7 @@ const ClosingCTA = () => {
         {/* Badge Area */}
         <div className="flex items-center justify-center gap-6 mb-12 w-full max-w-5xl mx-auto px-4">
           <div className="flex-1 h-0.5 bg-linear-to-l from-sky-light to-transparent opacity-60" />
-          <div className="px-6 py-2 bg-gradient-to-r from-blue-highlight to-bg-light-blue text-blue-deep text-md font-medium rounded-full border-2 border-white shadow-[0_0_15px_var(--color-blue-shadow)]">
+          <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5">
             Upgrade your Leads
           </div>
           <div className="flex-1 h-0.5 bg-linear-to-r from-sky-light to-transparent opacity-60" />

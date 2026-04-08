@@ -60,7 +60,7 @@ const WhyDoSales = () => {
       </div>
 
       {/* Why DoSales Section */}
-      <div className="rounded-tr-[20%] rounded-tl-[20%] bg-linear-to-b from-blue-ghost to-blue-ghost to-30% pt-14">
+      <div className="rounded-tl-[220px] rounded-tr-[220px] xs:rounded-tl-[700.4px] xs:rounded-tr-[700.4px] bg-linear-to-b from-blue-ghost to-blue-ghost to-30% pt-14">
         <div className="max-w-7xl mx-auto flex flex-col items-center mb-16 ">
           <div className="w-31 h-8 px-3.5 py-1.25 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-10">
             Why DoSales
@@ -72,10 +72,21 @@ const WhyDoSales = () => {
 
         {/* Features Illustration Recreated in JSX */}
         <div className="max-w-7xl mx-auto px-4">
-          <div className="relative w-full rounded-[40px] overflow-hidden border-2 border-primary-blue/30 bg-white/50 backdrop-blur-sm">
-            <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="relative w-full rounded-[40px] overflow-hidden border border-primary-blue/10 bg-white/50 backdrop-blur-sm">
+            {/* Card Accent Borders & Dividers handled within sections */}
+
+
+            <div className="grid grid-cols-1 md:grid-cols-2 relative h-full">
+              {/* Vertical divider - Perfectly centered between cards */}
+              <div 
+                className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 hidden md:block z-10"
+                style={{ backgroundImage: 'url("/assets/svg/Vertical Divider.svg")', backgroundSize: '100% 100%' }}
+              />
+
               {/* Card 1: Regional Dominance */}
-              <div className="flex flex-col p-8 md:p-12 border-b md:border-r border-primary-blue/20">
+              <div className="flex flex-col p-8 md:p-12 relative">
+
+
                 <div className="flex-1 flex items-center justify-center mb-10 h-64">
                   <Image
                     src="/assets/svg/whyDoSales/refionalDominance.svg"
@@ -98,7 +109,9 @@ const WhyDoSales = () => {
               </div>
 
               {/* Card 2: Vertical Intelligence */}
-              <div className="flex flex-col p-8 md:p-12 border-b border-primary-blue/20">
+              <div className="flex flex-col p-8 md:p-12 relative">
+
+
                 <div className="flex-1 flex items-center justify-center mb-10 h-64">
                   <Image
                     src="/assets/svg/whyDoSales/verifyIntelligence.svg"
@@ -122,7 +135,12 @@ const WhyDoSales = () => {
             </div>
 
             {/* Card 3: AI Autonomy (Refined Size) */}
-            <div className="flex flex-col md:flex-row p-6 md:p-10 items-center overflow-hidden">
+
+
+
+            <div className="flex flex-col md:flex-row p-6 md:p-10 items-center relative overflow-hidden">
+
+
               <div className="md:w-[60%] flex items-center justify-center mb-8 md:mb-0 h-64 md:h-80">
                 <Image
                   src="/assets/svg/whyDoSales/aiAutonomy.svg"

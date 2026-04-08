@@ -99,6 +99,7 @@ const MarqueeRow = ({
           width: "fit-content",
           animation: `marqueeLeft ${duration}s linear infinite`,
           animationPlayState: isPaused ? "paused" : "running",
+          display: "inherit",
         }}
       >
         {/* We duplicate the items to create a seamless loop */}
@@ -120,8 +121,7 @@ const RealPainPoints = () => {
 
   return (
     <div className="px-4 py-6 xs:py-5 w-full overflow-hidden ">
-      <section className="relative max-w-[1700px] mx-auto rounded-[40px] h-[898px] flex flex-col lg:flex-row items-center overflow-hidden bg-dashboard-bg py-12 lg:py-0 border border-dashboard-outline/50 shadow-sm ">
-      
+      <section className="relative max-w-[1700px] mx-auto rounded-[40px] h-auto lg:h-[898px] flex flex-col lg:flex-row items-center overflow-hidden bg-dashboard-bg py-12 lg:py-0 border border-dashboard-outline/50 shadow-sm ">
         <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-white/60 blur-[100px] rounded-full -translate-x-1/4 -translate-y-1/4 z-0 pointer-events-none" />
 
         <div className="absolute w-full h-full max-w-[436px] max-h-[430px] top-0 left-5 z-0">
@@ -129,13 +129,13 @@ const RealPainPoints = () => {
         </div>
 
         {/* Left Content */}
-        <div className="relative w-full lg:w-[45%] px-8 lg:px-24 pt-10 pb-8 lg:pt-10 lg:pb-32 flex flex-col items-start  z-10 lg:self-start">
-          <div className="px-6 py-2 bg-gradient-to-r from-blue-highlight to-bg-light-blue text-blue-deep text-md font-medium rounded-full border-2 border-white shadow-[0_0_15px_var(--color-blue-shadow)] mb-10 ">
+        <div className="relative w-full lg:w-[45%] px-8 lg:px-24 pb-8 lg:pt-10 lg:pb-32 flex flex-col items-start  z-10 lg:self-start">
+          <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-10">
             Real Pain Points
           </div>
 
           <div className="flex flex-col gap-6 max-w-[436px]">
-            <h2 className="text-[52px] lg:text-[52px] font-semibold text-text-main leading-[1.1] tracking-tight">
+            <h2 className="text-[38px] lg:text-[38px] font-semibold text-text-main leading-[1.1] tracking-tight">
               Existing tools
               <br />
               weren't built
@@ -152,8 +152,9 @@ const RealPainPoints = () => {
         </div>
 
         {/* Right Content - Dark Container with Horizontal Carousel */}
-        <div className="relative w-full lg:w-[1044px] pt-12 lg:pt-0 z-10 pl-4 lg:pl-10 flex lg:items-end shrink-0 overflow-hidden lg:h-full">
-          <div className="bg-slate-950 w-full min-w-[400px] lg:min-w-[1500px] rounded-l-[40px] p-6 lg:p-10 border-[10px]  border-r-0 border-white shadow-2xl h-[700px] flex flex-col justify-center gap-6 overflow-hidden lg:mb-10">
+        <div className="relative w-full lg:w-[1044px] pt-12 lg:pt-0 z-10 px-4 lg:px-0 lg:pl-10 flex lg:items-end shrink-0 overflow-hidden lg:h-full">
+
+             <div className="bg-slate-950 w-full min-w-[300px] lg:min-w-[1200px] rounded-l-[40px] p-6 lg:p-10 border-4 border-r-0 border-white shadow-2xl h-[700px] flex flex-col justify-center gap-6 overflow-hidden">
             <MarqueeRow items={row1} duration={40} />
             <MarqueeRow items={row2} duration={35} />
             <MarqueeRow items={row3} duration={45} />

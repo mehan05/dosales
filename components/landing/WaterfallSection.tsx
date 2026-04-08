@@ -2,6 +2,17 @@
 import React from "react";
 import { Radar, IconContainer } from "../ui/radar-effect";
 
+
+const RADAR_DURATION = 10; // seconds — must match CSS animation duration
+
+const getSparkleDelay = (leftPct: number, bottomPct: number): number => {
+  // Origin of the radar is at (50%, 0%) from the bottom of the container.
+  const dx = leftPct - 50;   // positive = right of center
+  const dy = bottomPct;      // positive = above radar origin
+  const angleDeg = (Math.atan2(dx, dy) * 180) / Math.PI; // range: -90 to +90
+  return ((angleDeg + 90) / 180) * RADAR_DURATION;
+};
+
 const WaterfallSection = () => {
   return (
     <section className="relative w-full bg-dark-navy py-24 px-4 overflow-hidden min-h-200 flex flex-col items-center justify-center">
@@ -75,8 +86,8 @@ const WaterfallSection = () => {
               delay={0.1}
               noContainer={true}
               showSparkle={true}
-              sparkleDelay={3}
-              sparkleDuration={10}
+              sparkleDelay={getSparkleDelay(50, 88)}
+              sparkleDuration={RADAR_DURATION}
             />
           </div>
 
@@ -100,8 +111,8 @@ const WaterfallSection = () => {
               delay={0.2}
               noContainer={true}
               showSparkle={true}
-              sparkleDelay={3}
-              sparkleDuration={10}
+              sparkleDelay={getSparkleDelay(70.6, 58.9)}
+              sparkleDuration={RADAR_DURATION}
             />
           </div>
 
@@ -125,8 +136,8 @@ const WaterfallSection = () => {
               delay={0.3}
               noContainer={true}
               showSparkle={true}
-              sparkleDelay={7.094}
-              sparkleDuration={10}
+              sparkleDelay={getSparkleDelay(73.1, 29.9)}
+              sparkleDuration={RADAR_DURATION}
             />
           </div>
 
@@ -150,8 +161,8 @@ const WaterfallSection = () => {
               delay={0.4}
               noContainer={true}
               showSparkle={true}
-              sparkleDelay={8.167}
-              sparkleDuration={10}
+              sparkleDelay={getSparkleDelay(88, 24.7)}
+              sparkleDuration={RADAR_DURATION}
             />
           </div>
 
@@ -175,8 +186,8 @@ const WaterfallSection = () => {
               delay={0.5}
               noContainer={true}
               showSparkle={true}
-              sparkleDelay={5.0}
-              sparkleDuration={10}
+              sparkleDelay={getSparkleDelay(50, 36)}
+              sparkleDuration={RADAR_DURATION}
             />
           </div>
 
@@ -200,8 +211,8 @@ const WaterfallSection = () => {
               delay={0.6}
               noContainer={true}
               showSparkle={true}
-              sparkleDelay={3.733}
-              sparkleDuration={10}
+              sparkleDelay={getSparkleDelay(30.7, 45.9)}
+              sparkleDuration={RADAR_DURATION}
             />
           </div>
 
@@ -225,8 +236,8 @@ const WaterfallSection = () => {
               delay={0.7}
               noContainer={true}
               showSparkle={true}
-              sparkleDelay={2.467}
-              sparkleDuration={10}
+              sparkleDelay={getSparkleDelay(16.6, 34.1)}
+              sparkleDuration={RADAR_DURATION}
             />
           </div>
 
@@ -250,8 +261,8 @@ const WaterfallSection = () => {
               delay={0.8}
               noContainer={true}
               showSparkle={true}
-              sparkleDelay={1.272}
-              sparkleDuration={10}
+              sparkleDelay={getSparkleDelay(28.5, 9.1)}
+              sparkleDuration={RADAR_DURATION}
             />
           </div>
         </div>

@@ -199,7 +199,7 @@ const Funnel: React.FC<FunnelProps> = ({ activeStep, onStepClick }) => {
       />
 
       <div className="mt-10 text-center">
-        <p className="text-sm font-bold text-text-main tracking-[0.2em] uppercase">
+        <p className="text-sm font-bold text-[16px] uppercase">
           DOSALES AI AUTOMATED FUNNEL
         </p>
       </div>

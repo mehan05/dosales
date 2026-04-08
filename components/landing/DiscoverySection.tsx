@@ -272,10 +272,11 @@ const DiscoverySection = () => {
 
         {/* Right Side: Content */}
         <div className="flex flex-col items-start lg:col-span-4 max-w-2xl lg:max-w-none">
-          <div className="px-5 py-2 xs:px-6 xs:py-2 bg-gradient-to-r from-blue-highlight to-bg-light-blue text-blue-deep text-sm xs:text-md font-medium rounded-full border-2 border-white mb-8 xs:mb-10 whitespace-nowrap">
+            <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-10">
+
             AI Outbound Agent
           </div>
-          <h2 className="text-3xl xs:text-5xl lg:text-6xl font-semibold text-slate-900 mb-4 xs:mb-6 leading-[1.1] tracking-tight">
+          <h2 className="text-[36px] xs:text-[36px] lg:text-[36px] font-semibold text-slate-900 mb-4 xs:mb-6 leading-[1.1] tracking-tight">
             From Ideal Prospects to Booked Meetings <span className='text-md'>—</span> Automatically
           </h2>
           <p className="text-base xs:text-lg text-slate-dark font-light leading-relaxed">
