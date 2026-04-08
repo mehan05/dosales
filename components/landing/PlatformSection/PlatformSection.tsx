@@ -94,7 +94,7 @@ const PlatformSection = () => {
                   alt="Enrich and Qualify"
                   width={598}
                   height={526}
-                  className="w-full h-auto drop-shadow-xl"
+                  className="w-full h-auto drop-shadow-xl rounded-[20px]"
                 />
               )}
               {activeStep === 3 && (

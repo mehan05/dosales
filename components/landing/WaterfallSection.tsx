@@ -19,15 +19,15 @@ const WaterfallSection = () => {
         >
           <style>{`
             @keyframes rotate-radar {
-              from { transform: translate(-50%, -50%) rotate(0deg); }
-              to { transform: translate(-50%, -50%) rotate(360deg); }
+              from { transform: translate(-50%, -50%) rotate(-90deg); }
+              to { transform: translate(-50%, -50%) rotate(90deg); }
             }
             .animate-radar-rotate {
-              animation: rotate-radar 20s linear infinite;
+              animation: rotate-radar 10s linear infinite;
             }
           `}</style>
           
-          {/* Radar Sweep Line (360-degree rotation) */}
+          {/* Radar Sweep Line (180-degree semicircle sweep) */}
           <div 
             className="animate-radar-rotate absolute top-full left-1/2 w-[200%] aspect-square pointer-events-none z-20"
             style={{
@@ -51,16 +51,16 @@ const WaterfallSection = () => {
           />
 
           {/*
-            Icons – perfectly synchronized with 360-degree clockwise rotation (20s period)
-            Angles (CCW from Right): Antenna=90, Mail=70.7, Globe=52.3, Library=33, Desktop=90, People=112.8, Database=135.6, Building=157.1
-            Exact Delays (CSS clockwise from Top):
-            Top = 0s
-            Mail = (90-70.7)/360 * 20 = 1.072s
-            Globe = (90-52.3)/360 * 20 = 2.094s
-            Library = (90-33)/360 * 20 = 3.167s
-            Building = (90-157.1+360)/360 * 20 = 16.272s
-            Database = (90-135.6+360)/360 * 20 = 17.467s
-            People = (90-112.8+360)/360 * 20 = 18.733s
+            Icons – perfectly synchronized with 180-degree clockwise sweep (10s period)
+            Range: Left (-90°) to Right (+90°). Total = 180°.
+            Exact Delays (CSS clockwise from Left):
+            Building (-67.1°)  = ( (-67.1 - (-90)) / 180 ) * 10 = 1.272s
+            Database (-45.6°)  = ( (-45.6 + 90) / 180 ) * 10 = 2.467s
+            People (-22.8°)    = ( (-22.8 + 90) / 180 ) * 10 = 3.733s
+            Antenna (0°)       = ( (0 + 90) / 180 ) * 10 = 5.0s
+            Mail (+19.3°)      = ( (19.3 + 90) / 180 ) * 10 = 6.072s
+            Globe (+37.7°)     = ( (37.7 + 90) / 180 ) * 10 = 7.094s
+            Library (+57.0°)   = ( (57.0 + 90) / 180 ) * 10 = 8.167s
           */}
 
           {/* Antenna */}
@@ -77,8 +77,8 @@ const WaterfallSection = () => {
               delay={0.1}
               noContainer={true}
               showSparkle={true}
-              sparkleDelay={0}
-              sparkleDuration={20}
+              sparkleDelay={5.0}
+              sparkleDuration={10}
             />
           </div>
 
@@ -96,8 +96,8 @@ const WaterfallSection = () => {
               delay={0.2}
               noContainer={true}
               showSparkle={true}
-              sparkleDelay={1.072}
-              sparkleDuration={20}
+              sparkleDelay={6.072}
+              sparkleDuration={10}
             />
           </div>
 
@@ -115,8 +115,8 @@ const WaterfallSection = () => {
               delay={0.3}
               noContainer={true}
               showSparkle={true}
-              sparkleDelay={2.094}
-              sparkleDuration={20}
+              sparkleDelay={7.094}
+              sparkleDuration={10}
             />
           </div>
 
@@ -134,8 +134,8 @@ const WaterfallSection = () => {
               delay={0.4}
               noContainer={true}
               showSparkle={true}
-              sparkleDelay={3.167}
-              sparkleDuration={20}
+              sparkleDelay={8.167}
+              sparkleDuration={10}
             />
           </div>
 
@@ -153,8 +153,8 @@ const WaterfallSection = () => {
               delay={0.5}
               noContainer={true}
               showSparkle={true}
-              sparkleDelay={0}
-              sparkleDuration={20}
+              sparkleDelay={5.0}
+              sparkleDuration={10}
             />
           </div>
 
@@ -172,8 +172,8 @@ const WaterfallSection = () => {
               delay={0.6}
               noContainer={true}
               showSparkle={true}
-              sparkleDelay={18.733}
-              sparkleDuration={20}
+              sparkleDelay={3.733}
+              sparkleDuration={10}
             />
           </div>
 
@@ -191,8 +191,8 @@ const WaterfallSection = () => {
               delay={0.7}
               noContainer={true}
               showSparkle={true}
-              sparkleDelay={17.467}
-              sparkleDuration={20}
+              sparkleDelay={2.467}
+              sparkleDuration={10}
             />
           </div>
 
@@ -210,8 +210,8 @@ const WaterfallSection = () => {
               delay={0.8}
               noContainer={true}
               showSparkle={true}
-              sparkleDelay={16.272}
-              sparkleDuration={20}
+              sparkleDelay={1.272}
+              sparkleDuration={10}
             />
           </div>
         </div>

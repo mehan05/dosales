@@ -160,26 +160,32 @@ const DiscoverySection = () => {
   const [showLeads, setShowLeads] = useState(false);
   const [fieldValues, setFieldValues] = useState<Record<string, string>>({});
   const [isAutoClicking, setIsAutoClicking] = useState(false);
-  const [hasAnimated, setHasAnimated] = useState(false);
   
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { amount: 0.5, once: true });
 
   useEffect(() => {
-    if (isInView && !hasAnimated) {
-      const typeSequence = async () => {
-        setHasAnimated(true);
+    let isMounted = true;
+
+    const runAutomation = async () => {
+      while (isMounted && isInView) {
+        // Step 1: Reset to initial state
+        setShowLeads(false);
+        setFieldValues({});
+        setIsAutoClicking(false);
         
         const typeText = async (id: string, text: string) => {
           for (let i = 0; i <= text.length; i++) {
+            if (!isMounted) return;
             setFieldValues(prev => ({ ...prev, [id]: text.slice(0, i) }));
-            await new Promise(r => setTimeout(r, 30 + Math.random() * 30));
+            await new Promise(r => setTimeout(r, 30 + Math.random() * 20));
           }
         };
 
-        await new Promise(r => setTimeout(r, 800)); // Initial pause
+        if (!isMounted) break;
+        await new Promise(r => setTimeout(r, 1000)); // Initial pause
         
-        // Launch all typing animations in parallel
+        // Step 2: Typing animation
         await Promise.all([
           typeText('target_company', 'Stripe, Coinbase'),
           typeText('job_titles', 'CTO, VP Engineering'),
@@ -189,16 +195,29 @@ const DiscoverySection = () => {
           typeText('max_results', '25'),
         ]);
         
-        await new Promise(r => setTimeout(r, 500)); // Wait after everything is typed
+        if (!isMounted) break;
+        await new Promise(r => setTimeout(r, 800)); // Wait before clicking
+        
+        // Step 3: Trigger Discovery
         setIsAutoClicking(true);
         await new Promise(r => setTimeout(r, 600));
+        if (!isMounted) break;
         setShowLeads(true);
         setIsAutoClicking(false);
-      };
 
-      typeSequence();
+        // Step 4: Show results for a period before restarting
+        await new Promise(r => setTimeout(r, 5000)); 
+      }
+    };
+
+    if (isInView) {
+      runAutomation();
     }
-  }, [isInView, hasAnimated]);
+
+    return () => {
+      isMounted = false;
+    };
+  }, [isInView]);
 
   return (
     <section ref={sectionRef} className="py-12 xs:py-24 bg-white overflow-hidden">

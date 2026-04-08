@@ -48,25 +48,70 @@ const WhyDoSales = () => {
           </h2>
         </div>
 
-        {/* Features Illustration */}
+        {/* Features Illustration Recreated in JSX */}
         <div className="max-w-7xl mx-auto px-4">
-          <div className="relative w-full rounded-[40px] overflow-hidden border-2 border-primary-blue/30 bg-slate-50/30">
-            <Image 
-              src="/assets/svg/whyDoSales.svg" 
-              alt="Why DoSales Features" 
-              width={1400} 
-              height={800}
-              className="hidden xs:block w-full h-auto"
-              priority
-            />
-            <Image 
-              src="/assets/svg/whyDoSalesMobile.svg" 
-              alt="Why DoSales Features Mobile" 
-              width={426} 
-              height={800}
-              className="block xs:hidden w-full h-auto"
-              priority
-            />
+          <div className="relative w-full rounded-[40px] overflow-hidden border-2 border-primary-blue/30 bg-white/50 backdrop-blur-sm">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              {/* Card 1: Regional Dominance */}
+              <div className="flex flex-col p-8 md:p-12 border-b md:border-r border-primary-blue/20">
+                <div className="flex-1 flex items-center justify-center mb-10 h-64">
+                  <Image 
+                    src="/assets/svg/whyDoSales/refionalDominance.svg" 
+                    alt="Regional Dominance" 
+                    width={400} 
+                    height={300}
+                    className="w-full h-auto max-w-[420px]"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-heading mb-4 tracking-tight">Regional Dominance</h3>
+                  <p className="text-text-main text-[16px] leading-[1.6] max-w-md">
+                    Built for MENA & Southeast Asia from day one — not bolted on as an afterthought. 
+                    Coverage where Apollo and ZoomInfo have blind spots.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 2: Vertical Intelligence */}
+              <div className="flex flex-col p-8 md:p-12 border-b border-primary-blue/20">
+                <div className="flex-1 flex items-center justify-center mb-10 h-64">
+                  <Image 
+                    src="/assets/svg/whyDoSales/verifyIntelligence.svg" 
+                    alt="Vertical Intelligence" 
+                    width={400} 
+                    height={300}
+                    className="w-full h-auto max-w-[420px]"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-heading mb-4 tracking-tight">Vertical Intelligence</h3>
+                  <p className="text-text-main text-[16px] leading-[1.6] max-w-md">
+                    Deep data models for Fintech, PropTech, Trade Finance, and Supply Chain. 
+                    Industry-specific signals that horizontal tools miss entirely.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 3: AI Autonomy (Refined Size) */}
+            <div className="flex flex-col md:flex-row p-6 md:p-10 items-center overflow-hidden">
+              <div className="md:w-[60%] flex items-center justify-center mb-8 md:mb-0 h-64 md:h-80">
+                <Image 
+                  src="/assets/svg/whyDoSales/aiAutonomy.svg" 
+                  alt="AI Autonomy" 
+                  width={700} 
+                  height={400}
+                  className="w-full h-auto max-w-[320px] md:max-w-162.5 scale-105 md:scale-110"
+                />
+              </div>
+              <div className="md:w-[40%] md:pl-12">
+                <h3 className="text-3xl font-bold text-heading mb-4 tracking-tight">AI Autonomy</h3>
+                <p className="text-text-main text-[18px] leading-normal max-w-lg font-medium">
+                  Autonomous prospecting that finds, enriches, scores, and engages leads. 
+                  Your AI SDR works 24/7 while your team focuses on closing.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

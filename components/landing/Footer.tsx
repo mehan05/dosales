@@ -7,6 +7,25 @@ import { FaLinkedin, FaInstagram, FaXTwitter } from 'react-icons/fa6';
 const Footer = () => {
   return (
     <footer className="py-20 px-6">
+      {/* SVG Gradient Definitions */}
+      <svg width="0" height="0" className="absolute" aria-hidden="true" focusable="false">
+        <linearGradient id="instagram-gradient" x1="100%" y1="100%" x2="0%" y2="0%">
+          <stop stopColor="#f09433" offset="0%" />
+          <stop stopColor="#e6683c" offset="25%" />
+          <stop stopColor="#dc2743" offset="50%" />
+          <stop stopColor="#cc2366" offset="75%" />
+          <stop stopColor="#bc1888" offset="100%" />
+        </linearGradient>
+        <linearGradient id="linkedin-gradient" x1="100%" y1="100%" x2="0%" y2="0%">
+          <stop stopColor="#0077b5" offset="0%" />
+          <stop stopColor="#00a0dc" offset="100%" />
+        </linearGradient>
+        <linearGradient id="x-gradient" x1="100%" y1="100%" x2="0%" y2="0%">
+          <stop stopColor="#000000" offset="0%" />
+          <stop stopColor="#666666" offset="100%" />
+        </linearGradient>
+      </svg>
+
       <div className="max-w-425 mx-auto bg-bg-footer rounded-[48px] p-6 sm:p-12 md:p-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           
@@ -74,13 +93,13 @@ const Footer = () => {
             <div className="bg-white rounded-[24px] px-4 sm:px-8 py-4 sm:py-5 flex gap-2 items-center justify-between w-full lg:w-[380px] shadow-sm">
               <span className="text-slate-medium text-base sm:text-lg font-medium">Follow us on</span>
               <div className="flex items-center gap-3 sm:gap-6">
-                <a href="#" className="text-text-main hover:text-primary-blue transition-colors text-xl sm:text-2xl">
+                <a href="#" className="text-text-main hover:[&>svg]:fill-[url(#linkedin-gradient)] transition-all duration-300 text-xl sm:text-2xl hover:scale-110">
                   <FaLinkedin />
                 </a>
-                <a href="#" className="text-text-main hover:text-primary-blue transition-colors text-xl sm:text-2xl">
+                <a href="#" className="text-text-main hover:[&>svg]:fill-[url(#instagram-gradient)] transition-all duration-300 text-xl sm:text-2xl hover:scale-110">
                   <FaInstagram />
                 </a>
-                <a href="#" className="text-text-main hover:text-primary-blue transition-colors text-xl sm:text-2xl">
+                <a href="#" className="text-text-main hover:[&>svg]:fill-[url(#x-gradient)] transition-all duration-300 text-xl sm:text-2xl hover:scale-110">
                   <FaXTwitter />
                 </a>
               </div>

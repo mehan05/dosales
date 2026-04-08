@@ -110,10 +110,22 @@ const Step3DBox: React.FC<Step3DBoxProps> = ({
         </defs>
 
         {/* Top face (thin sliver, at y=0) - creates 3D top */}
-        <path d={topPath} fill={topFill} />
+        <path 
+          d={topPath} 
+          fill={topFill} 
+          stroke={isActive ? "var(--color-sky-pale)" : "var(--color-blue-soft)"}
+          strokeWidth="1"
+          strokeLinejoin="round"
+        />
 
         {/* Front face (trapezoid, starting at y=7) */}
-        <path d={frontPath} fill={frontFill} />
+        <path 
+          d={frontPath} 
+          fill={frontFill} 
+          stroke={isActive ? "var(--color-sky-main)" : "var(--color-blue-soft)"}
+          strokeWidth="1"
+          strokeLinejoin="round"
+        />
 
         {/* Label text centered on front face */}
         <text
