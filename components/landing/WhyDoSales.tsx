@@ -60,7 +60,7 @@ const WhyDoSales = () => {
       </div>
 
       {/* Why DoSales Section */}
-      <div className="rounded-tl-[100px] rounded-tr-[100px] xs:rounded-tl-[200.4px] xs:rounded-tr-[200.4px] bg-linear-to-b from-blue-ghost to-blue-ghost to-30% pt-14 w-full">
+      <div className="rounded-tl-[100px] rounded-tr-[100px] xs:rounded-tl-[200.4px] xs:rounded-tr-[200.4px] bg-linear-to-b from-blue-ghost to-blue-ghost to-30% pt-7 w-full">
         <div className="max-w-7xl mx-auto px-4 flex flex-col items-center mb-16 ">
           <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-10">
             {" "}

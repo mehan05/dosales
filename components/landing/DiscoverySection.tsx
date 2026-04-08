@@ -1,44 +1,65 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence, useInView } from 'framer-motion';
-import { HiSparkles, HiArrowRight, HiOutlineSave, HiChevronDown, HiViewGrid, HiCreditCard } from 'react-icons/hi';
+import React, { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
+import {
+  HiSparkles,
+  HiArrowRight,
+  HiOutlineSave,
+  HiChevronDown,
+  HiViewGrid,
+  HiCreditCard,
+} from "react-icons/hi";
 
-const DiscoverySearchCard = ({ 
-  onRunDiscovery, 
+const DiscoverySearchCard = ({
+  onRunDiscovery,
   isMobile = false,
   values = {},
-  isAutoClicking = false
-}: { 
-  onRunDiscovery?: () => void, 
-  isMobile?: boolean,
-  values?: Record<string, string>,
-  isAutoClicking?: boolean
+  isAutoClicking = false,
+}: {
+  onRunDiscovery?: () => void;
+  isMobile?: boolean;
+  values?: Record<string, string>;
+  isAutoClicking?: boolean;
 }) => (
   <div className="flex flex-col h-full">
     <h2 className="text-2xl font-bold text-slate-800 mb-8">Discovery Search</h2>
-    
+
     <div className="grid grid-cols-2 gap-x-6 gap-y-4 xs:gap-6 mb-8">
       {[
-        { id: 'target_company', label: 'Target Company', placeholder: 'e.g. Stripe, Coinbase' },
-        { id: 'job_titles', label: 'Job Titles', placeholder: 'CTO, VP Engineering' },
-        { id: 'location', label: 'Location', placeholder: 'San Francisco, London' },
-        { id: 'industry', label: 'Industry', placeholder: 'Fintech, SaaS' },
-        { id: 'company_size', label: 'Company Size', placeholder: '50-200' },
-        { id: 'max_results', label: 'Max Results', placeholder: '25' },
+        {
+          id: "target_company",
+          label: "Target Company",
+          placeholder: "e.g. Stripe, Coinbase",
+        },
+        {
+          id: "job_titles",
+          label: "Job Titles",
+          placeholder: "CTO, VP Engineering",
+        },
+        {
+          id: "location",
+          label: "Location",
+          placeholder: "San Francisco, London",
+        },
+        { id: "industry", label: "Industry", placeholder: "Fintech, SaaS" },
+        { id: "company_size", label: "Company Size", placeholder: "50-200" },
+        { id: "max_results", label: "Max Results", placeholder: "25" },
       ].map((field) => (
         <div key={field.id} className="space-y-2">
-          <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{field.label}</label>
+          <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+            {field.label}
+          </label>
           <div className="relative">
-            <input 
-              type="text" 
+            <input
+              type="text"
               placeholder={field.placeholder}
-              value={values[field.id] || ''}
+              value={values[field.id] || ""}
               readOnly
               className="w-full bg-slate-50/50 border border-slate-100 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-blue/20 transition-all placeholder:text-slate-300"
             />
             {values[field.id] && (
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className="absolute right-3 top-1/2 -translate-y-1/2 w-0.5 h-4 bg-primary-blue/40 animate-pulse"
@@ -51,13 +72,22 @@ const DiscoverySearchCard = ({
 
     <div className="flex items-center gap-3 mb-10">
       <div className="w-4 h-4 rounded bg-slate-100 border border-slate-200"></div>
-      <span className="text-xs font-medium text-slate-500 italic">Auto-enrich discovered leads</span>
+      <span className="text-xs font-medium text-slate-500 italic">
+        Auto-enrich discovered leads
+      </span>
     </div>
 
     <div className="flex flex-wrap items-center gap-3 mt-auto">
-      <motion.button 
+      <motion.button
         onClick={onRunDiscovery}
-        animate={isAutoClicking ? { scale: [1, 0.95, 1], backgroundColor: ['#2864FF', '#1E4DBE', '#2864FF'] } : {}}
+        animate={
+          isAutoClicking
+            ? {
+                scale: [1, 0.95, 1],
+                backgroundColor: ["#2864FF", "#1E4DBE", "#2864FF"],
+              }
+            : {}
+        }
         transition={{ duration: 0.4 }}
         className="bg-primary-blue text-white px-6 py-3 rounded-xl font-bold text-[10px] xs:text-xs flex items-center gap-2 hover:bg-blue-deeper transition-all shadow-lg shadow-blue-500/20 active:scale-95 whitespace-nowrap"
       >
@@ -75,13 +105,54 @@ const DiscoverySearchCard = ({
   </div>
 );
 
-const LeadsCard = ({ onBack, isMobile = false }: { onBack?: () => void, isMobile?: boolean }) => {
+const LeadsCard = ({
+  onBack,
+  isMobile = false,
+}: {
+  onBack?: () => void;
+  isMobile?: boolean;
+}) => {
   const leads = [
-    { name: 'David Kim', title: 'CEO', company: 'Axe Infinity', size: '201-500 Emps', tier: 'HOT', score: 94 },
-    { name: 'Priya Nair', title: 'CFO', company: 'Axe Infinity', size: '201-500 Emps', tier: 'HOT', score: 89 },
-    { name: 'Marcus Oei', title: 'Director of Engineering', company: 'Revolut Ltd.', size: 'Fintech & Digital Finance', tier: 'HOT', score: 86 },
-    { name: 'Priya Nair', title: 'CFO', company: 'Axe Infinity', size: '201-500 Emps', tier: 'HOT', score: 89 },
-    { name: 'Zoe Serova', title: 'Head of Technology', company: 'Revolut Ltd.', size: 'Fintech & Digital Finance', tier: 'HOT', score: 74 },
+    {
+      name: "David Kim",
+      title: "CEO",
+      company: "Axe Infinity",
+      size: "201-500 Emps",
+      tier: "HOT",
+      score: 94,
+    },
+    {
+      name: "Priya Nair",
+      title: "CFO",
+      company: "Axe Infinity",
+      size: "201-500 Emps",
+      tier: "HOT",
+      score: 89,
+    },
+    {
+      name: "Marcus Oei",
+      title: "Director of Engineering",
+      company: "Revolut Ltd.",
+      size: "Fintech & Digital Finance",
+      tier: "HOT",
+      score: 86,
+    },
+    {
+      name: "Priya Nair",
+      title: "CFO",
+      company: "Axe Infinity",
+      size: "201-500 Emps",
+      tier: "HOT",
+      score: 89,
+    },
+    {
+      name: "Zoe Serova",
+      title: "Head of Technology",
+      company: "Revolut Ltd.",
+      size: "Fintech & Digital Finance",
+      tier: "HOT",
+      score: 74,
+    },
   ];
 
   return (
@@ -110,22 +181,37 @@ const LeadsCard = ({ onBack, isMobile = false }: { onBack?: () => void, isMobile
         <table className="w-full min-w-[500px] xs:min-w-0">
           <thead className="bg-slate-50/50">
             <tr className="border-b border-slate-100">
-              <th className="text-left py-4 px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">Name / Title</th>
-              <th className="text-left py-4 px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">Company</th>
-              <th className="text-left py-4 px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest text-center">Tier</th>
-              <th className="text-left py-4 px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest text-center">Score</th>
+              <th className="text-left py-4 px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                Name / Title
+              </th>
+              <th className="text-left py-4 px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                Company
+              </th>
+              <th className="text-left py-4 px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest text-center">
+                Tier
+              </th>
+              <th className="text-left py-4 px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest text-center">
+                Score
+              </th>
               <th className="py-4 px-4"></th>
             </tr>
           </thead>
           <tbody className="divide-y divide-slate-50">
             {leads.map((lead, idx) => (
-              <tr key={idx} className="group hover:bg-slate-50/50 transition-colors">
+              <tr
+                key={idx}
+                className="group hover:bg-slate-50/50 transition-colors"
+              >
                 <td className="py-4 px-4">
-                  <p className="text-sm font-bold text-slate-800 whitespace-nowrap">{lead.name}</p>
+                  <p className="text-sm font-bold text-slate-800 whitespace-nowrap">
+                    {lead.name}
+                  </p>
                   <p className="text-[10px] text-slate-400">{lead.title}</p>
                 </td>
                 <td className="py-4 px-4">
-                  <p className="text-sm font-bold text-slate-800 whitespace-nowrap">{lead.company}</p>
+                  <p className="text-sm font-bold text-slate-800 whitespace-nowrap">
+                    {lead.company}
+                  </p>
                   <p className="text-[10px] text-slate-400">{lead.size}</p>
                 </td>
                 <td className="py-4 px-4 text-center">
@@ -134,7 +220,9 @@ const LeadsCard = ({ onBack, isMobile = false }: { onBack?: () => void, isMobile
                   </span>
                 </td>
                 <td className="py-4 px-4 text-center">
-                  <span className="text-sm font-black text-emerald-500">{lead.score}</span>
+                  <span className="text-sm font-black text-emerald-500">
+                    {lead.score}
+                  </span>
                 </td>
                 <td className="py-4 px-4 text-right">
                   <HiArrowRight className="inline-block text-slate-300 group-hover:text-slate-400 transition-colors cursor-pointer" />
@@ -144,9 +232,9 @@ const LeadsCard = ({ onBack, isMobile = false }: { onBack?: () => void, isMobile
           </tbody>
         </table>
       </div>
-      
+
       {!isMobile && (
-        <button 
+        <button
           onClick={onBack}
           className="mt-6 text-xs font-bold text-slate-400 hover:text-slate-600 transition-colors self-start flex items-center gap-1"
         >
@@ -161,7 +249,7 @@ const DiscoverySection = () => {
   const [showLeads, setShowLeads] = useState(false);
   const [fieldValues, setFieldValues] = useState<Record<string, string>>({});
   const [isAutoClicking, setIsAutoClicking] = useState(false);
-  
+
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { amount: 0.5, once: true });
 
@@ -174,40 +262,40 @@ const DiscoverySection = () => {
         setShowLeads(false);
         setFieldValues({});
         setIsAutoClicking(false);
-        
+
         const typeText = async (id: string, text: string) => {
           for (let i = 0; i <= text.length; i++) {
             if (!isMounted) return;
-            setFieldValues(prev => ({ ...prev, [id]: text.slice(0, i) }));
-            await new Promise(r => setTimeout(r, 30 + Math.random() * 20));
+            setFieldValues((prev) => ({ ...prev, [id]: text.slice(0, i) }));
+            await new Promise((r) => setTimeout(r, 30 + Math.random() * 20));
           }
         };
 
         if (!isMounted) break;
-        await new Promise(r => setTimeout(r, 1000)); // Initial pause
-        
+        await new Promise((r) => setTimeout(r, 1000)); // Initial pause
+
         // Step 2: Typing animation
         await Promise.all([
-          typeText('target_company', 'Stripe, Coinbase'),
-          typeText('job_titles', 'CTO, VP Engineering'),
-          typeText('location', 'San Francisco, London'),
-          typeText('industry', 'Fintech, SaaS'),
-          typeText('company_size', '50-200'),
-          typeText('max_results', '25'),
+          typeText("target_company", "Stripe, Coinbase"),
+          typeText("job_titles", "CTO, VP Engineering"),
+          typeText("location", "San Francisco, London"),
+          typeText("industry", "Fintech, SaaS"),
+          typeText("company_size", "50-200"),
+          typeText("max_results", "25"),
         ]);
-        
+
         if (!isMounted) break;
-        await new Promise(r => setTimeout(r, 800)); // Wait before clicking
-        
+        await new Promise((r) => setTimeout(r, 800)); // Wait before clicking
+
         // Step 3: Trigger Discovery
         setIsAutoClicking(true);
-        await new Promise(r => setTimeout(r, 600));
+        await new Promise((r) => setTimeout(r, 600));
         if (!isMounted) break;
         setShowLeads(true);
         setIsAutoClicking(false);
 
         // Step 4: Show results for a period before restarting
-        await new Promise(r => setTimeout(r, 5000)); 
+        await new Promise((r) => setTimeout(r, 5000));
       }
     };
 
@@ -221,10 +309,27 @@ const DiscoverySection = () => {
   }, [isInView]);
 
   return (
-    <section ref={sectionRef} className="py-12 xs:py-24 bg-white overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="py-12 xs:py-24 bg-white overflow-hidden"
+    >
       <div className="max-w-[1700px] mx-auto px-4 xs:px-6 grid grid-cols-1 lg:grid-cols-12 items-center gap-12 lg:gap-16">
-        
-        {/* Left Side: Card UI */}
+        {/* left Side: Content */}
+        <div className="flex flex-col items-start lg:col-span-4 max-w-2xl lg:max-w-none">
+          <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-10">
+            AI Outbound Agent
+          </div>
+          <h2 className="text-[36px] xs:text-[36px] lg:text-[36px] font-semibold text-slate-900 mb-4 xs:mb-6 leading-[1.1] tracking-tight">
+            From Ideal Prospects to Booked Meetings{" "}
+            <span className="text-md">—</span> Automatically
+          </h2>
+          <p className="text-base xs:text-lg text-slate-dark font-light leading-relaxed">
+            From ICP targeting to follow-ups, DoSales handles the entire
+            outbound process. So your team spends time closing, not chasing.
+          </p>
+        </div>
+
+        {/* right Side: Card UI */}
         <div className="relative lg:col-span-8 w-full">
           <div className="relative rounded-[32px] xs:rounded-[40px] p-1.5 xs:p-5 bg-dashboard-outline/30  transition-all border-4 xs:border-8 border-white w-full">
             <div className="bg-white rounded-[28px] xs:rounded-[32px] p-6 xs:p-8 border border-blue-50/50 min-h-[460px] xs:min-h-[500px] flex flex-col w-full overflow-hidden">
@@ -238,9 +343,9 @@ const DiscoverySection = () => {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="w-full flex flex-col h-full"
                   >
-                    <DiscoverySearchCard 
-                      onRunDiscovery={() => setShowLeads(true)} 
-                      isMobile={true} 
+                    <DiscoverySearchCard
+                      onRunDiscovery={() => setShowLeads(true)}
+                      isMobile={true}
                       values={fieldValues}
                       isAutoClicking={isAutoClicking}
                     />
@@ -254,10 +359,13 @@ const DiscoverySection = () => {
                     transition={{ duration: 0.4, ease: "easeOut" }}
                     className="w-full flex flex-col h-full"
                   >
-                    <LeadsCard onBack={() => setShowLeads(false)} isMobile={true} />
-                    
+                    <LeadsCard
+                      onBack={() => setShowLeads(false)}
+                      isMobile={true}
+                    />
+
                     {/* Explicit Back for Mobile results if needed */}
-                    <button 
+                    <button
                       onClick={() => setShowLeads(false)}
                       className="mt-6 text-xs font-bold text-slate-400 hover:text-slate-600 transition-colors self-start flex items-center gap-1 xs:hidden"
                     >
@@ -269,21 +377,6 @@ const DiscoverySection = () => {
             </div>
           </div>
         </div>
-
-        {/* Right Side: Content */}
-        <div className="flex flex-col items-start lg:col-span-4 max-w-2xl lg:max-w-none">
-            <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-10">
-
-            AI Outbound Agent
-          </div>
-          <h2 className="text-[36px] xs:text-[36px] lg:text-[36px] font-semibold text-slate-900 mb-4 xs:mb-6 leading-[1.1] tracking-tight">
-            From Ideal Prospects to Booked Meetings <span className='text-md'>—</span> Automatically
-          </h2>
-          <p className="text-base xs:text-lg text-slate-dark font-light leading-relaxed">
-            From ICP targeting to follow-ups, DoSales handles the entire outbound process. So your team spends time closing, not chasing.
-          </p>
-        </div>
-
       </div>
     </section>
   );
