@@ -1,10 +1,26 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const LeadsImage = () => {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
+
+  // Animation values: initially tilted and slightly scaled, then flattens on scroll
+  const rotateX = useTransform(scrollYProgress, [0, 0.5], [15, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.5], [1.05, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2], [0.6, 1]);
+
   return (
-    <section className="xs:pb-32 pb-8 px-4 relative">
-      <div className="max-w-[1540px] mx-auto relative">
+    <section ref={containerRef} className="xs:pb-32 pb-8 px-4 relative perspective-[1540px]">
+      <motion.div 
+        style={{ rotateX, scale, opacity }}
+        className="max-w-[1540px] mx-auto relative origin-top py-10"
+      >
         {/* Purple Background Blur Effect */}
         <div 
           className="absolute -right-50 top-20 -translate-y-1/2 w-170 h-[400px] bg-bg-vivid/30 rounded-full blur-[100px] pointer-events-none -z-10"
@@ -30,7 +46,7 @@ const LeadsImage = () => {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

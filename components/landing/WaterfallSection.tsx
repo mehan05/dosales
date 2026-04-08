@@ -17,6 +17,25 @@ const WaterfallSection = () => {
             maskImage: "radial-gradient(ellipse at bottom, black 40%, transparent 80%)"
           }}
         >
+          <style>{`
+            @keyframes rotate-radar {
+              from { transform: translate(-50%, -50%) rotate(0deg); }
+              to { transform: translate(-50%, -50%) rotate(360deg); }
+            }
+            .animate-radar-rotate {
+              animation: rotate-radar 20s linear infinite;
+            }
+          `}</style>
+          
+          {/* Radar Sweep Line (360-degree rotation) */}
+          <div 
+            className="animate-radar-rotate absolute top-full left-1/2 w-[200%] aspect-square pointer-events-none z-20"
+            style={{
+              background: "conic-gradient(from -30deg at 50% 50%, transparent 0deg, rgba(59, 130, 246, 0.1) 10deg, rgba(59, 130, 246, 0.6) 25deg, rgba(59, 130, 246, 1) 30deg, transparent 30.1deg)",
+              mixBlendMode: "plus-lighter"
+            }}
+          />
+
           {/* Radar Background – full SVG circle clipped to top semicircle */}
           <img
             src="/assets/svg/radarbg.svg"
@@ -32,13 +51,19 @@ const WaterfallSection = () => {
           />
 
           {/*
-            Icons – polar coords (r = 0..1 fraction of radius = half width)
-            θ=90° top, θ=135° upper-left, θ=45° upper-right, etc.
-            left%   = 50 + r*cos(θ_rad)*50
-            bottom% = r*sin(θ_rad)*100
+            Icons – perfectly synchronized with 360-degree clockwise rotation (20s period)
+            Angles (CCW from Right): Antenna=90, Mail=70.7, Globe=52.3, Library=33, Desktop=90, People=112.8, Database=135.6, Building=157.1
+            Exact Delays (CSS clockwise from Top):
+            Top = 0s
+            Mail = (90-70.7)/360 * 20 = 1.072s
+            Globe = (90-52.3)/360 * 20 = 2.094s
+            Library = (90-33)/360 * 20 = 3.167s
+            Building = (90-157.1+360)/360 * 20 = 16.272s
+            Database = (90-135.6+360)/360 * 20 = 17.467s
+            People = (90-112.8+360)/360 * 20 = 18.733s
           */}
 
-          {/* Antenna  θ=90°  r=0.88  → left=50%   bot=88% */}
+          {/* Antenna */}
           <div
             className="absolute z-10"
             style={{
@@ -51,10 +76,13 @@ const WaterfallSection = () => {
               icon={<img src="/assets/svg/radar/status.svg" alt="Status" className="w-full h-full" />}
               delay={0.1}
               noContainer={true}
+              showSparkle={true}
+              sparkleDelay={0}
+              sparkleDuration={20}
             />
           </div>
 
-          {/* Mail     θ=55°  r=0.72  → left=70.6% bot=58.9% */}
+          {/* Mail */}
           <div
             className="absolute z-10"
             style={{
@@ -67,10 +95,13 @@ const WaterfallSection = () => {
               icon={<img src="/assets/svg/radar/mail.svg" alt="Mail" className="w-full h-full" />}
               delay={0.2}
               noContainer={true}
+              showSparkle={true}
+              sparkleDelay={1.072}
+              sparkleDuration={20}
             />
           </div>
 
-          {/* Globe    θ=33°  r=0.55  → left=73.1% bot=29.9% */}
+          {/* Globe */}
           <div
             className="absolute z-10"
             style={{
@@ -83,10 +114,13 @@ const WaterfallSection = () => {
               icon={<img src="/assets/svg/radar/globe.svg" alt="Globe" className="w-full h-full" />}
               delay={0.3}
               noContainer={true}
+              showSparkle={true}
+              sparkleDelay={2.094}
+              sparkleDuration={20}
             />
           </div>
 
-          {/* Library  θ=18°  r=0.80  → left=88%   bot=24.7% */}
+          {/* Library */}
           <div
             className="absolute z-10"
             style={{
@@ -99,10 +133,13 @@ const WaterfallSection = () => {
               icon={<img src="/assets/svg/radar/library.svg" alt="Library" className="w-full h-full" />}
               delay={0.4}
               noContainer={true}
+              showSparkle={true}
+              sparkleDelay={3.167}
+              sparkleDuration={20}
             />
           </div>
 
-          {/* Desktop  θ=90°  r=0.36  → left=50%   bot=36% */}
+          {/* Desktop */}
           <div
             className="absolute z-10"
             style={{
@@ -115,10 +152,13 @@ const WaterfallSection = () => {
               icon={<img src="/assets/svg/radar/desktop.svg" alt="Desktop" className="w-full h-full" />}
               delay={0.5}
               noContainer={true}
+              showSparkle={true}
+              sparkleDelay={0}
+              sparkleDuration={20}
             />
           </div>
 
-          {/* People   θ=130° r=0.60  → left=30.7% bot=45.9% */}
+          {/* People */}
           <div
             className="absolute z-10"
             style={{
@@ -131,10 +171,13 @@ const WaterfallSection = () => {
               icon={<img src="/assets/svg/radar/people.svg" alt="People" className="w-full h-full" />}
               delay={0.6}
               noContainer={true}
+              showSparkle={true}
+              sparkleDelay={18.733}
+              sparkleDuration={20}
             />
           </div>
 
-          {/* Database θ=153° r=0.75  → left=16.6% bot=34.1% */}
+          {/* Database */}
           <div
             className="absolute z-10"
             style={{
@@ -147,10 +190,13 @@ const WaterfallSection = () => {
               icon={<img src="/assets/svg/radar/database.svg" alt="Database" className="w-full h-full" />}
               delay={0.7}
               noContainer={true}
+              showSparkle={true}
+              sparkleDelay={17.467}
+              sparkleDuration={20}
             />
           </div>
 
-          {/* Building θ=168° r=0.44  → left=28.5% bot=9.1% */}
+          {/* Building */}
           <div
             className="absolute z-10"
             style={{
@@ -163,6 +209,9 @@ const WaterfallSection = () => {
               icon={<img src="/assets/svg/radar/building.svg" alt="Building" className="w-full h-full" />}
               delay={0.8}
               noContainer={true}
+              showSparkle={true}
+              sparkleDelay={16.272}
+              sparkleDuration={20}
             />
           </div>
         </div>

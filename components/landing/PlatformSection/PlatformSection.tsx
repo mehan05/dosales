@@ -8,6 +8,27 @@ import Funnel from "./Funnel";
 
 const PlatformSection = () => {
   const [activeStep, setActiveStep] = useState(1);
+  const totalSteps = 3;
+  const intervalRef = React.useRef<NodeJS.Timeout | null>(null);
+
+  const startInterval = () => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      setActiveStep((prev) => (prev % totalSteps) + 1);
+    }, 2000);
+  };
+
+  React.useEffect(() => {
+    startInterval();
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, []);
+
+  const handleStepClick = (step: number) => {
+    setActiveStep(step);
+    startInterval(); // Reset timer on manual click
+  };
 
   return (
     <section className="relative pt-16 pb-3 xs:pb-32 xs:pt-32 sm:pb-10  bg-linear-to-b from-white to-blue-50/40 overflow-hidden font-sans">
@@ -42,7 +63,7 @@ const PlatformSection = () => {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 mt-12 xs:mt-32 items-center">
         {/* Left Column: Funnel */}
         <div className="flex flex-col items-center">
-          <Funnel activeStep={activeStep} onStepClick={setActiveStep} />
+          <Funnel activeStep={activeStep} onStepClick={handleStepClick} />
         </div>
 
         {/* Right Column: Dynamic UI Card */}

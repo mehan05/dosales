@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import TestimonialCard from "./TestimonialCard";
 import GridBackground from "../ui/GridBackground";
@@ -77,10 +78,43 @@ const testimonialData = [
   },
 ];
 
+const MarqueeRow = ({ items, duration = 30 }: { items: typeof testimonialData, duration?: number }) => {
+  const [isPaused, setIsPaused] = React.useState(false);
+
+  return (
+    <div 
+      className="flex overflow-hidden"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
+      <div
+        className="flex gap-4 pr-4"
+        style={{ 
+          width: "fit-content",
+          animation: `marqueeLeft ${duration}s linear infinite`,
+          animationPlayState: isPaused ? "paused" : "running"
+        }}
+      >
+        {/* We duplicate the items to create a seamless loop */}
+        {[...items, ...items].map((testimonial, idx) => (
+          <div key={idx} className="w-[350px] shrink-0">
+            <TestimonialCard {...testimonial} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const RealPainPoints = () => {
+  // Split data into 3 rows for more visual interest
+  const row1 = testimonialData.slice(0, 3);
+  const row2 = testimonialData.slice(3, 6);
+  const row3 = testimonialData.slice(6, 9);
+
   return (
     <div className="px-4 py-6 xs:py-5 w-full overflow-hidden">
-      <section className="relative max-w-[1700px]  mx-auto rounded-[40px] min-h-[800px] flex flex-col lg:flex-row items-center overflow-hidden bg-dashboard-bg py-12 lg:py-0 border border-dashboard-outline/50 shadow-sm">
+      <section className="relative max-w-[1700px] mx-auto rounded-[40px] min-h-[800px] flex flex-col lg:flex-row items-center overflow-hidden bg-dashboard-bg py-12 lg:py-0 border border-dashboard-outline/50 shadow-sm">
         <GridBackground className="text-black overflow-hidden" />
 
         {/* Left Content */}
@@ -106,14 +140,12 @@ const RealPainPoints = () => {
           </div>
         </div>
 
-        {/* Right Content - Dark Container */}
+        {/* Right Content - Dark Container with Horizontal Carousel */}
         <div className="relative w-full lg:w-[55%] pt-12 lg:pt-0 z-10 pl-4 lg:pl-10 flex items-center shrink-0 overflow-hidden">
-          <div className="bg-slate-950 w-full min-w-[300px] lg:min-w-[1200px] rounded-l-[40px] p-6 lg:p-10 border-4 border-r-0 border-white shadow-2xl h-[700px] flex items-center">
-            <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-4 w-full h-full max-h-full overflow-hidden">
-              {testimonialData.map((testimonial, index) => (
-                <TestimonialCard key={index} {...testimonial} />
-              ))}
-            </div>
+          <div className="bg-slate-950 w-full min-w-[300px] lg:min-w-[1200px] rounded-l-[40px] p-6 lg:p-10 border-4 border-r-0 border-white shadow-2xl h-[700px] flex flex-col justify-center gap-6 overflow-hidden">
+            <MarqueeRow items={row1} duration={40} />
+            <MarqueeRow items={row2} duration={35} />
+            <MarqueeRow items={row3} duration={45} />
           </div>
         </div>
       </section>

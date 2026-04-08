@@ -1,29 +1,50 @@
 'use client';
 
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { HiSparkles, HiArrowRight, HiOutlineSave, HiChevronDown, HiViewGrid, HiCreditCard } from 'react-icons/hi';
 
-const DiscoverySearchCard = ({ onRunDiscovery, isMobile = false }: { onRunDiscovery?: () => void, isMobile?: boolean }) => (
+const DiscoverySearchCard = ({ 
+  onRunDiscovery, 
+  isMobile = false,
+  values = {},
+  isAutoClicking = false
+}: { 
+  onRunDiscovery?: () => void, 
+  isMobile?: boolean,
+  values?: Record<string, string>,
+  isAutoClicking?: boolean
+}) => (
   <div className="flex flex-col h-full">
     <h2 className="text-2xl font-bold text-slate-800 mb-8">Discovery Search</h2>
     
     <div className="grid grid-cols-2 gap-x-6 gap-y-4 xs:gap-6 mb-8">
       {[
-        { label: 'Target Company', placeholder: 'e.g. Stripe, Coinbase' },
-        { label: 'Job Titles', placeholder: 'CTO, VP Engineering' },
-        { label: 'Location', placeholder: 'San Francisco, London' },
-        { label: 'Industry', placeholder: 'Fintech, SaaS' },
-        { label: 'Company Size', placeholder: '50-200' },
-        { label: 'Max Results', placeholder: '25' },
-      ].map((field, idx) => (
-        <div key={idx} className="space-y-2">
+        { id: 'target_company', label: 'Target Company', placeholder: 'e.g. Stripe, Coinbase' },
+        { id: 'job_titles', label: 'Job Titles', placeholder: 'CTO, VP Engineering' },
+        { id: 'location', label: 'Location', placeholder: 'San Francisco, London' },
+        { id: 'industry', label: 'Industry', placeholder: 'Fintech, SaaS' },
+        { id: 'company_size', label: 'Company Size', placeholder: '50-200' },
+        { id: 'max_results', label: 'Max Results', placeholder: '25' },
+      ].map((field) => (
+        <div key={field.id} className="space-y-2">
           <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{field.label}</label>
-          <input 
-            type="text" 
-            placeholder={field.placeholder} 
-            className="w-full bg-slate-50/50 border border-slate-100 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-blue/20 transition-all placeholder:text-slate-300"
-          />
+          <div className="relative">
+            <input 
+              type="text" 
+              placeholder={field.placeholder}
+              value={values[field.id] || ''}
+              readOnly
+              className="w-full bg-slate-50/50 border border-slate-100 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-blue/20 transition-all placeholder:text-slate-300"
+            />
+            {values[field.id] && (
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="absolute right-3 top-1/2 -translate-y-1/2 w-0.5 h-4 bg-primary-blue/40 animate-pulse"
+              />
+            )}
+          </div>
         </div>
       ))}
     </div>
@@ -34,13 +55,15 @@ const DiscoverySearchCard = ({ onRunDiscovery, isMobile = false }: { onRunDiscov
     </div>
 
     <div className="flex flex-wrap items-center gap-3 mt-auto">
-      <button 
+      <motion.button 
         onClick={onRunDiscovery}
+        animate={isAutoClicking ? { scale: [1, 0.95, 1], backgroundColor: ['#2864FF', '#1E4DBE', '#2864FF'] } : {}}
+        transition={{ duration: 0.4 }}
         className="bg-primary-blue text-white px-6 py-3 rounded-xl font-bold text-[10px] xs:text-xs flex items-center gap-2 hover:bg-blue-deeper transition-all shadow-lg shadow-blue-500/20 active:scale-95 whitespace-nowrap"
       >
         <HiSparkles className="text-sm" />
         RUN DISCOVERY
-      </button>
+      </motion.button>
       <button className="bg-slate-900 text-white px-4 py-3 rounded-xl font-bold text-[10px] xs:text-xs flex items-center gap-2 hover:bg-slate-800 transition-all active:scale-95">
         0 <HiChevronDown />
       </button>
@@ -135,9 +158,50 @@ const LeadsCard = ({ onBack, isMobile = false }: { onBack?: () => void, isMobile
 
 const DiscoverySection = () => {
   const [showLeads, setShowLeads] = useState(false);
+  const [fieldValues, setFieldValues] = useState<Record<string, string>>({});
+  const [isAutoClicking, setIsAutoClicking] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { amount: 0.5, once: true });
+
+  useEffect(() => {
+    if (isInView && !hasAnimated) {
+      const typeSequence = async () => {
+        setHasAnimated(true);
+        
+        const typeText = async (id: string, text: string) => {
+          for (let i = 0; i <= text.length; i++) {
+            setFieldValues(prev => ({ ...prev, [id]: text.slice(0, i) }));
+            await new Promise(r => setTimeout(r, 30 + Math.random() * 30));
+          }
+        };
+
+        await new Promise(r => setTimeout(r, 800)); // Initial pause
+        
+        // Launch all typing animations in parallel
+        await Promise.all([
+          typeText('target_company', 'Stripe, Coinbase'),
+          typeText('job_titles', 'CTO, VP Engineering'),
+          typeText('location', 'San Francisco, London'),
+          typeText('industry', 'Fintech, SaaS'),
+          typeText('company_size', '50-200'),
+          typeText('max_results', '25'),
+        ]);
+        
+        await new Promise(r => setTimeout(r, 500)); // Wait after everything is typed
+        setIsAutoClicking(true);
+        await new Promise(r => setTimeout(r, 600));
+        setShowLeads(true);
+        setIsAutoClicking(false);
+      };
+
+      typeSequence();
+    }
+  }, [isInView, hasAnimated]);
 
   return (
-    <section className="py-12 xs:py-24 bg-white overflow-hidden">
+    <section ref={sectionRef} className="py-12 xs:py-24 bg-white overflow-hidden">
       <div className="max-w-[1700px] mx-auto px-4 xs:px-6 grid grid-cols-1 lg:grid-cols-12 items-center gap-12 lg:gap-16">
         
         {/* Left Side: Card UI */}
@@ -154,7 +218,12 @@ const DiscoverySection = () => {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="w-full flex flex-col h-full"
                   >
-                    <DiscoverySearchCard onRunDiscovery={() => setShowLeads(true)} isMobile={true} />
+                    <DiscoverySearchCard 
+                      onRunDiscovery={() => setShowLeads(true)} 
+                      isMobile={true} 
+                      values={fieldValues}
+                      isAutoClicking={isAutoClicking}
+                    />
                   </motion.div>
                 ) : (
                   <motion.div
