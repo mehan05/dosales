@@ -9,6 +9,7 @@ import {
   HiChevronDown,
   HiViewGrid,
   HiCreditCard,
+  HiArrowNarrowDown,
 } from "react-icons/hi";
 
 const DiscoverySearchCard = ({
@@ -46,8 +47,8 @@ const DiscoverySearchCard = ({
         { id: "company_size", label: "Company Size", placeholder: "50-200" },
         { id: "max_results", label: "Max Results", placeholder: "25" },
       ].map((field) => (
-        <div key={field.id} className="space-y-2">
-          <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+        <div key={field.id} className="space-y-2.5">
+          <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest px-0.5">
             {field.label}
           </label>
           <div className="relative">
@@ -56,7 +57,7 @@ const DiscoverySearchCard = ({
               placeholder={field.placeholder}
               value={values[field.id] || ""}
               readOnly
-              className="w-full bg-slate-50/50 border border-slate-100 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-blue/20 transition-all placeholder:text-slate-300"
+              className="w-full bg-white border border-slate-100 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-blue/20 transition-all placeholder:text-slate-300"
             />
             {values[field.id] && (
               <motion.div
@@ -95,7 +96,7 @@ const DiscoverySearchCard = ({
         RUN DISCOVERY
       </motion.button>
       <button className="bg-slate-900 text-white px-4 py-3 rounded-xl font-bold text-[10px] xs:text-xs flex items-center gap-2 hover:bg-slate-800 transition-all active:scale-95">
-        0 <HiChevronDown />
+        0 <HiArrowNarrowDown />
       </button>
       <button className="bg-white text-slate-600 border border-slate-200 px-6 py-3 rounded-xl font-bold text-[10px] xs:text-xs flex items-center gap-2 hover:bg-slate-50 transition-all active:scale-95 whitespace-nowrap">
         <HiOutlineSave className="text-sm" />
@@ -317,9 +318,9 @@ const DiscoverySection = () => {
         
 
         {/* right Side: Card UI */}
-        <div className="relative lg:col-span-8 w-full order-2 lg:order-1">
-          <div className="relative rounded-[32px] xs:rounded-[40px] p-1.5 xs:p-5 bg-dashboard-outline/30  transition-all border-4 xs:border-8 border-white w-full">
-            <div className="bg-white rounded-[28px] xs:rounded-[32px] p-6 xs:p-8 border border-blue-50/50 min-h-[460px] xs:min-h-[500px] flex flex-col w-full overflow-hidden">
+        <div className="relative lg:col-span-8 w-full order-2 lg:order-1 p-[10px] rounded-[32px] xs:rounded-[40px] bg-linear-to-b from-dashboard-outline to-dashboard-bg">
+          <div className="relative rounded-[30px] xs:rounded-[38px]   bg-grey-white transition-all w-full h-full">
+            <div className="bg-grey-white rounded-[28px] xs:rounded-[32px] p-6 xs:p-8  min-h-[460px] xs:min-h-[500px] flex flex-col w-full overflow-hidden shadow-sm">
               <AnimatePresence mode="wait" initial={false}>
                 {!showLeads ? (
                   <motion.div
@@ -364,8 +365,6 @@ const DiscoverySection = () => {
             </div>
           </div>
         </div>
-
-
         {/* left Side: Content */}
         <div className="flex flex-col items-start lg:col-span-4 max-w-2xl lg:max-w-none order-1 lg:order-2">
           <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-10">

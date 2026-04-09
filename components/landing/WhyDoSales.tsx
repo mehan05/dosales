@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const WhyDoSales = () => {
   return (
-    <section className="relative xs:pt-4 xs:pb-24 py-4 overflow-hidden xs:mt-0 mt-0 ">
+    <section className="relative xs:pt-4  overflow-hidden xs:mt-0 mt-0">
       <div className="absolute inset-0 bg-gradient-to-t from-bg-pale to-blue-ghost to-50% -z-10" />
       {/* Top edge white blur for section blending - subtilized to prevent dimming content */}
       <div className="absolute top-0 left-0 right-0 h-40 bg-linear-to-b from-white/60 via-white/20 to-transparent pointer-events-none z-0" />
@@ -64,8 +64,8 @@ const WhyDoSales = () => {
 
       {/* Why DoSales Section */}
       <div className="rounded-tl-[100px] rounded-tr-[100px] xs:rounded-tl-[200.4px] xs:rounded-tr-[200.4px] bg-linear-to-b from-blue-ghost to-blue-ghost to-30% pt-7 w-full">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col items-center mb-16 ">
-          <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-10">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col mt-15 items-center mb-16">
+          <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-5">
             {" "}
             Why DoSales
           </div>

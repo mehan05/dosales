@@ -54,7 +54,7 @@ const PlatformSection = () => {
           </p>
 
           {/* Button */}
-          <button className="bg-primary-blue max-w-[250px] text-white px-5 py-4 rounded-xl font-bold text-sm shadow-xl shadow-blue-600/20 transition-all active:scale-95 group flex items-center gap-2">
+          <button className="bg-primary-blue max-w-[250px] text-white px-5 py-4 rounded-xl font-bold text-sm  group flex items-center gap-2">
             Setup your Sales Engine
           </button>
         </div>
