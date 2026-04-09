@@ -31,7 +31,7 @@ const PlatformSection = () => {
   };
 
   return (
-    <section className="relative pt-16 pb-6  xs:pb-16 xs:pt-17 sm:pb-24 bg-linear-to-b from-white via-blue-50/40 to-white overflow-hidden font-sans">
+    <section className="relative pt-16 md:pb-6 xs:pt-17 bg-linear-to-b from-white via-blue-50/40 to-white overflow-hidden font-sans">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-6 relative z-10 ">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto relative ">

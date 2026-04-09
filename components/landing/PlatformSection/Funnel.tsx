@@ -155,6 +155,12 @@ const Funnel: React.FC<FunnelProps> = ({ activeStep, onStepClick }) => {
 
   return (
     <div className="w-full max-w-lg relative flex flex-col items-center gap-3">
+      <div className="order-first md:order-last mb-6 mt-2 md:mb-0 md:mt-10 text-center">
+        <p className="font-[500] text-[16px] uppercase tracking-wider text-text-main">
+          DOSALES AI AUTOMATED FUNNEL
+        </p>
+      </div>
+
       {/* Step 1: Define & Discover (widest) */}
       <Step3DBox
         label="1.  Define & Discover"
@@ -197,12 +203,6 @@ const Funnel: React.FC<FunnelProps> = ({ activeStep, onStepClick }) => {
         frontPath="M515 7 L483.176 93 H31.8205 L0 7 H515Z"
         fontSize={18 / 0.7}
       />
-
-      <div className="mt-10 text-center">
-        <p className="text-sm font-[500] text-[16px] uppercase">
-          DOSALES AI AUTOMATED FUNNEL
-        </p>
-      </div>
     </div>
   );
 };

@@ -42,14 +42,14 @@ const Footer = () => {
               </div>
               <span className="text-2xl font-bold text-[20px]">DoSales</span>
             </div>
-            <p className="text-slate-medium text-sm leading-relaxed max-w-60">
+            <p className="text-slate-medium text-sm leading-relaxed max-w-full">
               AI-powered sales intelligence for emerging markets. Verified B2B data across MENA and Southeast Asia.
             </p>
           </div>
 
           {/* Product Links */}
           <div>
-            <h3 className="text-[20px] font-bold mb-6">Product</h3>
+            <h3 className="text-[20px] font-bold mb-3">Product</h3>
             <ul className="space-y-[8px]">
               <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">Lead Database</a></li>
               <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">AI Prospecting</a></li>
@@ -61,7 +61,7 @@ const Footer = () => {
 
           {/* Company Links */}
           <div>
-            <h3 className="text-[20px] font-bold mb-6">Company</h3>
+            <h3 className="text-[20px] font-bold mb-3">Company</h3>
             <ul className="space-y-[8px]">
               <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">About</a></li>
               <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">Careers</a></li>
@@ -108,8 +108,8 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-20 pt-12 border-t border-border-footer flex flex-col xs:flex-row justify-between items-start xs:items-center gap-6">
-          <p className="text-muted-slate-blue text-[14px]">
+        <div className=" width-full mt-20 pt-12 border-t border-border-footer flex flex-col md:flex-row justify-between items-start xs:items-center max-xs:items-center gap-6">
+          <p className="text-muted-slate-blue text-[14px] items-start">
             © 2026 — Copyright. All Rights reserved
           </p>
           <div className="grid grid-cols-2 xs:flex xs:flex-wrap items-center gap-x-6 gap-y-4 xs:gap-8 w-full xs:w-auto">
