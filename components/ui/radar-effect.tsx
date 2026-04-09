@@ -177,8 +177,8 @@ export const IconContainer = ({
         <div className={twMerge(
           "flex items-center justify-center",
           noContainer 
-            ? "h-8 w-8 xs:h-12 xs:w-12" 
-            : "h-10 w-10 xs:h-12 xs:w-12 rounded-2xl border border-slate-700 bg-slate-800 shadow-inner"
+            ? "h-[30px] w-[30px] md:h-[40px] md:w-[40px]" 
+            : "h-[30px] w-[30px] md:h-[40px] md:w-[40px] rounded-2xl border border-slate-700 bg-slate-800 shadow-inner"
         )}>
           {icon || (
             <svg className="h-6 w-6 xs:h-8 xs:w-8 text-slate-600" fill="currentColor" viewBox="0 0 20 20">

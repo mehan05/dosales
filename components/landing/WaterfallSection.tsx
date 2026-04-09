@@ -297,7 +297,7 @@ const WaterfallSection = () => {
         <div className="px-3 py-1 bg-linear-to-r from-banner-from to-banner-to max-w-[300px] text-white text-[16px] font-semibold rounded-full border border-banner-border mb-10 shadow-2xl tracking-wide">
           Waterfall Enrichment
         </div>
-        <h2 className="text-[48px] font-[400] lg:text-6xl bg-gradient-to-r from-pure-white to-white-muted bg-clip-text text-transparent mb-4 tracking-tight leading-tight">
+        <h2 className="text-[36px] lg:text-[48px] font-[400] bg-gradient-to-r from-pure-white to-white-muted bg-clip-text text-transparent mb-4 tracking-tight leading-tight">
           Chains 10+ data providers, 85% match rates
         </h2>
         <p className="text-slate-muted text-[16px] lg:text-[16px] leading-relaxed max-w-2xl font-thin">

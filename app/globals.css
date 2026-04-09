@@ -83,6 +83,10 @@
   --breakpoint-xs: 427px;
 }
 
+@utility badge-gradient {
+  background: linear-gradient(to right, var(--color-badge-from), var(--color-badge-to));
+}
+
 :root {
   --background: var(--color-pure-white);
   --foreground: var(--color-text-main);

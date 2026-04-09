@@ -68,16 +68,16 @@ const WhyDoSales = () => {
 
       {/* Why DoSales Section */}
       <div
-        className="bg-linear-to-b border-1 border-blue-200 from-blue-ghost to-blue-ghost to-30% pt-7 w-full"
+        className="bg-linear-to-b border-1 border-blue-200 from-blue-ghost to-blue-ghost to-30% md:pt-7 w-full"
         style={{ borderRadius: "50% 50% 0 0 / 80px 80px 0 0" }}
       >
         <div className="max-w-7xl mx-auto px-4 flex flex-col mt-15 items-center mb-16">
-          <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-5">
+          <div className="w-auto h-8 px-3.5 py-1.25 badge-gradient text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-5">
 
             {" "}
             Why DoSales
           </div>
-          <h2 className="text-[48px] !lg:text-[52px] font-bold text-text-main text-center max-w-4xl tracking-tight leading-tight">
+          <h2 className="text-[36px] lg:text-[48px] font-bold text-text-main text-center max-w-4xl tracking-tight leading-tight">
             Existing tools weren't built for your markets
           </h2>
         </div>
@@ -130,7 +130,7 @@ const WhyDoSales = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-heading mb-4 tracking-tight">
+                  <h3 className="text-[20px] font-bold text-heading mb-4 tracking-tight">
                     Regional Dominance
                   </h3>
                   <p className="text-text-main text-[16px] leading-[1.6] max-w-md">
