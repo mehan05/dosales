@@ -14,25 +14,15 @@ const WhyDoSales = () => {
             <h3 className="text-[32px] font-[500] text-heading tracking-tighter ">
               50 LEADS/MO
             </h3>
-            <p className="text-slate-dark  text-[16px] ">
-              FREE FOREVER
-            </p>
+            <p className="text-slate-dark  text-[16px] ">FREE FOREVER</p>
           </div>
           <div className="flex flex-col gap-2">
-            <h3 className="text-[32px] font-[500] text-heading ">
-              2 MIN
-            </h3>
-            <p className="text-slate-dark  text-[16px] ">
-              SETUP
-            </p>
+            <h3 className="text-[32px] font-[500] text-heading ">2 MIN</h3>
+            <p className="text-slate-dark  text-[16px] ">SETUP</p>
           </div>
           <div className="flex flex-col gap-2">
-            <h3 className="text-[32px] font-[500] text-heading ">
-              NO CARD
-            </h3>
-            <p className="text-slate-dark  text-[16px] ">
-              REQUIRED
-            </p>
+            <h3 className="text-[32px] font-[500] text-heading ">NO CARD</h3>
+            <p className="text-slate-dark  text-[16px] ">REQUIRED</p>
           </div>
         </div>
 
@@ -47,7 +37,13 @@ const WhyDoSales = () => {
           <div className="flex items-center gap-0.5">
             <svg width="0" height="0" className="absolute">
               <defs>
-                <linearGradient id="star-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <linearGradient
+                  id="star-gradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="0%"
+                  y2="100%"
+                >
                   <stop offset="0%" stopColor="white" />
                   <stop offset="100%" stopColor="var(--color-gold)" />
                 </linearGradient>
@@ -71,9 +67,13 @@ const WhyDoSales = () => {
       </div>
 
       {/* Why DoSales Section */}
-      <div className="rounded-tl-[100px] rounded-tr-[100px] xs:rounded-tl-[200.4px] xs:rounded-tr-[200.4px] bg-linear-to-b from-blue-ghost to-blue-ghost to-30% pt-7 w-full">
+      <div
+        className="bg-linear-to-b border-1 border-blue-200 from-blue-ghost to-blue-ghost to-30% pt-7 w-full"
+        style={{ borderRadius: "50% 50% 0 0 / 80px 80px 0 0" }}
+      >
         <div className="max-w-7xl mx-auto px-4 flex flex-col mt-15 items-center mb-16">
-          <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-badge-from to-badge-to text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_var(--color-shadow-faint)] flex items-center justify-center gap-2.5 mb-5">
+          <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-5">
+
             {" "}
             Why DoSales
           </div>
@@ -91,7 +91,8 @@ const WhyDoSales = () => {
             <div
               className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 hidden md:block z-10"
               style={{
-                background: "linear-gradient(to bottom, var(--color-connector-blue), var(--color-connector-pale))",
+                background:
+                  "linear-gradient(to bottom, var(--color-connector-blue), var(--color-connector-pale))",
                 opacity: 1,
               }}
             />
@@ -101,7 +102,8 @@ const WhyDoSales = () => {
               <div
                 className="absolute w-1/2 left-1/2 -translate-x-1/2 top-0 h-px z-10"
                 style={{
-                  background: "linear-gradient(to right, var(--color-connector-blue), var(--color-connector-pale))",
+                  background:
+                    "linear-gradient(to right, var(--color-connector-blue), var(--color-connector-pale))",
                   opacity: 0.86,
                 }}
               />
@@ -112,7 +114,8 @@ const WhyDoSales = () => {
                 <div
                   className="absolute inset-y-0 left-0 w-px z-10"
                   style={{
-                    background: "linear-gradient(to bottom, var(--color-connector-blue), var(--color-connector-pale))",
+                    background:
+                      "linear-gradient(to bottom, var(--color-connector-blue), var(--color-connector-pale))",
                     opacity: 1,
                   }}
                 />
@@ -144,7 +147,8 @@ const WhyDoSales = () => {
                 <div
                   className="absolute inset-y-0 right-0 w-px z-10"
                   style={{
-                    background: "linear-gradient(to bottom, var(--color-connector-blue), var(--color-connector-pale))",
+                    background:
+                      "linear-gradient(to bottom, var(--color-connector-blue), var(--color-connector-pale))",
                     opacity: 1,
                   }}
                 />
@@ -174,7 +178,8 @@ const WhyDoSales = () => {
             <div
               className="relative h-px w-full z-10"
               style={{
-                background: "linear-gradient(to right, var(--color-connector-blue), var(--color-connector-pale))",
+                background:
+                  "linear-gradient(to right, var(--color-connector-blue), var(--color-connector-pale))",
                 opacity: 0.86,
               }}
             />
@@ -185,7 +190,8 @@ const WhyDoSales = () => {
               <div
                 className="absolute inset-y-0 right-0 w-px z-10"
                 style={{
-                  background: "linear-gradient(to bottom, var(--color-connector-blue), var(--color-connector-pale))",
+                  background:
+                    "linear-gradient(to bottom, var(--color-connector-blue), var(--color-connector-pale))",
                   opacity: 1,
                 }}
               />
@@ -202,7 +208,8 @@ const WhyDoSales = () => {
               <div
                 className="absolute w-1/2 left-1/2 -translate-x-1/2 bottom-0 h-px z-10"
                 style={{
-                  background: "linear-gradient(to right, var(--color-connector-blue), var(--color-connector-pale))",
+                  background:
+                    "linear-gradient(to right, var(--color-connector-blue), var(--color-connector-pale))",
                   opacity: 0.86,
                 }}
               />

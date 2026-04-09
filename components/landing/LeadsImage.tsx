@@ -16,7 +16,7 @@ const LeadsImage = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.2], [0.6, 1]);
 
   return (
-    <section ref={containerRef} className="xs:pb-4 pb-2 px-4 relative perspective-[1540px]">
+    <section ref={containerRef} className="xs:pb-4  max-xs:pt-10 max-xs:pb-6 xs:pt-10 xs:pb-6 lg:pt-5 pb-2 px-4 relative perspective-[1540px]">
       <motion.div 
         style={{ rotateX, scale, opacity }}
         className="max-w-[1540px] mx-auto relative origin-top pt-2 pb-5"
@@ -33,7 +33,7 @@ const LeadsImage = () => {
               height={950}
               src="/assets/svg/leagsPage.svg"
               alt="Leads Dashboard Preview"
-              className="hidden xs:block object-cover object-top w-full"
+              className="hidden sm:block object-cover object-top w-full"
               priority
             />
             <Image
@@ -41,7 +41,7 @@ const LeadsImage = () => {
               height={600}
               src="/assets/svg/leadsPageMobile.svg"
               alt="Leads Dashboard Preview Mobile"
-              className="block xs:hidden object-contain w-full"
+              className="block sm:hidden object-contain w-full"
               priority
             />
           </div>
