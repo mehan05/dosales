@@ -132,7 +132,7 @@ const RealPainPoints = () => {
 
         {/* Left Content */}
         <div className="relative w-full lg:w-[45%] px-12 lg:px-24 pb-8 lg:pt-10 lg:pb-32 flex flex-col items-start  z-10 lg:self-start">
-          <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-10">
+          <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-badge-from to-badge-to text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_var(--color-shadow-faint)] flex items-center justify-center gap-2.5 mb-10">
             Real Pain Points
           </div>
 

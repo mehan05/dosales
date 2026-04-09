@@ -73,7 +73,7 @@ const WhyDoSales = () => {
       {/* Why DoSales Section */}
       <div className="rounded-tl-[100px] rounded-tr-[100px] xs:rounded-tl-[200.4px] xs:rounded-tr-[200.4px] bg-linear-to-b from-blue-ghost to-blue-ghost to-30% pt-7 w-full">
         <div className="max-w-7xl mx-auto px-4 flex flex-col mt-15 items-center mb-16">
-          <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-5">
+          <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-badge-from to-badge-to text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_var(--color-shadow-faint)] flex items-center justify-center gap-2.5 mb-5">
             {" "}
             Why DoSales
           </div>
@@ -91,7 +91,7 @@ const WhyDoSales = () => {
             <div
               className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 hidden md:block z-10"
               style={{
-                background: "linear-gradient(to bottom, #88BFF7, #EFF9FE)",
+                background: "linear-gradient(to bottom, var(--color-connector-blue), var(--color-connector-pale))",
                 opacity: 1,
               }}
             />
@@ -101,7 +101,7 @@ const WhyDoSales = () => {
               <div
                 className="absolute w-1/2 left-1/2 -translate-x-1/2 top-0 h-px z-10"
                 style={{
-                  background: "linear-gradient(to right, #88BFF7, #EFF9FE)",
+                  background: "linear-gradient(to right, var(--color-connector-blue), var(--color-connector-pale))",
                   opacity: 0.86,
                 }}
               />
@@ -112,7 +112,7 @@ const WhyDoSales = () => {
                 <div
                   className="absolute inset-y-0 left-0 w-px z-10"
                   style={{
-                    background: "linear-gradient(to bottom, #88BFF7, #EFF9FE)",
+                    background: "linear-gradient(to bottom, var(--color-connector-blue), var(--color-connector-pale))",
                     opacity: 1,
                   }}
                 />
@@ -144,7 +144,7 @@ const WhyDoSales = () => {
                 <div
                   className="absolute inset-y-0 right-0 w-px z-10"
                   style={{
-                    background: "linear-gradient(to bottom, #88BFF7, #EFF9FE)",
+                    background: "linear-gradient(to bottom, var(--color-connector-blue), var(--color-connector-pale))",
                     opacity: 1,
                   }}
                 />
@@ -174,7 +174,7 @@ const WhyDoSales = () => {
             <div
               className="relative h-px w-full z-10"
               style={{
-                background: "linear-gradient(to right, #88BFF7, #EFF9FE)",
+                background: "linear-gradient(to right, var(--color-connector-blue), var(--color-connector-pale))",
                 opacity: 0.86,
               }}
             />
@@ -185,7 +185,7 @@ const WhyDoSales = () => {
               <div
                 className="absolute inset-y-0 right-0 w-px z-10"
                 style={{
-                  background: "linear-gradient(to bottom, #88BFF7, #EFF9FE)",
+                  background: "linear-gradient(to bottom, var(--color-connector-blue), var(--color-connector-pale))",
                   opacity: 1,
                 }}
               />
@@ -202,7 +202,7 @@ const WhyDoSales = () => {
               <div
                 className="absolute w-1/2 left-1/2 -translate-x-1/2 bottom-0 h-px z-10"
                 style={{
-                  background: "linear-gradient(to right, #88BFF7, #EFF9FE)",
+                  background: "linear-gradient(to right, var(--color-connector-blue), var(--color-connector-pale))",
                   opacity: 0.86,
                 }}
               />

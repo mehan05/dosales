@@ -45,7 +45,7 @@ const WaterfallSection = () => {
               className="animate-radar-rotate absolute top-full left-1/2 w-[200%] aspect-square z-20"
               style={{
                 background:
-                  "conic-gradient(from -1deg at 50% 50%, transparent 0deg, rgba(59, 130, 246, 0.4) 1deg, transparent 1.2deg)",
+                  "conic-gradient(from -1deg at 50% 50%, transparent 0deg, var(--color-radar-sweep) 1deg, transparent 1.2deg)",
               }}
             />
 
@@ -294,7 +294,7 @@ const WaterfallSection = () => {
       </div>
 
       <div className="relative z-10 flex flex-col items-center text-center max-w-6xl mt-20">
-        <div className="px-3 py-1 bg-linear-to-r from-[#0D4763] to-[#060C12] max-w-[300px] text-white text-[16px] font-semibold rounded-full border border-[#1E3A4C] mb-10 shadow-2xl tracking-wide">
+        <div className="px-3 py-1 bg-linear-to-r from-banner-from to-banner-to max-w-[300px] text-white text-[16px] font-semibold rounded-full border border-banner-border mb-10 shadow-2xl tracking-wide">
           Waterfall Enrichment
         </div>
         <h2 className="text-[48px] font-[400] lg:text-6xl bg-gradient-to-r from-pure-white to-white-muted bg-clip-text text-transparent mb-4 tracking-tight leading-tight">

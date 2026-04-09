@@ -104,7 +104,7 @@ const SparklingGlow = ({ delay, duration }: { delay: number; duration: number })
         return (
           <div
             key={i}
-            className="animate-sparkle-bit absolute h-1.5 w-1.5 rounded-full bg-white shadow-[0_0_12px_white,0_0_20px_rgba(59,130,246,1)] mix-blend-plus-lighter"
+            className="animate-sparkle-bit absolute h-1.5 w-1.5 rounded-full bg-white shadow-[0_0_12px_white,0_0_20px_var(--color-blue-500)] mix-blend-plus-lighter"
             style={{ 
               animationDelay: `-${duration - delay}s`,
               "--dx": `${dx}px`,
@@ -153,14 +153,14 @@ export const IconContainer = ({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.95 }}
             transition={{ duration: 0.15, ease: "easeOut" }}
-            className="absolute bottom-full mb-6 left-1/2 -translate-x-1/2 w-64 p-5 rounded-[1.25rem] bg-[#0B1219] border border-slate-700 shadow-[0_25px_60px_rgba(0,0,0,0.8)] z-100 pointer-events-none"
+            className="absolute bottom-full mb-6 left-1/2 -translate-x-1/2 w-64 p-5 rounded-[1.25rem] bg-[var(--color-tooltip-bg)] border border-slate-700 shadow-[0_25px_60px_var(--color-shadow-dark)] z-100 pointer-events-none"
           >
             <div className="relative z-10">
               <h4 className="text-white text-[16px] font-bold mb-1.5 tracking-tight">{popupTitle}</h4>
               <p className="text-white/90 text-[14px] leading-relaxed font-medium">{popupDescription}</p>
             </div>
             {/* Small arrow/tail for the popup */}
-            <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-[#0B1219] border-r border-b border-slate-800 rotate-45"></div>
+            <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-[var(--color-tooltip-bg)] border-r border-b border-slate-800 rotate-45"></div>
           </motion.div>
         )}
       </AnimatePresence>

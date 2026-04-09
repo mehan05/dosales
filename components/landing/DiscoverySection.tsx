@@ -84,7 +84,7 @@ const DiscoverySearchCard = ({
           isAutoClicking
             ? {
                 scale: [1, 0.95, 1],
-                backgroundColor: ["#2864FF", "#1E4DBE", "#2864FF"],
+                backgroundColor: ["var(--color-blue-accent)", "var(--color-blue-accent-dark)", "var(--color-blue-accent)"],
               }
             : {}
         }
@@ -366,7 +366,7 @@ const DiscoverySection = () => {
         </div>
         {/* left Side: Content */}
         <div className="flex flex-col items-start lg:col-span-4 max-w-2xl lg:max-w-none order-1 lg:order-2">
-          <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-[#C5E7F7] to-[#F4F9FB] text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-10">
+          <div className="w-auto h-8 px-3.5 py-1.25 bg-linear-to-r from-badge-from to-badge-to text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_var(--color-shadow-faint)] flex items-center justify-center gap-2.5 mb-10">
             AI Outbound Agent
           </div>
           <h2 className="lg:text-[52px] text-[36px] lg:leading-[1.5] font-semibold text-slate-900 mb-4 xs:mb-6  tracking-tight">

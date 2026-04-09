@@ -55,6 +55,30 @@
   --color-shadow-ultra-light: rgba(0, 0, 0, 0.02);
   --color-shadow-subtle: rgba(0, 0, 0, 0.08);
   --color-shadow-heading: rgba(2, 106, 162, 0.35);
+  --color-shadow-faint: rgba(0, 0, 0, 0.05);
+  --color-shadow-dark: rgba(0, 0, 0, 0.8);
+
+  /* Badge Gradient */
+  --color-badge-from: #C5E7F7;
+  --color-badge-to: #F4F9FB;
+
+  /* WhyDoSales Connectors / Dividers */
+  --color-connector-blue: #88BFF7;
+  --color-connector-pale: #EFF9FE;
+
+  /* Discovery Section Button Animation */
+  --color-blue-accent: #2864FF;
+  --color-blue-accent-dark: #1E4DBE;
+
+  /* Radar / Sparkle Effect */
+  --color-tooltip-bg: #0B1219;
+  --color-radar-sweep: rgba(59, 130, 246, 0.4);
+  --color-blue-500: rgba(59, 130, 246, 1);
+
+  /* Waterfall Banner */
+  --color-banner-from: #0D4763;
+  --color-banner-to: #060C12;
+  --color-banner-border: #1E3A4C;
 
   --breakpoint-xs: 427px;
 }
