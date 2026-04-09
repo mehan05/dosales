@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const WhyDoSales = () => {
   return (
-    <section className="relative xs:pt-4  overflow-hidden xs:mt-0 mt-0">
+    <section className="relative xs:pt-4 overflow-hidden xs:mt-0 mt-0 flex flex-col min-h-screen">
       <div className="absolute inset-0 bg-gradient-to-t from-bg-pale to-blue-ghost to-50% -z-10" />
       {/* Top edge white blur for section blending - subtilized to prevent dimming content */}
       <div className="absolute top-0 left-0 right-0 h-40 bg-linear-to-b from-white/60 via-white/20 to-transparent pointer-events-none z-0" />
@@ -66,14 +66,12 @@ const WhyDoSales = () => {
         </div>
       </div>
 
-      {/* Why DoSales Section */}
       <div
-        className="bg-linear-to-b border-1 border-blue-200 from-blue-ghost to-blue-ghost to-30% md:pt-7 w-full"
+        className="bg-linear-to-b flex-1 pb-32 from-blue-ghost to-blue-ghost to-30% md:pt-7 w-full"
         style={{ borderRadius: "50% 50% 0 0 / 80px 80px 0 0" }}
       >
         <div className="max-w-7xl mx-auto px-4 flex flex-col mt-15 items-center mb-16">
           <div className="w-auto h-8 px-3.5 py-1.25 badge-gradient text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-5">
-
             {" "}
             Why DoSales
           </div>
@@ -84,20 +82,19 @@ const WhyDoSales = () => {
 
         {/* Features Illustration Recreated in JSX */}
         <div className="max-w-7xl mx-auto px-4">
-          <div className="relative w-full rounded-[40px] overflow-hidden border border-primary-blue/10 bg-blue-ghost backdrop-blur-sm">
+          <div className="relative w-full rounded-[40px] overflow-hidden  bg-blue-ghost backdrop-blur-sm">
             {/* Card Accent Borders & Dividers handled within sections */}
 
-            {/* Extended Vertical divider - Spans entire container */}
-            <div
-              className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 hidden md:block z-10"
-              style={{
-                background:
-                  "linear-gradient(to bottom, var(--color-connector-blue), var(--color-connector-pale))",
-                opacity: 1,
-              }}
-            />
-
             <div className="grid grid-cols-1 md:grid-cols-2 relative h-full">
+              {/* Vertical divider Segment for Top Row */}
+              <div
+                className="absolute top-4 bottom-4 left-1/2 w-px -translate-x-1/2 hidden md:block z-10"
+                style={{
+                  background:
+                    "linear-gradient(to bottom, var(--color-connector-blue), var(--color-connector-pale))",
+                  opacity: 0.8,
+                }}
+              />
               {/* Top side horizontal divider */}
               <div
                 className="absolute w-1/2 left-1/2 -translate-x-1/2 top-0 h-px z-10"
@@ -112,7 +109,7 @@ const WhyDoSales = () => {
               <div className="flex flex-col p-8 md:p-12 relative">
                 {/* Left side stroke line */}
                 <div
-                  className="absolute inset-y-0 left-0 w-px z-10"
+                  className="absolute top-50 left-0 w-px z-10 h-[300px]"
                   style={{
                     background:
                       "linear-gradient(to bottom, var(--color-connector-blue), var(--color-connector-pale))",
@@ -176,16 +173,18 @@ const WhyDoSales = () => {
 
             {/* Middle horizontal divider - Separates top row from AI Autonomy */}
             <div
-              className="relative h-px w-full z-10"
+              className="relative  left-30 h-px w-full z-10"
               style={{
                 background:
                   "linear-gradient(to right, var(--color-connector-blue), var(--color-connector-pale))",
-                opacity: 0.86,
+                opacity: 0.5,
               }}
             />
 
             {/* Card 3: AI Autonomy (Refined Size) */}
             <div className="flex flex-col md:flex-row p-6 md:p-10 items-center relative overflow-hidden">
+              {/* Vertical divider Segment for Bottom Section */}
+
               {/* Right side stroke line */}
               <div
                 className="absolute inset-y-0 right-0 w-px z-10"
@@ -227,6 +226,7 @@ const WhyDoSales = () => {
           </div>
         </div>
       </div>
+
     </section>
   );
 };

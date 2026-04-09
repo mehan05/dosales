@@ -154,9 +154,13 @@ const RealPainPoints = () => {
         </div>
 
         {/* Right Content - Dark Container with Horizontal Carousel */}
-        <div className="relative w-full lg:w-[1044px] pt-12  mb-10 lg:pt-0 z-10 px-4 lg:px-0 lg:pl-10 flex lg:items-end shrink-0 overflow-hidden lg:h-full">
-
-             <div className="bg-slate-950 w-full min-w-[300px] lg:min-w-[1200px] rounded-l-[40px] p-4 lg:p-10 border-4 border-r-0 border-white shadow-2xl h-[700px] flex flex-col justify-center gap-6 overflow-hidden">
+        <div className="relative w-full lg:w-[1044px] pt-12 mb-10 lg:pt-0 z-10 px-4 lg:px-0 lg:pl-10 flex lg:items-center shrink-0 overflow-hidden lg:h-full">
+             <div 
+               className="w-full min-w-[300px] lg:min-w-[1200px] rounded-l-[100px] p-4 lg:p-12 border-[16px] border-r-0 border-transparent h-[720px] flex flex-col justify-center gap-8 overflow-hidden"
+               style={{
+                 background: `linear-gradient(var(--color-slate-950), var(--color-slate-950)) padding-box, linear-gradient(to bottom, #C5E6F6, #F1FAFF) border-box`,
+               }}
+             >
             <MarqueeRow items={row1} duration={40} />
             <MarqueeRow items={row2} duration={35} />
             <MarqueeRow items={row3} duration={45} />

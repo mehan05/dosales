@@ -26,11 +26,11 @@ const LeadsImage = () => {
           className="absolute -right-50 top-30 -translate-y-1/2 w-170 h-[400px] bg-bg-vivid/30 rounded-full blur-[100px] pointer-events-none -z-10"
         />
         
-        <div className="relative w-full rounded-[48px] bg-white p-2.5 shadow-[0_20px_50px_var(--color-vivid-glow)]">
-          <div className="overflow-hidden rounded-[32px] w-full">
+        <div className="relative w-full rounded-[48px]  shadow-[0_20px_50px_var(--color-vivid-glow)]">
+          <div className="overflow-hidden rounded-[32px] w-full border border-[#F1FAFF]">
             <Image
-              width={1540}
-              height={950}
+              width={1120}
+              height={712}
               src="/assets/svg/leagsPage.svg"
               alt="Leads Dashboard Preview"
               className="hidden sm:block object-cover object-top w-full"
