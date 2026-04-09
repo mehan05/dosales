@@ -9,7 +9,6 @@ import {
   HiChevronDown,
   HiViewGrid,
   HiCreditCard,
-  HiArrowNarrowDown,
 } from "react-icons/hi";
 
 const DiscoverySearchCard = ({
@@ -96,7 +95,7 @@ const DiscoverySearchCard = ({
         RUN DISCOVERY
       </motion.button>
       <button className="bg-slate-900 text-white px-4 py-3 rounded-xl font-bold text-[10px] xs:text-xs flex items-center gap-2 hover:bg-slate-800 transition-all active:scale-95">
-        0 <HiArrowNarrowDown />
+        0 <HiChevronDown />
       </button>
       <button className="bg-white text-slate-600 border border-slate-200 px-6 py-3 rounded-xl font-bold text-[10px] xs:text-xs flex items-center gap-2 hover:bg-slate-50 transition-all active:scale-95 whitespace-nowrap">
         <HiOutlineSave className="text-sm" />
@@ -318,8 +317,8 @@ const DiscoverySection = () => {
         
 
         {/* right Side: Card UI */}
-        <div className="relative lg:col-span-8 w-full order-2 lg:order-1 p-[10px] rounded-[32px] xs:rounded-[40px] bg-linear-to-b from-dashboard-outline to-dashboard-bg">
-          <div className="relative rounded-[30px] xs:rounded-[38px]   bg-grey-white transition-all w-full h-full">
+        <div className="relative lg:col-span-8 w-full order-2 lg:order-1 p-[6px] rounded-[30px] xs:rounded-[36px] bg-linear-to-b from-dashboard-outline to-dashboard-bg">
+          <div className="relative rounded-[32px] xs:rounded-[40px]   bg-grey-white transition-all w-full h-full">
             <div className="bg-grey-white rounded-[28px] xs:rounded-[32px] p-6 xs:p-8  min-h-[460px] xs:min-h-[500px] flex flex-col w-full overflow-hidden shadow-sm">
               <AnimatePresence mode="wait" initial={false}>
                 {!showLeads ? (

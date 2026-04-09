@@ -14,23 +14,23 @@ const WhyDoSales = () => {
             <h3 className="text-[32px] font-[500] text-heading tracking-tighter ">
               50 LEADS/MO
             </h3>
-            <p className="text-slate-dark  text-[16px] tracking-widest">
+            <p className="text-slate-dark  text-[16px] ">
               FREE FOREVER
             </p>
           </div>
           <div className="flex flex-col gap-2">
-            <h3 className="text-[32px] font-[500] text-heading tracking-tighter">
+            <h3 className="text-[32px] font-[500] text-heading ">
               2 MIN
             </h3>
-            <p className="text-slate-dark  text-[16px] tracking-widest">
+            <p className="text-slate-dark  text-[16px] ">
               SETUP
             </p>
           </div>
           <div className="flex flex-col gap-2">
-            <h3 className="text-[32px] font-[500] text-heading tracking-tighter">
+            <h3 className="text-[32px] font-[500] text-heading ">
               NO CARD
             </h3>
-            <p className="text-slate-dark  text-[16px] tracking-widest">
+            <p className="text-slate-dark  text-[16px] ">
               REQUIRED
             </p>
           </div>
@@ -45,13 +45,21 @@ const WhyDoSales = () => {
             Loved by 132+ existing users
           </p>
           <div className="flex items-center gap-0.5">
+            <svg width="0" height="0" className="absolute">
+              <defs>
+                <linearGradient id="star-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stopColor="white" />
+                  <stop offset="100%" stopColor="var(--color-gold)" />
+                </linearGradient>
+              </defs>
+            </svg>
             {[...Array(5)].map((_, i) => (
               <svg
                 key={i}
                 width="16"
                 height="16"
                 viewBox="0 0 24 24"
-                fill="var(--color-gold)"
+                fill="url(#star-gradient)"
                 xmlns="http://www.w3.org/2000/svg"
                 className="shrink-0"
               >

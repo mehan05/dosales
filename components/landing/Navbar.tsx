@@ -34,10 +34,10 @@ const Navbar = () => {
                     <a
                         key={link.name}
                         href={link.href}
-                        className="flex items-center gap-1 cursor-pointer text-[16px] font-medium hover:text-primary-blue transition-colors"
+                        className="flex items-center gap-1 cursor-pointer text-[16px] font-medium hover:text-primary-blue transition-colors group"
                     >
                         {link.name}
-                        {link.hasDropdown && <span className="text-[10px]">▼</span>}
+                        {link.hasDropdown && <IoChevronDown className="transition-transform duration-200" size={14} />}
                     </a>
                 ))}
             </div>

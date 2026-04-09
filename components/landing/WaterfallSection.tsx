@@ -294,10 +294,10 @@ const WaterfallSection = () => {
       </div>
 
       <div className="relative z-10 flex flex-col items-center text-center max-w-6xl mt-20">
-        <div className="px-5 py-2 bg-linear-to-r from-[#0D4763] to-[#060C12] max-w-[300px] text-white text-[16px] font-semibold rounded-full border border-[#1E3A4C] mb-10 shadow-2xl tracking-wide">
+        <div className="px-3 py-1 bg-linear-to-r from-[#0D4763] to-[#060C12] max-w-[300px] text-white text-[16px] font-semibold rounded-full border border-[#1E3A4C] mb-10 shadow-2xl tracking-wide">
           Waterfall Enrichment
         </div>
-        <h2 className="text-[48px] lg:text-6xl bg-gradient-to-r from-pure-white to-white-muted bg-clip-text text-transparent mb-4 tracking-tight leading-tight">
+        <h2 className="text-[48px] font-[400] lg:text-6xl bg-gradient-to-r from-pure-white to-white-muted bg-clip-text text-transparent mb-4 tracking-tight leading-tight">
           Chains 10+ data providers, 85% match rates
         </h2>
         <p className="text-slate-muted text-[16px] lg:text-[16px] leading-relaxed max-w-2xl font-thin">

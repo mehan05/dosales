@@ -33,7 +33,7 @@ const ClosingCTA = () => {
         </h2>
 
         {/* Button */}
-        <button className="bg-text-main text-white px-4 py-4 rounded-xl font-bold text-sm hover:bg-slate-800 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 active:translate-y-0">
+        <button className="bg-text-main text-white w-[138px] h-[48px] rounded-xl font-bold text-sm hover:bg-slate-800 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 active:translate-y-0">
           Get Early Access
         </button>
       </div>

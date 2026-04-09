@@ -40,7 +40,7 @@ const Footer = () => {
                   className="object-contain"
                 />
               </div>
-              <span className="text-2xl font-bold text-text-main">DoSales</span>
+              <span className="text-2xl font-bold text-[20px]">DoSales</span>
             </div>
             <p className="text-slate-medium text-sm leading-relaxed max-w-60">
               AI-powered sales intelligence for emerging markets. Verified B2B data across MENA and Southeast Asia.
@@ -49,29 +49,29 @@ const Footer = () => {
 
           {/* Product Links */}
           <div>
-            <h3 className="text-text-main font-bold mb-6">Product</h3>
-            <ul className="space-y-4">
-              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-lg">Lead Database</a></li>
-              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-lg">AI Prospecting</a></li>
-              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-lg">Data Enrichment</a></li>
-              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-lg">CRM Sync</a></li>
-              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-lg">Market Intelligence</a></li>
+            <h3 className="text-[20px] font-bold mb-6">Product</h3>
+            <ul className="space-y-[8px]">
+              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">Lead Database</a></li>
+              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">AI Prospecting</a></li>
+              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">Data Enrichment</a></li>
+              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">CRM Sync</a></li>
+              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">Market Intelligence</a></li>
             </ul>
           </div>
 
           {/* Company Links */}
           <div>
-            <h3 className="text-text-main font-bold mb-6">Company</h3>
-            <ul className="space-y-4">
-              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-lg">About</a></li>
-              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-lg">Careers</a></li>
-              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-lg">Contact</a></li>
-              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-lg">Partners</a></li>
+            <h3 className="text-[20px] font-bold mb-6">Company</h3>
+            <ul className="space-y-[8px]">
+              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">About</a></li>
+              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">Careers</a></li>
+              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">Contact</a></li>
+              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">Partners</a></li>
             </ul>
           </div>
 
           {/* CTA & Socials */}
-          <div className="space-y-10">
+          <div className="space-y-[8px]">
             {/* Early Access Card */}
             <div className="bg-white rounded-[32px] p-4 sm:p-5 flex items-center gap-4 sm:gap-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer group w-full lg:w-[380px]">
               <div className="w-[64px] h-[64px] sm:w-[84px] sm:h-[84px] bg-text-main rounded-[24px] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
@@ -84,22 +84,22 @@ const Footer = () => {
                   />
                 </div>
               </div>
-              <span className="text-xl sm:text-[26px] font-bold text-text-main leading-[1.1]">
+              <span className=" sm:text-[20px] font-bold text-[23.81px] leading-[1.1]">
                 Apply for early<br/>access
               </span>
             </div>
 
             {/* Social Links */}
             <div className="bg-white rounded-[24px] px-4 sm:px-8 py-4 sm:py-5 flex gap-2 items-center justify-between w-full lg:w-[380px] shadow-sm">
-              <span className="text-slate-medium text-base sm:text-lg font-medium">Follow us on</span>
+              <span className="text-slate-medium text-base sm:text-[16px] font-medium">Follow us on</span>
               <div className="flex items-center gap-3 sm:gap-6">
-                <a href="#" className="text-text-main hover:[&>svg]:fill-[url(#linkedin-gradient)] transition-all duration-300 text-xl sm:text-2xl hover:scale-110">
+                <a href="#" className="text-[20px] hover:[&>svg]:fill-[url(#linkedin-gradient)] transition-all duration-300 text-xl sm:text-2xl hover:scale-110">
                   <FaLinkedin />
                 </a>
-                <a href="#" className="text-text-main hover:[&>svg]:fill-[url(#instagram-gradient)] transition-all duration-300 text-xl sm:text-2xl hover:scale-110">
+                <a href="#" className="text-[20px] hover:[&>svg]:fill-[url(#instagram-gradient)] transition-all duration-300 text-xl sm:text-2xl hover:scale-110">
                   <FaInstagram />
                 </a>
-                <a href="#" className="text-text-main hover:[&>svg]:fill-[url(#x-gradient)] transition-all duration-300 text-xl sm:text-2xl hover:scale-110">
+                <a href="#" className="text-[20px] hover:[&>svg]:fill-[url(#x-gradient)] transition-all duration-300 text-xl sm:text-2xl hover:scale-110">
                   <FaXTwitter />
                 </a>
               </div>
@@ -109,13 +109,13 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="mt-20 pt-12 border-t border-border-footer flex flex-col xs:flex-row justify-between items-start xs:items-center gap-6">
-          <p className="text-slate-light text-sm">
+          <p className="text-muted-slate-blue text-[14px]">
             © 2026 — Copyright. All Rights reserved
           </p>
           <div className="grid grid-cols-2 xs:flex xs:flex-wrap items-center gap-x-6 gap-y-4 xs:gap-8 w-full xs:w-auto">
-            <a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-sm font-medium">Privacy policy</a>
-            <a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-sm font-medium text-right xs:text-left">Terms of service</a>
-            <a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-sm font-medium">Cookie Settings</a>
+            <a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[16px] font-medium">Privacy policy</a>
+            <a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[16px] font-medium text-right xs:text-left">Terms of service</a>
+            <a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[16px] font-medium">Cookie Settings</a>
           </div>
         </div>
       </div>

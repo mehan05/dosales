@@ -25,7 +25,7 @@ const Hero = () => {
           <h2 className="text-[32px] md:text-4xl font-medium text-text-main max-w-4xl mx-auto mb-6 leading-[1.5] md:leading-relaxed">
             Turn your Ideal Customer Profile into a <br className="hidden md:block" />
             Qualified pipeline with{" "}
-            <span className="text-text-main font-extrabold">Automated Outreach</span>
+            <span className="text-text-main font-[600]">Automated Outreach</span>
           </h2>
 
           {/* Description */}
@@ -41,7 +41,7 @@ const Hero = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
-            <span className="text-[16px]">Early Access Live </span> - Limited Spots available
+            <span className="text-[16px] text-text-main">Early Access Live </span> - Limited Spots available
           </div>
 
           {/* Lead Capture Form */}
