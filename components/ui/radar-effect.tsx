@@ -127,6 +127,7 @@ export const IconContainer = ({
   sparkleDuration = 4,
   popupTitle,
   popupDescription,
+  popupAlign = "center",
 }: {
   icon?: React.ReactNode;
   text?: string;
@@ -137,30 +138,46 @@ export const IconContainer = ({
   sparkleDuration?: number;
   popupTitle?: string;
   popupDescription?: string;
+  popupAlign?: "left" | "right" | "center";
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div 
       className="relative"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+      onClick={(e) => {
+        e.stopPropagation();
+        setIsOpen(!isOpen);
+      }}
     >
       <AnimatePresence>
-        {isHovered && popupTitle && (
+        {isOpen && popupTitle && (
           <motion.div
             initial={{ opacity: 0, y: 10, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.95 }}
             transition={{ duration: 0.15, ease: "easeOut" }}
-            className="absolute bottom-full mb-6 left-1/2 -translate-x-1/2 w-64 p-5 rounded-[1.25rem] bg-[var(--color-tooltip-bg)] border border-slate-700 shadow-[0_25px_60px_var(--color-shadow-dark)] z-100 pointer-events-none"
+            className={twMerge(
+              "absolute bottom-full mb-6 p-5 rounded-[1.25rem] bg-[var(--color-tooltip-bg)] border border-slate-700 shadow-[0_25px_60px_var(--color-shadow-dark)] z-100 pointer-events-none",
+              "w-64 xs:w-72", // Slightly wider on larger mobile
+              popupAlign === "center" && "left-1/2 -translate-x-1/2",
+              popupAlign === "right" && "left-0 translate-x-0",
+              popupAlign === "left" && "right-0 translate-x-0"
+            )}
           >
             <div className="relative z-10">
               <h4 className="text-white text-[16px] font-bold mb-1.5 tracking-tight">{popupTitle}</h4>
               <p className="text-white/90 text-[14px] leading-relaxed font-medium">{popupDescription}</p>
             </div>
             {/* Small arrow/tail for the popup */}
-            <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-[var(--color-tooltip-bg)] border-r border-b border-slate-800 rotate-45"></div>
+            <div className={twMerge(
+              "absolute -bottom-1.5 w-3 h-3 bg-[var(--color-tooltip-bg)] border-r border-b border-slate-800 rotate-45",
+              popupAlign === "center" && "left-1/2 -translate-x-1/2",
+              popupAlign === "right" && "left-6",
+              popupAlign === "left" && "right-6"
+            )}></div>
           </motion.div>
         )}
       </AnimatePresence>

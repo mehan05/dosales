@@ -20,8 +20,8 @@ const WaterfallSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,var(--color-blue-shadow),transparent_70%)] pointer-events-none"></div>
 
       <div className="relative w-full max-w-5xl mx-auto">
-        <div className="relative w-full overflow-hidden" style={{ aspectRatio: "2 / 1" }}>
-          
+        {/* Background & Radar Layer - Needs overflow-hidden for the sweep line clipping */}
+        <div className="absolute inset-0 overflow-hidden z-0" style={{ aspectRatio: "2 / 1" }}>
           {/* Masked Background Layer */}
           <div 
             className="absolute inset-0 pointer-events-none"
@@ -63,21 +63,22 @@ const WaterfallSection = () => {
               style={{ height: "200%" }}
             />
           </div>
+        </div>
 
+        {/* Interactive Layer - Needs overflow-visible for popups/tooltips */}
+        <div className="relative w-full overflow-visible z-10" style={{ aspectRatio: "2 / 1" }}>
           {/* Vertical Guide & Intersection Dots */}
           <div className="absolute left-1/2 bottom-0 w-px h-full border-l border-dashed border-blue-500/20 pointer-events-none z-5" style={{ transform: "translateX(-50%)" }}></div>
           {[22, 45, 68, 91].map((bottomPct) => (
             <div
               key={bottomPct}
-              className="absolute left-1/2 w-1.5 h-1.5 rounded-full bg-blue-400/60 shadow-[0_0_8px_white] pointer-events-none z-10"
+              className="absolute left-1/2 w-1.5 h-1.5 rounded-full border border-blue-500/30 bg-dark-navy/80 pointer-events-none z-10"
               style={{
                 bottom: `${bottomPct}%`,
                 transform: "translate(-50%, 50%)",
               }}
             />
           ))}
-
-
 
           {/* Signal (Antenna) - Arc 4 */}
           <div
@@ -128,6 +129,7 @@ const WaterfallSection = () => {
               sparkleDuration={RADAR_DURATION}
               popupTitle="Email Verify"
               popupDescription="Validates email addresses for accuracy and deliverability"
+              popupAlign="left"
             />
           </div>
 
@@ -153,6 +155,7 @@ const WaterfallSection = () => {
               showSparkle={true}
               sparkleDelay={getSparkleDelay(32, 22)}
               sparkleDuration={RADAR_DURATION}
+              popupAlign="right"
             />
           </div>
 
@@ -178,6 +181,7 @@ const WaterfallSection = () => {
               showSparkle={true}
               sparkleDelay={getSparkleDelay(81, 32)}
               sparkleDuration={RADAR_DURATION}
+              popupAlign="left"
             />
           </div>
 
@@ -229,15 +233,16 @@ const WaterfallSection = () => {
               showSparkle={true}
               sparkleDelay={getSparkleDelay(26, 54)}
               sparkleDuration={RADAR_DURATION}
+              popupAlign="right"
             />
           </div>
 
           {/* Database (Cylinder) - Arc 4 */}
           <div
-            className="absolute z-10 border-2 border-b-cyan-400-500 "
+            className="absolute z-10 "
             style={{
-              left: "8%",
-              bottom: "28%",
+              left: "12%",
+              bottom: "34%",
               transform: "translate(-50%, 50%)",
             }}
           >
@@ -252,8 +257,9 @@ const WaterfallSection = () => {
               delay={0.7}
               noContainer={true}
               showSparkle={true}
-              sparkleDelay={getSparkleDelay(8, 28)}
+              sparkleDelay={getSparkleDelay(12, 34)}
               sparkleDuration={RADAR_DURATION}
+              popupAlign="right"
             />
           </div>
 
@@ -279,9 +285,11 @@ const WaterfallSection = () => {
               showSparkle={true}
               sparkleDelay={getSparkleDelay(67, 42)}
               sparkleDuration={RADAR_DURATION}
+              popupAlign="left"
             />
           </div>
         </div>
+
 
         {/* Center Logo – sits at the arc origin (bottom-center) */}
         <div className="absolute bottom-[-5] left-1/2 -translate-x-1/2 translate-y-1/2 z-100">
