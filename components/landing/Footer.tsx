@@ -6,7 +6,7 @@ import { FaGithub, FaInstagram, FaXTwitter } from 'react-icons/fa6';
 
 const Footer = () => {
   return (
-    <footer className="py-20 px-6">
+    <footer className="pt-10 pb-20 px-4">
       {/* SVG Gradient Definitions */}
       <svg width="0" height="0" className="absolute" aria-hidden="true" focusable="false">
         <linearGradient id="instagram-gradient" x1="100%" y1="100%" x2="0%" y2="0%">
@@ -71,7 +71,7 @@ const Footer = () => {
           </div>
 
           {/* CTA & Socials */}
-          <div className="space-y-[8px]">
+          <div className="space-y-[15px]">
             {/* Early Access Card */}
             <div className="bg-white rounded-[32px] p-4 sm:p-5 flex items-center gap-4 sm:gap-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer group w-full max-w-[380px]">
               <div className="w-[64px] h-[64px] sm:w-[84px] sm:h-[84px] bg-text-main rounded-[24px] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">

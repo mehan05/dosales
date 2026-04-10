@@ -8,21 +8,21 @@ const WhyDoSales = () => {
       {/* Top edge white blur for section blending - subtilized to prevent dimming content */}
       <div className="absolute top-0 left-0 right-0 h-40 bg-linear-to-b from-white/60 via-white/20 to-transparent pointer-events-none z-0" />
       {/* Top statistics section */}
-      <div className="max-w-6xl mx-auto px-4 flex flex-col items-center mb-24 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 flex flex-col items-center  mb-[40px] md:mb-24 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full text-center mb-13.75 ">
           <div className="flex flex-col gap-2">
-            <h3 className="text-[32px] font-[500] text-heading tracking-tighter ">
+            <h3 className=" text-[24px] md:text-[32px] font-[500] text-heading tracking-tighter ">
               50 LEADS/MO
             </h3>
-            <p className="text-slate-dark  text-[16px] ">FREE FOREVER</p>
+            <p className="text-slate-dark  text-[16px] font-[500] ">FREE FOREVER</p>
           </div>
           <div className="flex flex-col gap-2">
-            <h3 className="text-[32px] font-[500] text-heading ">2 MIN</h3>
-            <p className="text-slate-dark  text-[16px] ">SETUP</p>
+            <h3 className="text-[24px] md:text-[32px] font-[500] text-heading ">2 MIN</h3>
+            <p className="text-slate-dark  text-[16px] font-[500] ">SETUP</p>
           </div>
           <div className="flex flex-col gap-2">
-            <h3 className="text-[32px] font-[500] text-heading ">NO CARD</h3>
-            <p className="text-slate-dark  text-[16px] ">REQUIRED</p>
+            <h3 className="text-[24px] md:text-[32px] font-[500] text-heading ">NO CARD</h3>
+            <p className="text-slate-dark  text-[16px] font-[500] ">REQUIRED</p>
           </div>
         </div>
 
@@ -67,10 +67,10 @@ const WhyDoSales = () => {
       </div>
 
       <div
-        className="bg-linear-to-b flex-1 pb-32 from-blue-ghost to-blue-ghost to-30% md:pt-7 md:mt-[118.84px] w-full"
+        className="bg-linear-to-b flex-1 pb-32 from-blue-ghost to-blue-ghost to-30% md:pt-7 mt-[80px] md:mt-[118.84px] w-full"
         style={{ borderRadius: "50% 50% 0 0 / 80px 80px 0 0" }}
       >
-        <div className="max-w-7xl mx-auto px-4 flex flex-col gap-[20px] mt-[83.16px] items-center mb-28">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col gap-[20px] mt-[83.16px] items-center  mb-[44px] md:mb-28">
           <div className="w-auto h-8 px-3.5 py-1.25 badge-gradient text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-5">
             {" "}
             Why DoSales
@@ -117,7 +117,7 @@ const WhyDoSales = () => {
                   }}
                 />
 
-                <div className="flex-1 flex items-center justify-center mb-10 h-64">
+                <div className="flex-1 flex items-center justify-center  mb-[20px] md:mb-10 h-64">
                   <Image
                     src="/assets/svg/whyDoSales/refionalDominance.svg"
                     alt="Regional Dominance"
@@ -127,7 +127,7 @@ const WhyDoSales = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="text-[20px] font-bold text-heading mb-4 tracking-tight">
+                  <h3 className="text-[20px] font-bold text-heading mb-[10px] md:mb-4 tracking-tight">
                     Regional Dominance
                   </h3>
                   <p className="text-text-main text-[16px] leading-[1.6] max-w-md">
@@ -159,7 +159,7 @@ const WhyDoSales = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-heading mb-4 tracking-tight">
+                  <h3 className="text-[20px] font-bold text-heading  mb-2 md:mb-4 tracking-tight">
                     Vertical Intelligence
                   </h3>
                   <p className="text-text-main text-[16px] leading-[1.6] max-w-md">
@@ -194,7 +194,7 @@ const WhyDoSales = () => {
                   opacity: 1,
                 }}
               />
-              <div className="md:w-[50%] flex items-center justify-center mb-8 md:mb-0 h-64 md:h-80">
+              <div className="md:w-[50%] flex items-center justify-center mb-[20px] md:mb-0 h-64 md:h-80">
                 <Image
                   src="/assets/svg/whyDoSales/aiAutonomy.svg"
                   alt="AI Autonomy"
@@ -213,10 +213,10 @@ const WhyDoSales = () => {
                 }}
               />
               <div className="md:w-[40%] md:pl-12 md:pb-12">
-                <h3 className="text-3xl font-bold text-heading mb-4 tracking-tight">
+              <h3 className="text-[20px] font-bold text-heading  mb-2 md:mb-4 tracking-tight">
                   AI Autonomy
                 </h3>
-                <p className="text-text-main text-[18px] leading-normal max-w-lg font-medium">
+                <p className="text-text-main text-[16px] leading-normal max-w-lg font-medium">
                   Autonomous prospecting that finds, enriches, scores, and
                   engages leads. Your AI SDR works 24/7 while your team focuses
                   on closing.

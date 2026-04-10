@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const ClosingCTA = () => {
   return (
-    <section className="relative pt-6 pb-25 md:py-24 overflow-hidden bg-white">
+    <section className="relative pt-5 pb-25 md:pt-24 md:pb-24 overflow-hidden bg-white">
       {/* Background SVG and Glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-100 pointer-events-none select-none overflow-hidden">
         <Image 

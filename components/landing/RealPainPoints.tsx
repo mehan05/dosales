@@ -124,7 +124,7 @@ const RealPainPoints = () => {
   const row3 = testimonialData.slice(6, 9);
 
   return (
-    <div className="pt-6 xs:pt-[132px] pb-6 lg:px-8 xs:pb-5 w-full overflow-hidden  ">
+    <div className="pt-[80px] md:pt-[132px] pb-6 lg:px-8 xs:pb-5 w-full overflow-hidden  ">
       <section className="relative w-auto ml-5 mr-2.5 md:mx-auto rounded-[40px] h-auto lg:h-[898px]   flex flex-col lg:flex-row items-center overflow-hidden bg-dashboard-bg py-12 lg:py-0 border border-dashboard-outline/50 shadow-sm ">
         <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-white/60 blur-[100px] rounded-full -translate-x-1/4 -translate-y-1/4 z-0 pointer-events-none"/>
 

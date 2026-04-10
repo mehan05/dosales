@@ -31,7 +31,7 @@ const PlatformSection = () => {
   };
 
   return (
-    <section className="relative md:pb-[40px] xs:pt-[120px] bg-linear-to-b from-white via-blue-50/40 to-white overflow-hidden font-sans">
+    <section className="relative pb-20 md:pb-[40px] xs:pt-[120px] bg-linear-to-b from-white via-blue-50/40 to-white overflow-hidden font-sans">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-6 relative z-10 ">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto relative ">
@@ -68,7 +68,7 @@ const PlatformSection = () => {
         </div>
 
         {/* Right Column: Dynamic UI Card */}
-        <div className="relative group min-h-50 xs:min-h-125">
+        <div className="relative group min-h-50 xs:min-h-0">
           <div className="absolute -inset-4 bg-linear-to-tr from-blue-100/20 to-transparent rounded-[40px] blur-2xl group-hover:bg-blue-100/40 transition-colors" />
 
           <AnimatePresence mode="wait">

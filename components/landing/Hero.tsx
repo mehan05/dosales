@@ -1,6 +1,6 @@
 import React from "react";
 import LeadsImage from "./LeadsImage";
-import Navbar from "./Navbar";
+
 import GridBackground from "../ui/GridBackground";
 
 const Hero = () => {
@@ -10,19 +10,19 @@ const Hero = () => {
       <div className="absolute top-[-20%] right-[-10%] w-[60%] h-120 bg-white rounded-full blur-[200px] opacity-60 pointer-events-none z-0" />
       
       <GridBackground className="text-white z-0" />
-      <Navbar />
+
 
       <section className="relative pt-20 xs:pb-0 pb-4  overflow-hidden z-10">
         {/* Background Grid - already handled by GridBackground above */}
 
         <div className="container mx-auto px-4 relative z-10 text-center  lg:leading-relaxed">
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-4xl font-semibold text-heading mb-4 tracking-tight">
+          <h1 className="text-[24px] md:text-4xl md:text-4xl font-semibold text-heading mb-4 tracking-tight">
             Stop Chasing Leads!
           </h1>
 
           {/* Sub-heading */}
-          <h2 className="text-[39px] md:text-4xl font-medium text-text-main max-w-4xl mx-auto mb-6 leading-[1.5] md:leading-relaxed">
+          <h2 className=" text-[28px] md:text-[39px] md:text-4xl font-medium text-text-main max-w-4xl mx-auto mb-6 leading-[1.5] md:leading-relaxed">
             Turn your Ideal Customer Profile into a <br className="hidden md:block" />
             Qualified pipeline with{" "}
             <span className="text-text-main font-[600]">Automated Outreach</span>
@@ -41,7 +41,7 @@ const Hero = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
-            <span className="text-[16px] text-text-main">Early Access Live </span> - Limited Spots available
+            <span className=" text-[14px] md:text-[16px] text-text-main">Early Access Live </span> - Limited Spots available
           </div>
 
           {/* Lead Capture Form */}

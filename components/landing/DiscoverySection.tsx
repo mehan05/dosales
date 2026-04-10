@@ -84,7 +84,11 @@ const DiscoverySearchCard = ({
           isAutoClicking
             ? {
                 scale: [1, 0.95, 1],
-                backgroundColor: ["var(--color-blue-accent)", "var(--color-blue-accent-dark)", "var(--color-blue-accent)"],
+                backgroundColor: [
+                  "var(--color-blue-accent)",
+                  "var(--color-blue-accent-dark)",
+                  "var(--color-blue-accent)",
+                ],
               }
             : {}
         }
@@ -311,11 +315,9 @@ const DiscoverySection = () => {
   return (
     <section
       ref={sectionRef}
-      className="pt-12 xs:pt-34 pb-0 bg-white overflow-hidden"
+      className=" pt-[80px]  md:pt-12 md:pt-34 pb-0 bg-white overflow-hidden"
     >
       <div className="max-w-[1600px] mx-auto px-4 xs:px-10.5 grid grid-cols-1 lg:grid-cols-12 items-start gap-12 lg:gap-16">
-        
-
         {/* right Side: Card UI */}
         <div className="relative lg:col-span-8 w-full order-2 lg:order-1 p-[6px] rounded-[30px] xs:rounded-[36px] bg-linear-to-b from-dashboard-outline to-dashboard-bg">
           <div className="relative rounded-[32px] xs:rounded-[40px]   bg-grey-white transition-all w-full h-full">
@@ -366,13 +368,13 @@ const DiscoverySection = () => {
         </div>
         {/* left Side: Content */}
         <div className="flex flex-col items-start lg:col-span-4 max-w-2xl lg:max-w-none order-1 lg:order-2 pr-[30px]">
-          <div className="w-auto h-8 px-3.5 py-1.25 badge-gradient text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_var(--color-shadow-faint)] flex items-center justify-center gap-2.5 mb-10">
+          <div className="w-auto h-8 px-3.5 badge-gradient text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_var(--color-shadow-faint)] flex items-center justify-center gap-2.5 mb-1">
             AI Outbound Agent
           </div>
-          <h2 className="lg:text-[52px] text-[36px] lg:leading-[1.5] font-semibold text-slate-900 mb-4 xs:mb-6  tracking-tight">
+          <h2 className="lg:text-[52px] text-[36px] lg:leading-[1.5] font-semibold text-slate-900 mb-4 xs:mb-6 tracking-tight">
             From Ideal Prospects to Booked Meetings - Automatically{" "}
           </h2>
-          <p className="text-base xs:text-[16px]  text-slate-dark font-light ">
+          <p className="text-base font-[500] xs:text-[16px]  text-slate-dark  ">
             From ICP targeting to follow-ups, DoSales handles the entire
             outbound process. So your team spends time closing, not chasing.
           </p>

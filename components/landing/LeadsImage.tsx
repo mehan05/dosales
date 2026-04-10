@@ -16,10 +16,10 @@ const LeadsImage = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.2], [0.6, 1]);
 
   return (
-    <section ref={containerRef} className="xs:pb-4  max-xs:pt-6.5 max-xs:pb-6.5 xs:pt-10 lg:pt-5 px-4 relative perspective-[1540px]">
+    <section ref={containerRef} className="  max-xs:pt-6.5  xs:pt-[48px] lg:pt-5 px-4 relative perspective-[1540px]">
       <motion.div 
         style={{ rotateX, scale, opacity }}
-        className="max-w-[1540px] mx-auto relative origin-top pt-2 pb-5 "
+        className="max-w-[1540px] mx-auto relative origin-top pt-2 pb-[40px] md:pb-[80px]"
       >
         {/* Purple Background Blur Effect */}
         <div 
