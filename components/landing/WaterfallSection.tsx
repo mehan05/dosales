@@ -15,7 +15,7 @@ const getSparkleDelay = (leftPct: number, bottomPct: number): number => {
 
 const WaterfallSection = () => {
   return (
-    <section id="waterfall-section" className="  relative w-full bg-dark-navy py-34 px-4 overflow-hidden min-h-200 flex flex-col items-center justify-center">
+    <section className="  relative w-full bg-dark-navy py-34 px-4 overflow-hidden min-h-200 flex flex-col items-center justify-center">
       {/* Background radial glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,var(--color-blue-shadow),transparent_70%)] pointer-events-none"></div>
 
