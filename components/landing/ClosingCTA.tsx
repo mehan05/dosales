@@ -8,7 +8,7 @@ const ClosingCTA = () => {
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-100 pointer-events-none select-none overflow-hidden">
         <Image 
           src="/assets/svg/upgradeYourLeadsBgImage.png" 
-          alt="" 
+          alt="Abstract background representing sale growth and lead optimization" 
           fill
           className="w-full h-full object-cover object-bottom [mask-image:linear-gradient(to_top,black,transparent_70%)]"
         />

@@ -120,7 +120,7 @@ const WhyDoSales = () => {
                 <div className="flex-1 flex items-center justify-center  mb-[20px] md:mb-10 h-64">
                   <Image
                     src="/assets/svg/whyDoSales/refionalDominance.svg"
-                    alt="Regional Dominance"
+                    alt="Regional Dominance in MENA and Southeast Asia B2B data"
                     width={400}
                     height={300}
                     className="w-full h-auto max-w-[420px]"
@@ -152,7 +152,7 @@ const WhyDoSales = () => {
                 <div className="flex-1 flex items-center justify-center mb-10 h-64">
                   <Image
                     src="/assets/svg/whyDoSales/verifyIntelligence.svg"
-                    alt="Vertical Intelligence"
+                    alt="Vertical Intelligence for Fintech, PropTech, and Trade Finance"
                     width={400}
                     height={300}
                     className="w-full h-auto max-w-[420px]"
@@ -197,7 +197,7 @@ const WhyDoSales = () => {
               <div className="md:w-[50%] flex items-center justify-center mb-[20px] md:mb-0 h-64 md:h-80">
                 <Image
                   src="/assets/svg/whyDoSales/aiAutonomy.svg"
-                  alt="AI Autonomy"
+                  alt="Autonomous AI SDR for 24/7 prospecting and lead scoring"
                   width={700}
                   height={400}
                   className="w-full h-auto max-w-[320px] md:max-w-162.5 scale-105 md:scale-110"

@@ -61,10 +61,61 @@ const satoshi = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "DoSales",
-  description: "Automated Outreach and Lead Qualification",
+  metadataBase: new URL("https://dosales-omega.vercel.app/"),
+  title: {
+    default: "DoSales | AI-Powered B2B Lead Generation & Outreach",
+    template: "%s | DoSales"
+  },
+  description: "Automate your B2B sales pipeline with DoSales AI. Discover leads, enrich data, and qualify prospects automatically across MENA and Southeast Asia.",
+  keywords: ["B2B lead generation", "sales automation", "AI outreach", "lead qualification", "MENA B2B data", "Southeast Asia sales intelligence", "automated prospecting"],
+  authors: [{ name: "DoSales Team" }],
+  creator: "DoSales",
+  publisher: "DoSales",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    title: "DoSales | AI-Powered B2B Lead Generation & Outreach",
+    description: "Automate your B2B sales pipeline with DoSales AI. Discover leads, enrich data, and qualify prospects automatically.",
+    url: "https://dosales-omega.vercel.app/",
+    siteName: "DoSales",
+    images: [
+      {
+        url: "/assets/svg/logo.svg",
+        width: 800,
+        height: 600,
+        alt: "DoSales Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DoSales | AI-Powered B2B Lead Generation & Outreach",
+    description: "Automate your B2B sales pipeline with DoSales AI.",
+    images: ["/assets/svg/logo.svg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
     icon: "/assets/svg/logo.svg",
+    shortcut: "/assets/svg/logo.svg",
+    apple: "/assets/svg/logo.svg",
+  },
+  alternates: {
+    canonical: "/",
   },
 };
 

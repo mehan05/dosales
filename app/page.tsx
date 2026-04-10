@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Hero from "@/components/landing/Hero";
 import LeadsImage from "@/components/landing/LeadsImage";
 import WhyDoSales from "@/components/landing/WhyDoSales";
@@ -7,6 +8,11 @@ import RealPainPoints from "@/components/landing/RealPainPoints";
 import PlatformSection from "@/components/landing/PlatformSection/PlatformSection";
 import ClosingCTA from "@/components/landing/ClosingCTA";
 import Navbar from "@/components/landing/Navbar";
+
+export const metadata: Metadata = {
+  title: "AI-Powered B2B Lead Generation & Outreach",
+  description: "Automate your B2B sales pipeline with DoSales AI. Discover leads, enrich data, and qualify prospects automatically across MENA and Southeast Asia.",
+};
 
 export default function Home() {
   return (

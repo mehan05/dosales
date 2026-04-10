@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import Image from "next/image";
 import { Radar, IconContainer } from "../ui/radar-effect";
 
 
@@ -50,17 +50,21 @@ const WaterfallSection = () => {
             />
 
             {/* Radar Background – full SVG circle clipped to top semicircle */}
-            <img
+            <Image
               src="/assets/svg/radarbg.svg"
-              alt="Radar Background"
+              alt="Interactive radar background showing B2B data coverage"
               className="hidden xs:block absolute w-full top-0 left-0 z-0"
               style={{ height: "200%" }}
+              width={1024}
+              height={1024}
             />
-            <img
+            <Image
               src="/assets/svg/radarbgMobile.svg"
-              alt="Radar Background Mobile"
+              alt="Interactive radar background showing B2B data coverage mobile"
               className="block xs:hidden absolute w-full top-0 left-0 z-0"
               style={{ height: "200%" }}
+              width={512}
+              height={512}
             />
           </div>
         </div>
@@ -91,9 +95,11 @@ const WaterfallSection = () => {
           >
             <IconContainer
               icon={
-                <img
+                <Image
                   src="/assets/svg/radar/network.svg"
-                  alt="Signal"
+                  alt="Network Signal Strength"
+                  width={24}
+                  height={24}
                   className="w-full h-full"
                 />
               }
@@ -116,9 +122,11 @@ const WaterfallSection = () => {
           >
             <IconContainer
               icon={
-                <img
+                <Image
                   src="/assets/svg/radar/mail.svg"
-                  alt="Mail"
+                  alt="Email Verification Icon"
+                  width={24}
+                  height={24}
                   className="w-full h-full"
                 />
               }
@@ -144,9 +152,11 @@ const WaterfallSection = () => {
           >
             <IconContainer
               icon={
-                <img
+                <Image
                   src="/assets/svg/radar/building.svg"
-                  alt="Building"
+                  alt="Company Data Icon"
+                  width={24}
+                  height={24}
                   className="w-full h-full"
                 />
               }
@@ -170,9 +180,11 @@ const WaterfallSection = () => {
           >
             <IconContainer
               icon={
-                <img
+                <Image
                   src="/assets/svg/radar/house.svg"
-                  alt="Bank"
+                  alt="Financial Data Icon"
+                  width={24}
+                  height={24}
                   className="w-full h-full"
                 />
               }
@@ -196,9 +208,11 @@ const WaterfallSection = () => {
           >
             <IconContainer
               icon={
-                <img
+                <Image
                   src="/assets/svg/radar/display.svg"
-                  alt="Monitor"
+                  alt="Monitoring Data Icon"
+                  width={24}
+                  height={24}
                   className="w-full h-full"
                 />
               }
@@ -222,9 +236,11 @@ const WaterfallSection = () => {
           >
             <IconContainer
               icon={
-                <img
+                <Image
                   src="/assets/svg/radar/people.svg"
-                  alt="People"
+                  alt="Lead Contacts Icon"
+                  width={24}
+                  height={24}
                   className="w-full h-full "
                 />
               }
@@ -248,9 +264,11 @@ const WaterfallSection = () => {
           >
             <IconContainer
               icon={
-                <img
+                <Image
                   src="/assets/svg/radar/database.svg"
-                  alt="Database"
+                  alt="Central Leads Database Icon"
+                  width={24}
+                  height={24}
                   className="w-full h-full "
                 />
               }
@@ -274,9 +292,11 @@ const WaterfallSection = () => {
           >
             <IconContainer
               icon={
-                <img
+                <Image
                   src="/assets/svg/radar/globe.svg"
-                  alt="Globe"
+                  alt="Global Reach Data Icon"
+                  width={24}
+                  height={24}
                   className="w-full h-full"
                 />
               }
@@ -293,9 +313,11 @@ const WaterfallSection = () => {
 
         {/* Center Logo – sits at the arc origin (bottom-center) */}
         <div className="absolute bottom-[-5] left-1/2 -translate-x-1/2 translate-y-1/2 z-100">
-          <img
+          <Image
             src="/assets/svg/waterfallSectionLogo.svg"
-            alt="DoSales"
+            alt="DoSales Waterfall Logo"
+            width={80}
+            height={80}
             className="w-[80px] h-[80px] md:w-20 md:h-20"
           />
         </div>

@@ -42,10 +42,10 @@ const PlatformSection = () => {
           </div>
 
           {/* Headline */}
-          <h1 className="text-[36px] font-semibold text-text-main leading-[1.1] mb-5 tracking-tight">
+          <h2 className="text-[36px] font-semibold text-text-main leading-[1.1] mb-5 tracking-tight">
             An Automated Funnel that turns your ICP to Booked Meetings in 3
             steps
-          </h1>
+          </h2>
 
           {/* Subheadline */}
           <p className="text-[16px] text-slate-dark font-medium max-w-md mb-6 leading-relaxed">
@@ -82,7 +82,7 @@ const PlatformSection = () => {
               {activeStep === 1 && (
                 <Image
                   src="/assets/svg/platformSection/designAndDiscover.svg"
-                  alt="Define & Discover"
+                  alt="Define and Discover target ICP using DoSales AI"
                   width={598}
                   height={526}
                   className="w-full h-auto drop-shadow-xl"
@@ -92,7 +92,7 @@ const PlatformSection = () => {
               {activeStep === 2 && (
                 <Image
                   src="/assets/svg/platformSection/enrich.svg"
-                  alt="Enrich and Qualify"
+                  alt="Enrich and Qualify leads with 10+ data providers"
                   width={598}
                   height={526}
                   className="w-full h-auto drop-shadow-xl rounded-[30px]"
@@ -101,7 +101,7 @@ const PlatformSection = () => {
               {activeStep === 3 && (
                 <Image
                   src="/assets/svg/platformSection/searchAndConvert.svg"
-                  alt="Research & Convert"
+                  alt="Research and Convert prospects into booked meetings"
                   width={598}
                   height={526}
                   className="w-full h-auto drop-shadow-xl"

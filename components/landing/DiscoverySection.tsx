@@ -23,7 +23,7 @@ const DiscoverySearchCard = ({
   isAutoClicking?: boolean;
 }) => (
   <div className="flex flex-col h-full">
-    <h2 className="text-2xl font-bold text-slate-800 mb-8">Discovery Search</h2>
+    <h3 className="text-2xl font-bold text-slate-800 mb-8">Discovery Search</h3>
 
     <div className="grid grid-cols-2 gap-x-6 gap-y-4 xs:gap-6 mb-8">
       {[
@@ -163,7 +163,7 @@ const LeadsCard = ({
     <div className="flex flex-col h-full w-full ">
       <div className="flex justify-between items-start mb-3">
         <div>
-          <h2 className="text-2xl font-bold text-slate-800">Leads</h2>
+          <h3 className="text-2xl font-bold text-slate-800">Leads</h3>
           <p className="text-sm text-slate-400 mt-1 italic">0 of 6 leads</p>
         </div>
         <div className="flex items-center gap-3">

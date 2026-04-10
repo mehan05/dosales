@@ -32,7 +32,7 @@ const LeadsImage = () => {
               width={1300}
               height={900}
               src="/assets/svg/leagsPage.svg"
-              alt="Leads Dashboard Preview"
+              alt="DoSales AI Leads Dashboard Preview showing qualified B2B prospects"
               className="hidden sm:block object-cover object-top mx-auto"
               priority
             />
