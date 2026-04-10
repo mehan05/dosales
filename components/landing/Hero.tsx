@@ -1,6 +1,5 @@
 import React from "react";
 import LeadsImage from "./LeadsImage";
-import Navbar from "./Navbar";
 import GridBackground from "../ui/GridBackground";
 
 const Hero = () => {
@@ -10,14 +9,13 @@ const Hero = () => {
       <div className="absolute top-[-20%] right-[-10%] w-[60%] h-120 bg-white rounded-full blur-[200px] opacity-60 pointer-events-none z-0" />
       
       <GridBackground className="text-white z-0" />
-      <Navbar />
 
       <section className="relative pt-20 xs:pb-0 pb-4  overflow-hidden z-10">
         {/* Background Grid - already handled by GridBackground above */}
 
         <div className="container mx-auto px-4 relative z-10 text-center  lg:leading-relaxed">
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-4xl font-semibold text-heading mb-4 tracking-tight">
+          <h1 className="text-4xl md:text-4xl font-semibold text-heading mb-4 tracking-tight mt-[50px]">
             Stop Chasing Leads!
           </h1>
 
