@@ -76,7 +76,7 @@ const WhyDoSales = () => {
             Why DoSales
           </div>
           <h2 className="text-[36px] lg:text-[48px] font-bold text-text-main text-center max-w-4xl tracking-tight leading-tight">
-            Existing tools weren't built for your markets
+            Built exclusively for your market{" "}
           </h2>
         </div>
 
@@ -226,7 +226,6 @@ const WhyDoSales = () => {
           </div>
         </div>
       </div>
-
     </section>
   );
 };

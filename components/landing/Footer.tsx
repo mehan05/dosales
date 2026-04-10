@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { FaLinkedin, FaInstagram, FaXTwitter } from 'react-icons/fa6';
+import { FaGithub, FaInstagram, FaXTwitter } from 'react-icons/fa6';
 
 const Footer = () => {
   return (
@@ -16,9 +16,9 @@ const Footer = () => {
           <stop stopColor="#cc2366" offset="75%" />
           <stop stopColor="#bc1888" offset="100%" />
         </linearGradient>
-        <linearGradient id="linkedin-gradient" x1="100%" y1="100%" x2="0%" y2="0%">
-          <stop stopColor="#0077b5" offset="0%" />
-          <stop stopColor="#00a0dc" offset="100%" />
+        <linearGradient id="github-gradient" x1="100%" y1="100%" x2="0%" y2="0%">
+          <stop stopColor="#24292e" offset="0%" />
+          <stop stopColor="#444d56" offset="100%" />
         </linearGradient>
         <linearGradient id="x-gradient" x1="100%" y1="100%" x2="0%" y2="0%">
           <stop stopColor="#000000" offset="0%" />
@@ -90,17 +90,14 @@ const Footer = () => {
             </div>
 
             {/* Social Links */}
-            <div className="bg-white rounded-[24px] px-4 sm:px-8 py-4 sm:py-5 flex gap-2 items-center justify-between w-full lg:w-[380px] shadow-sm">
+            <div className="bg-white rounded-[24px] px-4 sm:px-8 py-4 sm:py-5 flex gap-2 items-center justify-start w-full lg:w-[380px] shadow-sm">
               <span className="text-slate-medium text-base sm:text-[16px] font-medium">Follow us on</span>
-              <div className="flex items-center gap-3 sm:gap-6">
-                <a href="#" className="text-[20px] hover:[&>svg]:fill-[url(#linkedin-gradient)] transition-all duration-300 text-xl sm:text-2xl hover:scale-110">
-                  <FaLinkedin />
-                </a>
-                <a href="#" className="text-[20px] hover:[&>svg]:fill-[url(#instagram-gradient)] transition-all duration-300 text-xl sm:text-2xl hover:scale-110">
-                  <FaInstagram />
-                </a>
+              <div className="flex items-center gap-3">
                 <a href="#" className="text-[20px] hover:[&>svg]:fill-[url(#x-gradient)] transition-all duration-300 text-xl sm:text-2xl hover:scale-110">
                   <FaXTwitter />
+                </a>
+                <a href="#" className="text-[20px] hover:[&>svg]:fill-[url(#github-gradient)] transition-all duration-300 text-xl sm:text-2xl hover:scale-110">
+                  <FaGithub />
                 </a>
               </div>
             </div>

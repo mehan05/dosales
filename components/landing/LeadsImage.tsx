@@ -16,24 +16,24 @@ const LeadsImage = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.2], [0.6, 1]);
 
   return (
-    <section ref={containerRef} className="xs:pb-4  max-xs:pt-10 max-xs:pb-6 xs:pt-10 xs:pb-6 lg:pt-5 pb-2 px-4 relative perspective-[1540px]">
+    <section ref={containerRef} className="xs:pb-4   max-xs:pt-10 max-xs:pb-6 xs:pt-10 xs:pb-6 lg:pt-5 pb-2 px-4 relative perspective-[1540px]">
       <motion.div 
         style={{ rotateX, scale, opacity }}
-        className="max-w-[1540px] mx-auto relative origin-top pt-2 pb-5"
+        className="max-w-[1540px] mx-auto relative origin-top pt-2 pb-5 "
       >
         {/* Purple Background Blur Effect */}
         <div 
-          className="absolute -right-50 top-30 -translate-y-1/2 w-170 h-[400px] bg-bg-vivid/30 rounded-full blur-[100px] pointer-events-none -z-10"
+          className="absolute  -right-50 top-30 -translate-y-1/2 w-170 h-[400px] bg-bg-vivid/30 rounded-full blur-[100px] pointer-events-none -z-10"
         />
         
-        <div className="relative w-full rounded-[48px]  shadow-[0_20px_50px_var(--color-vivid-glow)]">
-          <div className="overflow-hidden rounded-[32px] w-full border border-[#F1FAFF]">
+        <div className="relative w-full rounded-[48px]  ]">
+          <div className="overflow-hidden rounded-[32px] w-full">
             <Image
-              width={1120}
-              height={712}
+              width={1300}
+              height={900}
               src="/assets/svg/leagsPage.svg"
               alt="Leads Dashboard Preview"
-              className="hidden sm:block object-cover object-top w-full"
+              className="hidden sm:block object-cover object-top mx-auto"
               priority
             />
             <Image
@@ -41,7 +41,7 @@ const LeadsImage = () => {
               height={600}
               src="/assets/svg/leadsPageMobile.svg"
               alt="Leads Dashboard Preview Mobile"
-              className="block sm:hidden object-contain w-full"
+              className="block sm:hidden object-contain w-full mx-auto"
               priority
             />
           </div>

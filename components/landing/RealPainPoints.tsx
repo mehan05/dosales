@@ -82,21 +82,23 @@ const MarqueeRow = ({
   items,
   duration = 30,
   direction = "marqueeRight",
+  className = "",
 }: {
   items: typeof testimonialData;
   duration?: number;
   direction?: "marqueeLeft" | "marqueeRight";
+  className?: string;
 }) => {
   const [isPaused, setIsPaused] = React.useState(false);
 
   return (
     <div
-      className="flex overflow-hidden"
+      className={`flex overflow-hidden ${className}`}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
       <div
-        className="flex gap-4 pr-4"
+        className="flex gap-4 pr-4 h-full"
         style={{
           width: "fit-content",
           animation: `${direction} ${duration}s linear infinite`,
@@ -106,7 +108,7 @@ const MarqueeRow = ({
       >
         {/* We duplicate the items to create a seamless loop */}
         {[...items, ...items].map((testimonial, idx) => (
-          <div key={idx} className="w-[350px] shrink-0">
+          <div key={idx} className="w-[312px] lg:w-[350px] min-w-[312px] min-h-[186px] h-full shrink-0">
             <TestimonialCard {...testimonial} />
           </div>
         ))}
@@ -123,8 +125,8 @@ const RealPainPoints = () => {
 
   return (
     <div className="py-6 lg:px-8 xs:py-5 w-full overflow-hidden ">
-      <section className="  relative w-full mx-auto rounded-[40px] h-auto lg:h-[898px] flex flex-col lg:flex-row items-center overflow-hidden bg-dashboard-bg py-12 lg:py-0 border border-dashboard-outline/50 shadow-sm ">
-        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-white/60 blur-[100px] rounded-full -translate-x-1/4 -translate-y-1/4 z-0 pointer-events-none" />
+      <section className="relative w-auto ml-5 mr-2.5 md:mx-auto rounded-[40px] h-auto lg:h-[898px] flex flex-col lg:flex-row items-center overflow-hidden bg-dashboard-bg py-12 lg:py-0 border border-dashboard-outline/50 shadow-sm ">
+        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-white/60 blur-[100px] rounded-full -translate-x-1/4 -translate-y-1/4 z-0 pointer-events-none"/>
 
         <div className="absolute w-full h-full max-w-[436px] max-h-[430px] top-0 left-5 z-0">
           <GridBackground className="text-black overflow-hidden" />
@@ -132,7 +134,7 @@ const RealPainPoints = () => {
 
         {/* Left Content */}
         <div className="relative w-full lg:w-[45%] px-12 lg:px-24 pb-8 lg:pt-10 lg:pb-32 flex flex-col items-start  z-10 lg:self-start">
-          <div className="w-auto h-8 px-3.5 py-1.25 badge-gradient text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_var(--color-shadow-faint)] flex items-center justify-center gap-2.5 mb-10">
+          <div className="  w-auto h-8 px-3.5 py-1.25 badge-gradient text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_var(--color-shadow-faint)] flex items-center justify-center gap-2.5 mb-10">
             Real Pain Points
           </div>
 
@@ -154,16 +156,16 @@ const RealPainPoints = () => {
         </div>
 
         {/* Right Content - Dark Container with Horizontal Carousel */}
-        <div className="relative w-full lg:w-[1044px] pt-12 mb-10 lg:pt-0 z-10 px-4 lg:px-0 lg:pl-10 flex lg:items-center shrink-0 overflow-hidden lg:h-full">
+        <div className=" relative w-full lg:w-[1044px] z-10 px-4  lg:px-0 lg:pl-10 flex lg:items-end shrink-0 overflow-hidden lg:h-full">
              <div 
-               className="w-full min-w-[300px] lg:min-w-[1200px] rounded-l-[100px] p-4 lg:p-12 border-[16px] border-r-0 border-transparent h-[720px] flex flex-col justify-center gap-8 overflow-hidden"
+               className=" w-full min-w-[300px] lg:min-w-[1200px] rounded-l-[100px] p-2 pt-5 pb-5 border-[16px] border-r-0 border-transparent h-[695px] flex flex-col justify-center gap-8 overflow-hidden mb-20px lg:mb-[40px] ring-2 ring-white"
                style={{
-                 background: `linear-gradient(var(--color-slate-950), var(--color-slate-950)) padding-box, linear-gradient(to bottom, #C5E6F6, #F1FAFF) border-box`,
+                 background: ` linear-gradient(var(--color-slate-950), var(--color-slate-950)) padding-box, linear-gradient(to bottom, #C5E6F6, #F1FAFF) border-box`,
                }}
              >
-            <MarqueeRow items={row1} duration={40} />
-            <MarqueeRow items={row2} duration={35} />
-            <MarqueeRow items={row3} duration={45} />
+            <MarqueeRow items={row1} duration={40} className="flex-1" />
+            <MarqueeRow items={row2} duration={35} className="flex-1" />
+            <MarqueeRow items={row3} duration={45} className="flex-1" />
           </div>
         </div>
       </section>
