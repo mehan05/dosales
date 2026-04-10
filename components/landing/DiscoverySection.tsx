@@ -156,8 +156,8 @@ const LeadsCard = ({
   ];
 
   return (
-    <div className="flex flex-col h-full w-full">
-      <div className="flex justify-between items-start mb-6">
+    <div className="flex flex-col h-full w-full ">
+      <div className="flex justify-between items-start mb-3">
         <div>
           <h2 className="text-2xl font-bold text-slate-800">Leads</h2>
           <p className="text-sm text-slate-400 mt-1 italic">0 of 6 leads</p>
@@ -311,15 +311,15 @@ const DiscoverySection = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-12 xs:py-24 bg-white overflow-hidden"
+      className="pt-12 xs:pt-34 pb-0 bg-white overflow-hidden"
     >
-      <div className="max-w-[1600px] mx-auto px-4 xs:px-10 grid grid-cols-1 lg:grid-cols-12 items-start gap-12 lg:gap-16">
+      <div className="max-w-[1600px] mx-auto px-4 xs:px-10.5 grid grid-cols-1 lg:grid-cols-12 items-start gap-12 lg:gap-16">
         
 
         {/* right Side: Card UI */}
         <div className="relative lg:col-span-8 w-full order-2 lg:order-1 p-[6px] rounded-[30px] xs:rounded-[36px] bg-linear-to-b from-dashboard-outline to-dashboard-bg">
           <div className="relative rounded-[32px] xs:rounded-[40px]   bg-grey-white transition-all w-full h-full">
-            <div className="bg-grey-white rounded-[28px] xs:rounded-[32px] p-6 xs:p-8  min-h-[460px] xs:min-h-[500px] flex flex-col w-full overflow-hidden shadow-sm">
+            <div className="bg-grey-white rounded-[28px] xs:rounded-[32px] p-6 xs:p-8 min-h-[520px] flex flex-col w-full overflow-hidden shadow-sm">
               <AnimatePresence mode="wait" initial={false}>
                 {!showLeads ? (
                   <motion.div
@@ -365,7 +365,7 @@ const DiscoverySection = () => {
           </div>
         </div>
         {/* left Side: Content */}
-        <div className="flex flex-col items-start lg:col-span-4 max-w-2xl lg:max-w-none order-1 lg:order-2">
+        <div className="flex flex-col items-start lg:col-span-4 max-w-2xl lg:max-w-none order-1 lg:order-2 pr-[30px]">
           <div className="w-auto h-8 px-3.5 py-1.25 badge-gradient text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_var(--color-shadow-faint)] flex items-center justify-center gap-2.5 mb-10">
             AI Outbound Agent
           </div>

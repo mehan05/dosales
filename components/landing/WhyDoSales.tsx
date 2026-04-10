@@ -3,13 +3,13 @@ import Image from "next/image";
 
 const WhyDoSales = () => {
   return (
-    <section className="relative xs:pt-4 overflow-hidden xs:mt-0 mt-0 flex flex-col min-h-screen">
+    <section className="relative xs:pt-15 overflow-hidden xs:mt-0 mt-0 flex flex-col min-h-screen">
       <div className="absolute inset-0 bg-gradient-to-t from-bg-pale to-blue-ghost to-50% -z-10" />
       {/* Top edge white blur for section blending - subtilized to prevent dimming content */}
       <div className="absolute top-0 left-0 right-0 h-40 bg-linear-to-b from-white/60 via-white/20 to-transparent pointer-events-none z-0" />
       {/* Top statistics section */}
       <div className="max-w-6xl mx-auto px-4 flex flex-col items-center mb-24 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full text-center mb-16 ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full text-center mb-13.75 ">
           <div className="flex flex-col gap-2">
             <h3 className="text-[32px] font-[500] text-heading tracking-tighter ">
               50 LEADS/MO
@@ -30,7 +30,7 @@ const WhyDoSales = () => {
           REGISTER NOW
         </button>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-5">
           <p className="text-[14px] text-gray-500 font-medium leading-none">
             Loved by 132+ existing users
           </p>
@@ -67,10 +67,10 @@ const WhyDoSales = () => {
       </div>
 
       <div
-        className="bg-linear-to-b flex-1 pb-32 from-blue-ghost to-blue-ghost to-30% md:pt-7 w-full"
+        className="bg-linear-to-b flex-1 pb-32 from-blue-ghost to-blue-ghost to-30% md:pt-7 md:mt-[118.84px] w-full"
         style={{ borderRadius: "50% 50% 0 0 / 80px 80px 0 0" }}
       >
-        <div className="max-w-7xl mx-auto px-4 flex flex-col mt-15 items-center mb-16">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col gap-[20px] mt-[83.16px] items-center mb-28">
           <div className="w-auto h-8 px-3.5 py-1.25 badge-gradient text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-5">
             {" "}
             Why DoSales
@@ -81,11 +81,11 @@ const WhyDoSales = () => {
         </div>
 
         {/* Features Illustration Recreated in JSX */}
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4   ">
           <div className="relative w-full rounded-[40px] overflow-hidden  bg-blue-ghost backdrop-blur-sm">
             {/* Card Accent Borders & Dividers handled within sections */}
 
-            <div className="grid grid-cols-1 md:grid-cols-2 relative h-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 relative h-full ">
               {/* Vertical divider Segment for Top Row */}
               <div
                 className="absolute top-4 bottom-4 left-1/2 w-px -translate-x-1/2 hidden md:block z-10"
@@ -173,7 +173,7 @@ const WhyDoSales = () => {
 
             {/* Middle horizontal divider - Separates top row from AI Autonomy */}
             <div
-              className="relative  left-30 h-px w-full z-10"
+              className="relative  left-30 h-px w-full z-10 "
               style={{
                 background:
                   "linear-gradient(to right, var(--color-connector-blue), var(--color-connector-pale))",
@@ -212,7 +212,7 @@ const WhyDoSales = () => {
                   opacity: 0.86,
                 }}
               />
-              <div className="md:w-[40%] md:pl-12">
+              <div className="md:w-[40%] md:pl-12 md:pb-12">
                 <h3 className="text-3xl font-bold text-heading mb-4 tracking-tight">
                   AI Autonomy
                 </h3>

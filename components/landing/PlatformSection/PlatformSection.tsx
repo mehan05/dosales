@@ -31,24 +31,24 @@ const PlatformSection = () => {
   };
 
   return (
-    <section className="relative pt-16 md:pb-6 xs:pt-17 bg-linear-to-b from-white via-blue-50/40 to-white overflow-hidden font-sans">
+    <section className="relative md:pb-[40px] xs:pt-[120px] bg-linear-to-b from-white via-blue-50/40 to-white overflow-hidden font-sans">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-6 relative z-10 ">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto relative ">
           {/* Badge */}
-          <div className="w-auto h-8 px-3.5 py-1.25 badge-gradient text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_var(--color-shadow-faint)] flex items-center justify-center gap-2.5 mb-10">
+          <div className="w-auto h-8 px-3.5 py-1.25 badge-gradient text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_var(--color-shadow-faint)] flex items-center justify-center gap-2.5 mb-[16px]">
 
             Platform
           </div>
 
           {/* Headline */}
-          <h1 className="text-[36px] font-semibold text-text-main leading-[1.1] mb-8 tracking-tight">
+          <h1 className="text-[36px] font-semibold text-text-main leading-[1.1] mb-5 tracking-tight">
             An Automated Funnel that turns your ICP to Booked Meetings in 3
             steps
           </h1>
 
           {/* Subheadline */}
-          <p className="text-[16px] text-slate-dark font-medium max-w-md mb-8 leading-relaxed">
+          <p className="text-[16px] text-slate-dark font-medium max-w-md mb-6 leading-relaxed">
             Define your ICP and DoSales AI handles discovery, outreach, and
             qualification automatically.
           </p>

@@ -15,7 +15,7 @@ const getSparkleDelay = (leftPct: number, bottomPct: number): number => {
 
 const WaterfallSection = () => {
   return (
-    <section className="relative w-full bg-dark-navy py-24 px-4 overflow-hidden min-h-200 flex flex-col items-center justify-center">
+    <section className="  relative w-full bg-dark-navy py-34 px-4 overflow-hidden min-h-200 flex flex-col items-center justify-center">
       {/* Background radial glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,var(--color-blue-shadow),transparent_70%)] pointer-events-none"></div>
 
@@ -301,14 +301,14 @@ const WaterfallSection = () => {
         </div>
       </div>
 
-      <div className="relative z-10 flex flex-col items-center text-center max-w-6xl mt-20">
-        <div className="px-3 py-1 bg-linear-to-r from-banner-from to-banner-to max-w-[300px] text-white text-[16px] font-semibold rounded-full border border-banner-border mb-10 shadow-2xl tracking-wide">
+      <div className="relative z-10 flex flex-col items-center text-center max-w-6xl mt-[50px]">
+        <div className="px-3 py-1 bg-linear-to-r from-banner-from to-banner-to max-w-[300px] text-white text-[16px] font-semibold rounded-full border border-banner-border mb-[16px]  shadow-2xl tracking-wide">
           Waterfall Enrichment
         </div>
-        <h2 className="text-[36px] lg:text-[48px] font-[400] bg-gradient-to-r from-pure-white to-white-muted bg-clip-text text-transparent mb-4 tracking-tight leading-tight">
+        <h2 className="text-[36px] lg:text-[48px] font-[400] bg-gradient-to-r from-pure-white to-white-muted bg-clip-text text-transparent  tracking-tight leading-tight mb-2">
           Chains 10+ data providers, 85% match rates
         </h2>
-        <p className="text-slate-muted text-[16px] lg:text-[16px] leading-relaxed max-w-2xl font-thin">
+        <p className="text-slate-muted text-[16px] lg:text-[16px] leading-relaxed max-w-2xl font-thin ">
           We don't rely on a single source. DoSales waterfalls through 10+ data
           providers to verify emails, phones, and company intel across MENA and
           Southeast Asia.

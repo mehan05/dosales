@@ -73,7 +73,7 @@ const Footer = () => {
           {/* CTA & Socials */}
           <div className="space-y-[8px]">
             {/* Early Access Card */}
-            <div className="bg-white rounded-[32px] p-4 sm:p-5 flex items-center gap-4 sm:gap-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer group w-full lg:w-[380px]">
+            <div className="bg-white rounded-[32px] p-4 sm:p-5 flex items-center gap-4 sm:gap-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer group w-full max-w-[380px]">
               <div className="w-[64px] h-[64px] sm:w-[84px] sm:h-[84px] bg-text-main rounded-[24px] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                 <div className="relative w-8 h-8 sm:w-12 sm:h-12 invert brightness-0">
                   <Image 
@@ -90,7 +90,7 @@ const Footer = () => {
             </div>
 
             {/* Social Links */}
-            <div className="bg-white rounded-[24px] px-4 sm:px-8 py-4 sm:py-5 flex gap-2 items-center justify-start w-full lg:w-[380px] shadow-sm">
+            <div className="bg-white rounded-[24px] px-4 sm:px-8 py-4 sm:py-5 flex flex-wrap gap-2 items-center justify-start w-full max-w-[380px] shadow-sm">
               <span className="text-slate-medium text-base sm:text-[16px] font-medium">Follow us on</span>
               <div className="flex items-center gap-3">
                 <a href="#" className="text-[20px] hover:[&>svg]:fill-[url(#x-gradient)] transition-all duration-300 text-xl sm:text-2xl hover:scale-110">

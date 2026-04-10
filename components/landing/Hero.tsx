@@ -12,7 +12,7 @@ const Hero = () => {
       <GridBackground className="text-white z-0" />
       <Navbar />
 
-      <section className="relative pt-20 xs:pb-0 pb-4 overflow-hidden z-10">
+      <section className="relative pt-20 xs:pb-0 pb-4  overflow-hidden z-10">
         {/* Background Grid - already handled by GridBackground above */}
 
         <div className="container mx-auto px-4 relative z-10 text-center  lg:leading-relaxed">
@@ -22,21 +22,21 @@ const Hero = () => {
           </h1>
 
           {/* Sub-heading */}
-          <h2 className="text-[32px] md:text-4xl font-medium text-text-main max-w-4xl mx-auto mb-6 leading-[1.5] md:leading-relaxed">
+          <h2 className="text-[39px] md:text-4xl font-medium text-text-main max-w-4xl mx-auto mb-6 leading-[1.5] md:leading-relaxed">
             Turn your Ideal Customer Profile into a <br className="hidden md:block" />
             Qualified pipeline with{" "}
             <span className="text-text-main font-[600]">Automated Outreach</span>
           </h2>
 
           {/* Description */}
-          <p className="text-slate-dark text-[16px] max-w-2xl mx-auto mb-10 leading-relaxed ">
+          <p className="text-slate-dark text-[16px] max-w-2xl mx-auto mb-6 leading-relaxed ">
             DoSales automates lead discovery, outreach, and lead qualification
             with DoSales AI. Hand over only sales-ready prospects and your sales
             team focuses on Revenue and Closing.
           </p>
 
           {/* Early Access Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-early-access rounded-full text-sm font-medium text-emerald-800 mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-early-access rounded-full text-sm font-medium text-emerald-800 mb-3.5">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -45,7 +45,7 @@ const Hero = () => {
           </div>
 
           {/* Lead Capture Form */}
-          <div className="flex items-center justify-between max-w-[420px] mx-auto mb-4 bg-white p-1.5 rounded-2xl shadow-lg border border-gray-100 relative z-20">
+          <div className="flex items-center justify-between max-w-[420px] mx-auto mb-3.5 bg-white p-1.5 rounded-2xl shadow-lg border border-gray-100 relative z-20">
             <input
               type="email"
               placeholder="praveen@calibraint.com"
@@ -56,7 +56,7 @@ const Hero = () => {
             </button>
           </div>
           <p className="text-[16px] text-slate-dark italic">Get Free Early Access</p>
-          <div className="relative z-10">
+          <div className="relative z-10 ">
             <LeadsImage />
           </div>
         </div>

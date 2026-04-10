@@ -11,7 +11,7 @@ interface TestimonialCardProps {
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ name, role, company, content, avatar }) => {
   return (
-    <div className="bg-slate-darkest-card p-6 rounded-2xl flex flex-col gap-3 border border-white/5 hover:border-white/10 transition-colors h-full">
+    <div className="bg-slate-darkest-card p-3 rounded-2xl flex flex-col gap-3 border border-white/5 hover:border-white/10 transition-colors h-full">
       <p className="text-slate-text-muted text-[15px] leading-relaxed font-medium">
         {content}
       </p>

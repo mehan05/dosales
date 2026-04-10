@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const ClosingCTA = () => {
   return (
-    <section className="relative pt-6 pb-20 md:py-24 overflow-hidden bg-white">
+    <section className="relative pt-6 pb-25 md:py-24 overflow-hidden bg-white">
       {/* Background SVG and Glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-100 pointer-events-none select-none overflow-hidden">
         <Image 
@@ -19,7 +19,7 @@ const ClosingCTA = () => {
       <div className="container mx-auto px-4 relative z-10 text-center">
 
         {/* Badge Area */}
-        <div className="flex items-center justify-center gap-6 mb-12 w-full max-w-5xl mx-auto px-4">
+        <div className="flex items-center justify-center gap-6 mb-7.5 w-full max-w-5xl mx-auto px-4">
           <div className="flex-1 h-0.5 bg-linear-to-l from-sky-light to-transparent opacity-60" />
           <div className="w-auto h-8 px-3.5 py-1.25 badge-gradient text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_var(--color-shadow-faint)] flex items-center justify-center gap-2.5">
             Upgrade your Leads
@@ -28,7 +28,7 @@ const ClosingCTA = () => {
         </div>
 
         {/* Heading */}
-        <h2 className="text-5xl font-bold text-text-main mb-10 max-w-4xl mx-auto leading-[1.1]">
+        <h2 className="text-[58px] font-bold text-text-main mb-[16px] max-w-4xl mx-auto leading-[1.1]">
           Start closing in emerging <br className="hidden md:block" /> markets today
         </h2>
 
