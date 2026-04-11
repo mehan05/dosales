@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "closing_ctas",
+  "info": {
+    "singularName": "closing-cta",
+    "pluralName": "closing-ctas",
+    "displayName": "closingCTA"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "badgeContent": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "ctaButton": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false
+    }
+  }
+}

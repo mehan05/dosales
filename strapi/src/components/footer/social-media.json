@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_footer_social_medias",
+  "info": {
+    "displayName": "socialMedia"
+  },
+  "options": {},
+  "attributes": {
+    "socialMedias": {
+      "type": "component",
+      "component": "footer.social-media-logos-with-link",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

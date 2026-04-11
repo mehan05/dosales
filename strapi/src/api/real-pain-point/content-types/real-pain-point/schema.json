@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "real_pain_points",
+  "info": {
+    "singularName": "real-pain-point",
+    "pluralName": "real-pain-points",
+    "displayName": "realPainPoint"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "badgeContent": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "testimonalCards": {
+      "type": "component",
+      "component": "testimonials.testimomials-card",
+      "repeatable": true
+    }
+  }
+}

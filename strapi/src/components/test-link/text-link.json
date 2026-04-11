@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_test_link_text_links",
+  "info": {
+    "displayName": "textLink"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "string"
+    },
+    "url": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

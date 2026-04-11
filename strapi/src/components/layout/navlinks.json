@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_layout_navlinks",
+  "info": {
+    "displayName": "navlinks"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "children": {
+      "type": "component",
+      "component": "layout.sub-nav-links",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

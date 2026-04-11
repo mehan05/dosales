@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "footer_sections",
+  "info": {
+    "singularName": "footer-section",
+    "pluralName": "footer-sections",
+    "displayName": "footerSection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "footerBranding": {
+      "type": "component",
+      "component": "footer.footer-branding",
+      "repeatable": false
+    },
+    "LinkGroups": {
+      "type": "component",
+      "component": "footer.link-group",
+      "repeatable": true
+    },
+    "applyForEarlyAccess": {
+      "type": "component",
+      "component": "footer.footer-branding",
+      "repeatable": false
+    }
+  }
+}

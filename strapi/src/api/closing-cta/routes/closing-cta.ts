@@ -1,0 +1,7 @@
+/**
+ * closing-cta router
+ */
+
+import { factories } from '@strapi/strapi';
+
+export default factories.createCoreRouter('api::closing-cta.closing-cta');

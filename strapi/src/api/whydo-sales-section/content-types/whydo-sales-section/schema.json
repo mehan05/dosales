@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "whydo_sales_sections",
+  "info": {
+    "singularName": "whydo-sales-section",
+    "pluralName": "whydo-sales-sections",
+    "displayName": "whydoSalesSection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "badgeContent": {
+      "type": "string"
+    },
+    "heading1": {
+      "type": "string"
+    },
+    "content1": {
+      "type": "string"
+    },
+    "heading2": {
+      "type": "string"
+    },
+    "content2": {
+      "type": "string"
+    },
+    "heading3": {
+      "type": "string"
+    },
+    "content3": {
+      "type": "string"
+    }
+  }
+}

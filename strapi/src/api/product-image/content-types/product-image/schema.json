@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "product_images",
+  "info": {
+    "singularName": "product-image",
+    "pluralName": "product-images",
+    "displayName": "productImage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_footer_social_media_logos_with_links",
+  "info": {
+    "displayName": "socialMediaLogosWithLink"
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "url": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

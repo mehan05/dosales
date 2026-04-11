@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_funnel_funnel_image_and_contents",
+  "info": {
+    "displayName": "funnelImageAndContent"
+  },
+  "options": {},
+  "attributes": {
+    "funnelContent": {
+      "type": "string"
+    },
+    "funnelImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "funnelMainContent": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

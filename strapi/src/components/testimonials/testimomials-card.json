@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_testimonials_testimomials_cards",
+  "info": {
+    "displayName": "testimomialsCard"
+  },
+  "options": {},
+  "attributes": {
+    "feedback": {
+      "type": "text"
+    },
+    "profile": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "role": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

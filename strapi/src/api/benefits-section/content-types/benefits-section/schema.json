@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "benefits_sections",
+  "info": {
+    "singularName": "benefits-section",
+    "pluralName": "benefits-sections",
+    "displayName": "benefitsSection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content1": {
+      "type": "string"
+    },
+    "content1_1": {
+      "type": "string"
+    },
+    "content2": {
+      "type": "string"
+    },
+    "content2_2": {
+      "type": "string"
+    },
+    "content3": {
+      "type": "string"
+    },
+    "content3_3": {
+      "type": "string"
+    },
+    "ctaButtonContent": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false
+    }
+  }
+}

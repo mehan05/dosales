@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_footer_link_groups",
+  "info": {
+    "displayName": "linkGroup"
+  },
+  "options": {},
+  "attributes": {
+    "links": {
+      "type": "component",
+      "component": "footer.footer-branding",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

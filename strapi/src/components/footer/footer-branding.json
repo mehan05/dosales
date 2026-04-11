@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_footer_footer_brandings",
+  "info": {
+    "displayName": "footerBranding"
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
