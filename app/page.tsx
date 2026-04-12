@@ -22,6 +22,8 @@ export default async function Home() {
     realPainPointRes,
     platformRes,
     closingCtaRes,
+    benefitsRes,
+    productImageRes,
   ] = await Promise.all([
     fetchStrapi("hero-section", { populate: "*" }),
     fetchStrapi("whydo-sales-section"),
@@ -33,14 +35,16 @@ export default async function Home() {
       "populate[funnelAndImage][populate]": "*" 
     }),
     fetchStrapi("closing-cta", { populate: "*" }),
+    fetchStrapi("benefits-section", { populate: "*" }),
+    fetchStrapi("product-image", { populate: "*" }),
   ]);
 
   return (
     <main className="min-h-screen">
       <div className="bg-gradient-to-br from-bg-pale to-blue-ghost to-20%">
-        <Hero data={heroRes?.data} />
+        <Hero data={heroRes?.data} productImage={productImageRes?.data} />
       </div>
-      <WhyDoSales data={whyDoSalesRes?.data} />
+      <WhyDoSales data={whyDoSalesRes?.data} benefitsData={benefitsRes?.data} />
       <WaterfallSection data={waterfallRes?.data} />
       <DiscoverySection data={discoveryRes?.data} />
       <RealPainPoints data={realPainPointRes?.data} />

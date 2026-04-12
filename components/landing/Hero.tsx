@@ -1,13 +1,17 @@
 import React from "react";
 import LeadsImage from "./LeadsImage";
 import GridBackground from "../ui/GridBackground";
-import { HeroData } from "@/types/strapi";
+import { HeroData, ProductImageData } from "@/types/strapi";
+import { getStrapiMedia } from "@/lib/strapi";
 
 interface HeroProps {
   data?: HeroData;
+  productImage?: ProductImageData;
 }
 
-const Hero = ({ data }: HeroProps) => {
+const Hero = ({ data, productImage }: HeroProps) => {
+  const imageUrl = getStrapiMedia(productImage?.product_image?.url);
+
   return (
     <div className="relative bg-gradient-to-br from-bg-pale to-blue-ghost-light to-25% overflow-hidden">
       {/* Top right white shade */}
@@ -69,7 +73,7 @@ const Hero = ({ data }: HeroProps) => {
           </div>
           <p className="text-[16px] text-slate-dark italic">Get Free Early Access</p>
           <div className="relative z-10 ">
-            <LeadsImage />
+            <LeadsImage imageUrl={imageUrl} />
           </div>
         </div>
 

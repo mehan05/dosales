@@ -58,6 +58,22 @@ export interface HeroData {
   RegisterNowText?: StrapiButton;
 }
 
+export interface BenefitsSectionData {
+  content1: string;
+  content1_1: string;
+  content2: string;
+  content2_2: string;
+  content3: string;
+  content3_3: string;
+  ctaButtonContent?: StrapiButton;
+}
+
+export interface ProductImageData {
+  product_image?: {
+    url: string;
+  };
+}
+
 export interface WhyDoSalesData {
   badgeContent: string;
   mainHeading: string;
@@ -105,6 +121,7 @@ export interface PlatformSectionData {
   description: string;
   funnelMainContent: string;
   setupYourSalesEngine?: StrapiButton;
+  funnelAndImage: any[];
 }
 
 export interface ClosingCTAData {

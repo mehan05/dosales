@@ -1,12 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import { WhyDoSalesData } from "@/types/strapi";
+import { WhyDoSalesData, BenefitsSectionData } from "@/types/strapi";
 
 interface WhyDoSalesProps {
   data?: WhyDoSalesData;
+  benefitsData?: BenefitsSectionData;
 }
 
-const WhyDoSales = ({ data }: WhyDoSalesProps) => {
+const WhyDoSales = ({ data, benefitsData }: WhyDoSalesProps) => {
   return (
     <section className="relative xs:pt-15 overflow-hidden xs:mt-0 mt-0 flex flex-col min-h-screen">
       <div className="absolute inset-0 bg-gradient-to-t from-bg-pale to-blue-ghost to-50% -z-10" />
@@ -17,23 +18,41 @@ const WhyDoSales = ({ data }: WhyDoSalesProps) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full text-center mb-13.75 ">
           <div className="flex flex-col gap-2">
             <h3 className=" text-[24px] md:text-[32px] font-[500] text-heading tracking-tighter ">
-              50 LEADS/MO
+              {benefitsData?.content1 || "50 LEADS/MO"}
             </h3>
-            <p className="text-slate-dark  text-[16px] font-[500] ">FREE FOREVER</p>
+            <p className="text-slate-dark  text-[16px] font-[500] ">
+              {benefitsData?.content1_1 || "FREE FOREVER"}
+            </p>
           </div>
           <div className="flex flex-col gap-2">
-            <h3 className="text-[24px] md:text-[32px] font-[500] text-heading ">2 MIN</h3>
-            <p className="text-slate-dark  text-[16px] font-[500] ">SETUP</p>
+            <h3 className="text-[24px] md:text-[32px] font-[500] text-heading ">
+              {benefitsData?.content2 || "2 MIN"}
+            </h3>
+            <p className="text-slate-dark  text-[16px] font-[500] ">
+              {benefitsData?.content2_2 || "SETUP"}
+            </p>
           </div>
           <div className="flex flex-col gap-2">
-            <h3 className="text-[24px] md:text-[32px] font-[500] text-heading ">NO CARD</h3>
-            <p className="text-slate-dark  text-[16px] font-[500] ">REQUIRED</p>
+            <h3 className="text-[24px] md:text-[32px] font-[500] text-heading ">
+              {benefitsData?.content3 || "NO CARD"}
+            </h3>
+            <p className="text-slate-dark  text-[16px] font-[500] ">
+              {benefitsData?.content3_3 || "REQUIRED"}
+            </p>
           </div>
         </div>
 
-        <button className="bg-black text-white w-35 h-13 rounded-[10px] flex items-center justify-center gap-2.5 p-4 font-bold text-sm hover:bg-gray-900 transition-all shadow-lg active:scale-95 mb-6">
-          REGISTER NOW
-        </button>
+        {benefitsData?.ctaButtonContent?.url ? (
+          <a href={benefitsData.ctaButtonContent.url}>
+            <button className="bg-black text-white w-35 h-13 rounded-[10px] flex items-center justify-center gap-2.5 p-4 font-bold text-sm hover:bg-gray-900 transition-all shadow-lg active:scale-95 mb-6">
+              {benefitsData.ctaButtonContent.content || "REGISTER NOW"}
+            </button>
+          </a>
+        ) : (
+          <button className="bg-black text-white w-35 h-13 rounded-[10px] flex items-center justify-center gap-2.5 p-4 font-bold text-sm hover:bg-gray-900 transition-all shadow-lg active:scale-95 mb-6">
+            {benefitsData?.ctaButtonContent?.content || "REGISTER NOW"}
+          </button>
+        )}
 
         <div className="flex items-center gap-5">
           <p className="text-[14px] text-gray-500 font-medium leading-none">

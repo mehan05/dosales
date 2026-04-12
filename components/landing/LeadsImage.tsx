@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-const LeadsImage = () => {
+const LeadsImage = ({ imageUrl }: { imageUrl?: string | null }) => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -31,7 +31,7 @@ const LeadsImage = () => {
             <Image
               width={1300}
               height={900}
-              src="/assets/svg/leagsPage.svg"
+              src={imageUrl || "/assets/svg/leagsPage.svg"}
               alt="DoSales AI Leads Dashboard Preview showing qualified B2B prospects"
               className="hidden sm:block object-cover object-top mx-auto"
               priority
@@ -39,7 +39,7 @@ const LeadsImage = () => {
             <Image
               width={426}
               height={600}
-              src="/assets/svg/leadsPageMobile.svg"
+              src={imageUrl || "/assets/svg/leadsPageMobile.svg"}
               alt="Leads Dashboard Preview Mobile"
               className="block sm:hidden object-contain w-full mx-auto"
               priority

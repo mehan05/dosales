@@ -7,6 +7,7 @@ interface FunnelProps {
   activeStep: number;
   onStepClick: (step: number) => void;
   steps?: any[];
+  label?: string;
 }
 
 // Each step is a self-contained 3D box using:
@@ -141,7 +142,7 @@ const Step3DBox: React.FC<Step3DBoxProps> = ({
   );
 };
 
-const Funnel: React.FC<FunnelProps> = ({ activeStep, onStepClick, steps }) => {
+const Funnel: React.FC<FunnelProps> = ({ activeStep, onStepClick, steps, label }) => {
   const step1Label = steps?.[0]?.label || "1. Define & Discover";
   const step2Label = steps?.[1]?.label || "2. Enrich and Qualify";
   const step3Label = steps?.[2]?.label || "3. Research & Convert";
@@ -150,7 +151,7 @@ const Funnel: React.FC<FunnelProps> = ({ activeStep, onStepClick, steps }) => {
     <div className="w-full max-w-lg relative flex flex-col items-center gap-3">
       <div className="order-first md:order-last mb-6 mt-2 md:mb-0 md:mt-10 text-center">
         <p className="font-[500] text-[16px] uppercase tracking-wider text-text-main">
-          DOSALES AI AUTOMATED FUNNEL
+          {label || "DOSALES AI AUTOMATED FUNNEL"}
         </p>
       </div>
 

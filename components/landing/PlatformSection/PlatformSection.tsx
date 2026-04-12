@@ -49,7 +49,7 @@ const PlatformSection = ({ data }: PlatformSectionProps) => {
 
           {/* Headline */}
           <h2 className="text-[36px] font-semibold text-text-main leading-[1.1] mb-5 tracking-tight">
-            {data?.headline || "An Automated Funnel that turns your ICP to Booked Meetings in 3 steps"}
+            {data?.heading || "An Automated Funnel that turns your ICP to Booked Meetings in 3 steps"}
           </h2>
 
           {/* Subheadline */}
@@ -68,7 +68,12 @@ const PlatformSection = ({ data }: PlatformSectionProps) => {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 mt-12 xs:mt-20 items-center">
         {/* Left Column: Funnel */}
         <div className="flex flex-col items-center">
-          <Funnel activeStep={activeStep} onStepClick={handleStepClick} steps={data?.funnelAndImage} />
+          <Funnel 
+            activeStep={activeStep} 
+            onStepClick={handleStepClick} 
+            steps={data?.funnelAndImage} 
+            label={data?.funnelMainContent}
+          />
         </div>
 
         {/* Right Column: Dynamic UI Card */}
