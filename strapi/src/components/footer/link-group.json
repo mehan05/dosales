@@ -1,13 +1,16 @@
 {
   "collectionName": "components_footer_link_groups",
   "info": {
-    "displayName": "linkGroup"
+    "displayName": "linkGroupContents"
   },
   "options": {},
   "attributes": {
-    "links": {
+    "linkGroupName": {
+      "type": "string"
+    },
+    "link": {
       "type": "component",
-      "component": "footer.footer-branding",
+      "component": "test-link.text-link",
       "repeatable": true
     }
   },

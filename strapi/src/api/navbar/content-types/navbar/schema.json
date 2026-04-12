@@ -28,6 +28,9 @@
       "type": "component",
       "component": "shared.button",
       "repeatable": false
+    },
+    "pageName": {
+      "type": "string"
     }
   }
 }

@@ -586,7 +586,7 @@ export interface ApiFooterSectionFooterSection extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     footerBranding: Schema.Attribute.Component<'footer.footer-branding', false>;
-    LinkGroups: Schema.Attribute.Component<'footer.link-group', true>;
+    footerLinks: Schema.Attribute.Component<'footer.footer-links', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -654,6 +654,7 @@ export interface ApiNavbarNavbar extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     logo: Schema.Attribute.Media<'images' | 'files'>;
     navlinks: Schema.Attribute.Component<'layout.navlinks', false>;
+    pageName: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -817,6 +818,7 @@ export interface ApiWhydoSalesSectionWhydoSalesSection
       'api::whydo-sales-section.whydo-sales-section'
     > &
       Schema.Attribute.Private;
+    mainHeading: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

@@ -6,18 +6,29 @@ export interface FooterFooterBranding extends Struct.ComponentSchema {
     displayName: 'footerBranding';
   };
   attributes: {
-    logo: Schema.Attribute.Media<'images' | 'files'>;
-    text: Schema.Attribute.String;
+    brandName: Schema.Attribute.String;
+    logo: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface FooterFooterLinks extends Struct.ComponentSchema {
+  collectionName: 'components_footer_footer_links';
+  info: {
+    displayName: 'footerLinks';
+  };
+  attributes: {
+    footerLinks: Schema.Attribute.Component<'footer.link-group', true>;
   };
 }
 
 export interface FooterLinkGroup extends Struct.ComponentSchema {
   collectionName: 'components_footer_link_groups';
   info: {
-    displayName: 'linkGroup';
+    displayName: 'linkGroupContents';
   };
   attributes: {
-    links: Schema.Attribute.Component<'footer.footer-branding', true>;
+    link: Schema.Attribute.Component<'test-link.text-link', true>;
+    linkGroupName: Schema.Attribute.String;
   };
 }
 
@@ -118,6 +129,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'footer.footer-branding': FooterFooterBranding;
+      'footer.footer-links': FooterFooterLinks;
       'footer.link-group': FooterLinkGroup;
       'footer.social-media': FooterSocialMedia;
       'footer.social-media-logos-with-link': FooterSocialMediaLogosWithLink;

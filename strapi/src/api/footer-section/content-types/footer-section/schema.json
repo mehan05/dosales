@@ -16,14 +16,14 @@
       "component": "footer.footer-branding",
       "repeatable": false
     },
-    "LinkGroups": {
-      "type": "component",
-      "component": "footer.link-group",
-      "repeatable": true
-    },
     "applyForEarlyAccess": {
       "type": "component",
       "component": "footer.footer-branding",
+      "repeatable": false
+    },
+    "footerLinks": {
+      "type": "component",
+      "component": "footer.footer-links",
       "repeatable": false
     }
   }

@@ -9,11 +9,10 @@
       "type": "media",
       "multiple": false,
       "allowedTypes": [
-        "images",
-        "files"
+        "images"
       ]
     },
-    "text": {
+    "brandName": {
       "type": "string"
     }
   },
