@@ -4,8 +4,14 @@ import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import { IoCloseOutline, IoChevronDown } from 'react-icons/io5';
 import { motion, AnimatePresence } from 'framer-motion';
+import { NavbarData } from '@/types/strapi';
+import { getStrapiMedia } from '@/lib/strapi';
 
-const Navbar = () => {
+interface NavbarProps {
+    data?: NavbarData;
+}
+
+const Navbar = ({ data }: NavbarProps) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [isOverWaterfall, setIsOverWaterfall] = useState(false);
@@ -18,25 +24,27 @@ const Navbar = () => {
             const waterfallSection = document.getElementById('waterfall-section');
             if (waterfallSection) {
                 const rect = waterfallSection.getBoundingClientRect();
-                // Check if the sticky navbar (at top:0) is overlapping with the waterfall section
-                const navbarHeight = 80;
                 const isOver = rect.top <= 20 && rect.bottom >= 0;
                 setIsOverWaterfall(isOver);
             }
         };
 
         window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Initial check
+        handleScroll();
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     const toggleMenu = () => setIsOpen(!isOpen);
 
-    const navLinks = [
+    const navLinks = data?.navlinks || [
         { name: 'FEATURES', href: '#', hasDropdown: true },
         { name: 'ABOUT', href: '#' },
         { name: 'PRICING', href: '#' },
     ];
+
+    const ctaText = data?.ctaButton?.content || "Schedule a Demo";
+    const ctaUrl = data?.ctaButton?.url || "#";
+    const logoUrl = getStrapiMedia(data?.logo?.url) || "/assets/svg/logo.svg";
 
     return (
         <nav className={`
@@ -46,39 +54,65 @@ const Navbar = () => {
         `}>
             <div className="flex items-center gap-2">
                 <Image
-                    src={isOverWaterfall ? "/assets/svg/logo.svg" : "/assets/svg/logo.svg"}
+                    src={logoUrl}
                     alt="Logo"
                     width={32}
                     height={32}
                     className="w-8 h-8"
                 />
-                <span className={`text-[22px] font-bold ${isOverWaterfall ? 'text-white' : 'text-text-main'}`}>DoSales</span>
+                <span className={`text-[22px] font-bold ${isOverWaterfall ? 'text-white' : 'text-text-main'}`}>
+                    {data?.pageName || "DoSales"}
+                </span>
             </div>
 
             <div className="hidden md:flex items-center gap-8">
-                {navLinks.map((link) => (
-                    <a
-                        key={link.name}
-                        href={link.href}
-                        className={`
-                            flex items-center gap-1 cursor-pointer text-[16px] font-medium transition-colors group
-                            ${isOverWaterfall ? 'text-white hover:text-blue-300' : 'text-text-main hover:text-primary-blue'}
-                        `}
-                    >
-                        {link.name}
-                        {link.hasDropdown && <IoChevronDown className="transition-transform duration-200" size={14} />}
-                    </a>
-                ))}
+                {navLinks.map((link: any) => {
+                    const hasSubLinks = link.children && link.children.length > 0;
+                    return (
+                        <div key={link.id || link.name || link.content} className="relative group">
+                            <a
+                                href={link.url || link.href}
+                                className={`
+                                    flex items-center gap-1 cursor-pointer text-[16px] font-medium transition-colors group
+                                    ${isOverWaterfall ? 'text-white hover:text-blue-300' : 'text-text-main hover:text-primary-blue'}
+                                `}
+                            >
+                                {link.content || link.label || link.name}
+                                {(link.hasDropdown || hasSubLinks) && <IoChevronDown className="transition-transform duration-200" size={14} />}
+                            </a>
+
+                            {/* Simple Dropdown for sub-links */}
+                            {hasSubLinks && (
+                                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100 overflow-hidden">
+                                    <div className="py-2">
+                                        {link.children.map((subLink: any) => (
+                                            <a 
+                                                key={subLink.id} 
+                                                href={subLink.url} 
+                                                className="block px-4 py-2 text-sm text-text-main hover:bg-slate-50 hover:text-primary-blue transition-colors"
+                                            >
+                                                {subLink.content}
+                                            </a>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    );
+                })}
             </div>
 
-            <button className={`
-                hidden sm:flex relative z-50 w-40 h-[51px] items-center justify-center gap-2.5 p-5 rounded-[10px] font-semibold transition-all duration-300 text-[14px]
-                ${isOverWaterfall 
-                    ? 'bg-white text-text-main hover:bg-gray-100' 
-                    : 'bg-text-main text-white hover:bg-slate-800'}
-            `}>
-                Schedule a Demo
-            </button>
+            <a 
+                href={ctaUrl}
+                className={`
+                    hidden sm:flex relative z-50 px-6 h-[51px] items-center justify-center gap-2.5 rounded-[10px] font-semibold transition-all duration-300 text-[14px]
+                    ${isOverWaterfall 
+                        ? 'bg-white text-text-main hover:bg-gray-100' 
+                        : 'bg-text-main text-white hover:bg-slate-800'}
+                `}
+            >
+                {ctaText}
+            </a>
 
             <button onClick={toggleMenu} className="md:hidden relative z-50 p-1 cursor-pointer">
                 {isOpen ? (
@@ -104,16 +138,15 @@ const Navbar = () => {
                         transition={{ duration: 0.2, ease: "easeOut" }}
                         className="absolute top-18 left-0 right-0 z-110 bg-white shadow-2xl flex flex-col md:hidden border-t border-gray-100"
                     >
-                        {/* Menu Items */}
                         <div className="flex-1 flex flex-col px-8 py-6 gap-8">
-                            {navLinks.map((link) => (
-                                <div key={link.name} className="flex items-center justify-between w-full">
+                            {navLinks.map((link: any) => (
+                                <div key={link.id || link.name || link.label} className="flex items-center justify-between w-full">
                                     <a 
-                                        href={link.href}
+                                        href={link.url || link.href}
                                         className="text-[16px] font-medium text-text-main tracking-wide"
                                         onClick={() => setIsOpen(false)}
                                     >
-                                        {link.name}
+                                        {link.label || link.name}
                                     </a>
                                     {link.hasDropdown && (
                                         <IoChevronDown className="text-gray-400" size={20} />
@@ -121,11 +154,13 @@ const Navbar = () => {
                                 </div>
                             ))}
 
-                            {/* CTA Button in Menu */}
                             <div className="mt-4">
-                                <button className="w-full bg-text-main text-white h-14.5 rounded-xl font-bold text-[16px] hover:bg-slate-800 transition-all active:scale-95 shadow-lg">
-                                    Schedule a Demo
-                                </button>
+                                <a 
+                                    href={ctaUrl}
+                                    className="flex w-full bg-text-main text-white h-14.5 items-center justify-center rounded-xl font-bold text-[16px] hover:bg-slate-800 transition-all active:scale-95 shadow-lg"
+                                >
+                                    {ctaText}
+                                </a>
                             </div>
                         </div>
                     </motion.div>

@@ -1,7 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import { WhyDoSalesData } from "@/types/strapi";
 
-const WhyDoSales = () => {
+interface WhyDoSalesProps {
+  data?: WhyDoSalesData;
+}
+
+const WhyDoSales = ({ data }: WhyDoSalesProps) => {
   return (
     <section className="relative xs:pt-15 overflow-hidden xs:mt-0 mt-0 flex flex-col min-h-screen">
       <div className="absolute inset-0 bg-gradient-to-t from-bg-pale to-blue-ghost to-50% -z-10" />
@@ -72,11 +77,10 @@ const WhyDoSales = () => {
       >
         <div className="max-w-7xl mx-auto px-4 flex flex-col gap-[20px] mt-[83.16px] items-center  mb-[44px] md:mb-28">
           <div className="w-auto h-8 px-3.5 py-1.25 badge-gradient text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex items-center justify-center gap-2.5 mb-5">
-            {" "}
-            Why DoSales
+            {data?.badgeContent || "Why DoSales"}
           </div>
           <h2 className="text-[36px] lg:text-[48px] font-bold text-text-main text-center max-w-4xl tracking-tight leading-tight">
-            Built exclusively for your market{" "}
+            {data?.mainHeading || "Built exclusively for your market"}
           </h2>
         </div>
 
@@ -128,12 +132,10 @@ const WhyDoSales = () => {
                 </div>
                 <div>
                   <h3 className="text-[20px] font-bold text-heading mb-[10px] md:mb-4 tracking-tight">
-                    Regional Dominance
+                    {data?.heading1 || "Regional Dominance"}
                   </h3>
                   <p className="text-text-main text-[16px] leading-[1.6] max-w-md">
-                    Built for MENA & Southeast Asia from day one — not bolted on
-                    as an afterthought. Coverage where Apollo and ZoomInfo have
-                    blind spots.
+                    {data?.content1 || "Built for MENA & Southeast Asia from day one — not bolted on as an afterthought. Coverage where Apollo and ZoomInfo have blind spots."}
                   </p>
                 </div>
               </div>
@@ -160,12 +162,10 @@ const WhyDoSales = () => {
                 </div>
                 <div>
                   <h3 className="text-[20px] font-bold text-heading  mb-2 md:mb-4 tracking-tight">
-                    Vertical Intelligence
+                    {data?.heading2 || "Vertical Intelligence"}
                   </h3>
                   <p className="text-text-main text-[16px] leading-[1.6] max-w-md">
-                    Deep data models for Fintech, PropTech, Trade Finance, and
-                    Supply Chain. Industry-specific signals that horizontal
-                    tools miss entirely.
+                    {data?.content2 || "Deep data models for Fintech, PropTech, Trade Finance, and Supply Chain. Industry-specific signals that horizontal tools miss entirely."}
                   </p>
                 </div>
               </div>
@@ -214,12 +214,10 @@ const WhyDoSales = () => {
               />
               <div className="md:w-[40%] md:pl-12 md:pb-12">
               <h3 className="text-[20px] font-bold text-heading  mb-2 md:mb-4 tracking-tight">
-                  AI Autonomy
+                  {data?.heading3 || "AI Autonomy"}
                 </h3>
                 <p className="text-text-main text-[16px] leading-normal max-w-lg font-medium">
-                  Autonomous prospecting that finds, enriches, scores, and
-                  engages leads. Your AI SDR works 24/7 while your team focuses
-                  on closing.
+                  {data?.content3 || "Autonomous prospecting that finds, enriches, scores, and engages leads. Your AI SDR works 24/7 while your team focuses on closing."}
                 </p>
               </div>
             </div>

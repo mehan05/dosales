@@ -550,10 +550,6 @@ export interface ApiDiscoverySectionDiscoverySection
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.String;
-    images: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { getStrapiMedia } from '@/lib/strapi';
 
 interface TestimonialCardProps {
   name: string;
@@ -19,8 +20,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ name, role, company, 
       <div className="flex items-center gap-3 mt-auto">
         <div className="relative w-10 h-10 rounded-full overflow-hidden shrink-0 transition-all duration-300">
           <Image
-            src={avatar}
-            alt={name}
+            src={getStrapiMedia(avatar) || "https://i.pravatar.cc/150"}
+            alt={name || "User testimonial"}
             fill
             className="object-cover"
           />

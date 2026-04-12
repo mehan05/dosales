@@ -1,9 +1,13 @@
 import React from "react";
 import LeadsImage from "./LeadsImage";
-
 import GridBackground from "../ui/GridBackground";
+import { HeroData } from "@/types/strapi";
 
-const Hero = () => {
+interface HeroProps {
+  data?: HeroData;
+}
+
+const Hero = ({ data }: HeroProps) => {
   return (
     <div className="relative bg-gradient-to-br from-bg-pale to-blue-ghost-light to-25% overflow-hidden">
       {/* Top right white shade */}
@@ -13,26 +17,26 @@ const Hero = () => {
 
 
       <section className="relative pt-20 xs:pb-0 pb-4  overflow-hidden z-10">
-        {/* Background Grid - already handled by GridBackground above */}
-
         <div className="container mx-auto px-4 relative z-10 text-center  lg:leading-relaxed">
           {/* Main Heading */}
           <h1 className="text-[24px] md:text-4xl md:text-4xl font-semibold text-heading mb-4 tracking-tight">
-            Stop Chasing Leads!
+            {data?.headline || "Stop Chasing Leads!"}
           </h1>
 
           {/* Sub-heading */}
           <h2 className=" text-[28px] md:text-[39px] md:text-4xl font-medium text-text-main max-w-4xl mx-auto mb-6 leading-[1.5] md:leading-relaxed">
-            Turn your Ideal Customer Profile into a <br className="hidden md:block" />
-            Qualified pipeline with{" "}
-            <span className="text-text-main font-[600]">Automated Outreach</span>
+            {data?.subHeadline || (
+              <>
+                Turn your Ideal Customer Profile into a <br className="hidden md:block" />
+                Qualified pipeline with{" "}
+                <span className="text-text-main font-[600]">Automated Outreach</span>
+              </>
+            )}
           </h2>
 
           {/* Description */}
           <p className="text-slate-dark text-[16px] max-w-2xl mx-auto mb-6 leading-relaxed ">
-            DoSales automates lead discovery, outreach, and lead qualification
-            with DoSales AI. Hand over only sales-ready prospects and your sales
-            team focuses on Revenue and Closing.
+            {data?.description || "DoSales automates lead discovery, outreach, and lead qualification with DoSales AI. Hand over only sales-ready prospects and your sales team focuses on Revenue and Closing."}
           </p>
 
           {/* Early Access Badge */}
@@ -51,9 +55,17 @@ const Hero = () => {
               placeholder="praveen@calibraint.com"
               className="flex-1 px-4 py-2.5 outline-none text-slate-input w-full text-sm sm:text-base bg-transparent"
             />
-            <button className="bg-primary-blue text-white px-5 py-2.5 rounded-[10px] text-xs sm:text-sm font-bold hover:bg-blue-dark transition-colors whitespace-nowrap shadow-sm">
-              REGISTER NOW
-            </button>
+            {data?.RegisterNowText?.url ? (
+              <a href={data.RegisterNowText.url}>
+                <button className="bg-primary-blue text-white px-5 py-2.5 rounded-[10px] text-xs sm:text-sm font-bold hover:bg-blue-dark transition-colors whitespace-nowrap shadow-sm">
+                  {data?.RegisterNowText?.content || "REGISTER NOW"}
+                </button>
+              </a>
+            ) : (
+              <button className="bg-primary-blue text-white px-5 py-2.5 rounded-[10px] text-xs sm:text-sm font-bold hover:bg-blue-dark transition-colors whitespace-nowrap shadow-sm">
+                {data?.RegisterNowText?.content || "REGISTER NOW"}
+              </button>
+            )}
           </div>
           <p className="text-[16px] text-slate-dark italic">Get Free Early Access</p>
           <div className="relative z-10 ">

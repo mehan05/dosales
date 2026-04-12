@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import {
@@ -10,6 +9,11 @@ import {
   HiViewGrid,
   HiCreditCard,
 } from "react-icons/hi";
+import { DiscoveryData } from "@/types/strapi";
+
+interface DiscoverySectionProps {
+  data?: DiscoveryData;
+}
 
 const DiscoverySearchCard = ({
   onRunDiscovery,
@@ -249,7 +253,7 @@ const LeadsCard = ({
   );
 };
 
-const DiscoverySection = () => {
+const DiscoverySection = ({ data }: DiscoverySectionProps) => {
   const [showLeads, setShowLeads] = useState(false);
   const [fieldValues, setFieldValues] = useState<Record<string, string>>({});
   const [isAutoClicking, setIsAutoClicking] = useState(false);
@@ -369,14 +373,13 @@ const DiscoverySection = () => {
         {/* left Side: Content */}
         <div className="flex flex-col items-start lg:col-span-4 max-w-2xl lg:max-w-none order-1 lg:order-2 pr-[30px]">
           <div className="w-auto h-8 px-3.5 badge-gradient text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_var(--color-shadow-faint)] flex items-center justify-center gap-2.5 mb-1">
-            AI Outbound Agent
+            {data?.badgeContent || "AI Outbound Agent"}
           </div>
           <h2 className="lg:text-[52px] text-[36px] lg:leading-[1.5] font-semibold text-slate-900 mb-4 xs:mb-6 tracking-tight">
-            From Ideal Prospects to Booked Meetings - Automatically{" "}
+            {data?.heading || "From Ideal Prospects to Booked Meetings - Automatically"}
           </h2>
           <p className="text-base font-[500] xs:text-[16px]  text-slate-dark  ">
-            From ICP targeting to follow-ups, DoSales handles the entire
-            outbound process. So your team spends time closing, not chasing.
+            {data?.description || "From ICP targeting to follow-ups, DoSales handles the entire outbound process. So your team spends time closing, not chasing."}
           </p>
         </div>
       </div>
@@ -385,3 +388,4 @@ const DiscoverySection = () => {
 };
 
 export default DiscoverySection;
+

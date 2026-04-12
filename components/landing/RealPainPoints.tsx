@@ -2,81 +2,11 @@
 import React from "react";
 import TestimonialCard from "./TestimonialCard";
 import GridBackground from "../ui/GridBackground";
+import { RealPainPointData } from "@/types/strapi";
 
-const testimonialData = [
-  {
-    name: "Marcaus Teo",
-    role: "VP Sales",
-    company: "Nium",
-    content:
-      "We've burned through Apollo and ZoomInfo licenses. The UAE Fintech data is a graveyard — wrong emails, outdated titles, companies that pivoted two years ago.",
-    avatar: "https://i.pravatar.cc/150?u=marcaus",
-  },
-  {
-    name: "Talan Septimus",
-    role: "Sales Director",
-    company: "Razorpay",
-    content:
-      "We've burned through Apollo and ZoomInfo licenses. The UAE Fintech data is a graveyard — wrong emails, outdated titles, companies that pivoted two years ago.",
-    avatar: "https://i.pravatar.cc/150?u=talan",
-  },
-  {
-    name: "Jocelyn Kenter",
-    role: "Growth Lead",
-    company: "Funding Societies",
-    content:
-      "We've burned through Apollo and ZoomInfo licenses. The UAE Fintech data is a graveyard — wrong emails, outdated titles, companies that pivoted two years ago.",
-    avatar: "https://i.pravatar.cc/150?u=jocelyn",
-  },
-  {
-    name: "Zain Septimus",
-    role: "Head of BD",
-    company: "Sarwa",
-    content:
-      "We've burned through Apollo and ZoomInfo licenses. The UAE Fintech data is a graveyard — wrong emails, outdated titles, companies that pivoted two years ago.",
-    avatar: "https://i.pravatar.cc/150?u=zain",
-  },
-  {
-    name: "Paityn Vaccaro",
-    role: "Co-founder",
-    company: "Propeller",
-    content:
-      "We've burned through Apollo and ZoomInfo licenses. The UAE Fintech data is a graveyard — wrong emails, outdated titles, companies that pivoted two years ago.",
-    avatar: "https://i.pravatar.cc/150?u=paityn",
-  },
-  {
-    name: "Cristofer Curtis",
-    role: "SDR Manager",
-    company: "Tabby",
-    content:
-      "We've burned through Apollo and ZoomInfo licenses. The UAE Fintech data is a graveyard — wrong emails, outdated titles, companies that pivoted two years ago.",
-    avatar: "https://i.pravatar.cc/150?u=cristofer",
-  },
-  {
-    name: "Ahmad Zain",
-    role: "Director of Sales",
-    company: "Noon",
-    content:
-      "We've burned through Apollo and ZoomInfo licenses. The UAE Fintech data is a graveyard — wrong emails, outdated titles, companies that pivoted two years ago.",
-    avatar: "https://i.pravatar.cc/150?u=ahmad",
-  },
-  {
-    name: "Sarah Chen",
-    role: "VP Growth",
-    company: "Grab",
-    content:
-      "We've burned through Apollo and ZoomInfo licenses. The UAE Fintech data is a graveyard — wrong emails, outdated titles, companies that pivoted two years ago.",
-    avatar: "https://i.pravatar.cc/150?u=sarah",
-  },
-  {
-    name: "Omar Farooq",
-    role: "Head of Sales",
-    company: "Careem",
-    content:
-      "We've burned through Apollo and ZoomInfo licenses. The UAE Fintech data is a graveyard — wrong emails, outdated titles, companies that pivoted two years ago.",
-    avatar: "https://i.pravatar.cc/150?u=omar",
-  },
-];
+interface RealPainPointsProps {
+  data?: RealPainPointData;
+}
 
 const MarqueeRow = ({
   items,
@@ -84,12 +14,14 @@ const MarqueeRow = ({
   direction = "marqueeRight",
   className = "",
 }: {
-  items: typeof testimonialData;
+  items: any[];
   duration?: number;
   direction?: "marqueeLeft" | "marqueeRight";
   className?: string;
 }) => {
   const [isPaused, setIsPaused] = React.useState(false);
+
+  if (!items || items.length === 0) return null;
 
   return (
     <div
@@ -109,7 +41,13 @@ const MarqueeRow = ({
         {/* We duplicate the items to create a seamless loop */}
         {[...items, ...items].map((testimonial, idx) => (
           <div key={idx} className="w-[312px] lg:w-[350px] min-w-[312px] min-h-[186px] h-full shrink-0 " >
-            <TestimonialCard {...testimonial} />
+            <TestimonialCard 
+              name={testimonial.name}
+              role={testimonial.role}
+              company={testimonial.company}
+              content={testimonial.content}
+              avatar={testimonial.avatar?.url}
+            />
           </div>
         ))}
       </div>
@@ -117,11 +55,14 @@ const MarqueeRow = ({
   );
 };
 
-const RealPainPoints = () => {
+const RealPainPoints = ({ data }: RealPainPointsProps) => {
+  const testimonials = data?.testimonalCards || [];
+  
   // Split data into 3 rows for more visual interest
-  const row1 = testimonialData.slice(0, 3);
-  const row2 = testimonialData.slice(3, 6);
-  const row3 = testimonialData.slice(6, 9);
+  const itemsPerRow = Math.ceil(testimonials.length / 3);
+  const row1 = testimonials.slice(0, itemsPerRow);
+  const row2 = testimonials.slice(itemsPerRow, itemsPerRow * 2);
+  const row3 = testimonials.slice(itemsPerRow * 2);
 
   return (
     <div className="pt-[80px] md:pt-[132px] pb-6 lg:px-8 xs:pb-5 w-full overflow-hidden  ">
@@ -135,22 +76,19 @@ const RealPainPoints = () => {
         {/* Left Content */}
         <div className="relative w-full lg:w-[45%] px-12 lg:px-[64px] pb-8 lg:pt-[64px] lg:pb-32 flex flex-col items-start  z-10 lg:self-start">
           <div className="  w-auto h-8 px-3.5 py-1.25 badge-gradient text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_var(--color-shadow-faint)] flex items-center justify-center gap-2.5 mb-10">
-            Real Pain Points
+            {data?.badgeContent || "Real Pain Points"}
           </div>
 
           <div className="flex flex-col gap-6 max-w-[436px]">
             <h2 className="text-[38px] lg:text-[52px] font-semibold text-text-main leading-[1.1] tracking-tight">
-              Existing tools
-              <br />
-              weren't built
-              <br />
-              for emerging
-              <br />
-              markets
+              {data?.heading ? (
+                <span dangerouslySetInnerHTML={{ __html: data.heading.replace(/\n/g, '<br />') }} />
+              ) : (
+                <>Existing tools<br />weren't built<br />for emerging<br />markets</>
+              )}
             </h2>
             <p className="text-slate-dark text-[16px] leading-relaxed font-medium">
-              Hear from sales leaders who've burned through Apollo, ZoomInfo,
-              and Cognism trying to sell into MENA and Southeast Asia.
+              {data?.content || "Hear from sales leaders who've burned through Apollo, ZoomInfo, and Cognism trying to sell into MENA and Southeast Asia."}
             </p>
           </div>
         </div>
@@ -163,9 +101,9 @@ const RealPainPoints = () => {
                  background: ` linear-gradient(var(--color-slate-950), var(--color-slate-950)) padding-box, linear-gradient(to bottom, #C5E6F6, #F1FAFF) border-box`,
                }}
              >
-            <MarqueeRow items={row1} duration={40} className="flex-1 " />
-            <MarqueeRow items={row2} duration={35} className="flex-1" />
-            <MarqueeRow items={row3} duration={45} className="flex-1" />
+            {row1.length > 0 && <MarqueeRow items={row1} duration={40} className="flex-1 " />}
+            {row2.length > 0 && <MarqueeRow items={row2} duration={35} className="flex-1" />}
+            {row3.length > 0 && <MarqueeRow items={row3} duration={45} className="flex-1" />}
           </div>
         </div>
       </section>

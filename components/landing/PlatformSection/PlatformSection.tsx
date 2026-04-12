@@ -3,10 +3,15 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { HiArrowRight } from "react-icons/hi2";
 import Funnel from "./Funnel";
+import { PlatformSectionData } from "@/types/strapi";
+import { getStrapiMedia } from "@/lib/strapi";
 
-const PlatformSection = () => {
+interface PlatformSectionProps {
+  data?: PlatformSectionData;
+}
+
+const PlatformSection = ({ data }: PlatformSectionProps) => {
   const [activeStep, setActiveStep] = useState(1);
   const totalSteps = 3;
   const intervalRef = React.useRef<NodeJS.Timeout | null>(null);
@@ -15,7 +20,7 @@ const PlatformSection = () => {
     if (intervalRef.current) clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
       setActiveStep((prev) => (prev % totalSteps) + 1);
-    }, 2000);
+    }, 5000); // 5 seconds interval for better readability
   };
 
   React.useEffect(() => {
@@ -30,6 +35,8 @@ const PlatformSection = () => {
     startInterval(); // Reset timer on manual click
   };
 
+  const currentStepData = data?.funnelAndImage?.[activeStep - 1];
+
   return (
     <section className="relative pb-20 md:pb-[40px] xs:pt-[120px] bg-linear-to-b from-white via-blue-50/40 to-white overflow-hidden font-sans">
       {/* Hero Section */}
@@ -37,25 +44,22 @@ const PlatformSection = () => {
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto relative ">
           {/* Badge */}
           <div className="w-auto h-8 px-3.5 py-1.25 badge-gradient text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_var(--color-shadow-faint)] flex items-center justify-center gap-2.5 mb-[16px]">
-
-            Platform
+            {data?.badgeContent || "Platform"}
           </div>
 
           {/* Headline */}
           <h2 className="text-[36px] font-semibold text-text-main leading-[1.1] mb-5 tracking-tight">
-            An Automated Funnel that turns your ICP to Booked Meetings in 3
-            steps
+            {data?.headline || "An Automated Funnel that turns your ICP to Booked Meetings in 3 steps"}
           </h2>
 
           {/* Subheadline */}
           <p className="text-[16px] text-slate-dark font-medium max-w-md mb-6 leading-relaxed">
-            Define your ICP and DoSales AI handles discovery, outreach, and
-            qualification automatically.
+            {data?.description || "Define your ICP and DoSales AI handles discovery, outreach, and qualification automatically."}
           </p>
 
           {/* Button */}
           <button className="bg-primary-blue max-w-[250px] text-white px-5 py-4 rounded-xl font-bold text-sm  group flex items-center gap-2">
-            Setup your Sales Engine
+            {data?.setupYourSalesEngine?.content || "Setup your Sales Engine"}
           </button>
         </div>
       </div>
@@ -64,7 +68,7 @@ const PlatformSection = () => {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 mt-12 xs:mt-20 items-center">
         {/* Left Column: Funnel */}
         <div className="flex flex-col items-center">
-          <Funnel activeStep={activeStep} onStepClick={handleStepClick} />
+          <Funnel activeStep={activeStep} onStepClick={handleStepClick} steps={data?.funnelAndImage} />
         </div>
 
         {/* Right Column: Dynamic UI Card */}
@@ -79,34 +83,18 @@ const PlatformSection = () => {
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
             >
-              {activeStep === 1 && (
-                <Image
-                  src="/assets/svg/platformSection/designAndDiscover.svg"
-                  alt="Define and Discover target ICP using DoSales AI"
-                  width={598}
-                  height={526}
-                  className="w-full h-auto drop-shadow-xl"
-                  priority
-                />
-              )}
-              {activeStep === 2 && (
-                <Image
-                  src="/assets/svg/platformSection/enrich.svg"
-                  alt="Enrich and Qualify leads with 10+ data providers"
-                  width={598}
-                  height={526}
-                  className="w-full h-auto drop-shadow-xl rounded-[30px]"
-                />
-              )}
-              {activeStep === 3 && (
-                <Image
-                  src="/assets/svg/platformSection/searchAndConvert.svg"
-                  alt="Research and Convert prospects into booked meetings"
-                  width={598}
-                  height={526}
-                  className="w-full h-auto drop-shadow-xl"
-                />
-              )}
+              <Image
+                src={getStrapiMedia(currentStepData?.image?.url) || (
+                  activeStep === 1 ? "/assets/svg/platformSection/designAndDiscover.svg" :
+                  activeStep === 2 ? "/assets/svg/platformSection/enrich.svg" :
+                  "/assets/svg/platformSection/searchAndConvert.svg"
+                )}
+                alt={currentStepData?.label || "Platform Section Image"}
+                width={598}
+                height={526}
+                className="w-full h-auto drop-shadow-xl rounded-[30px]"
+                priority={activeStep === 1}
+              />
             </motion.div>
           </AnimatePresence>
         </div>

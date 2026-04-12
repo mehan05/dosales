@@ -19,16 +19,6 @@
     },
     "description": {
       "type": "text"
-    },
-    "images": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
     }
   }
 }

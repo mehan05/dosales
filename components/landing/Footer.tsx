@@ -3,8 +3,19 @@
 import React from 'react';
 import Image from 'next/image';
 import { FaGithub, FaInstagram, FaXTwitter } from 'react-icons/fa6';
+import { FooterSectionData } from '@/types/strapi';
+import { getStrapiMedia } from '@/lib/strapi';
 
-const Footer = () => {
+interface FooterProps {
+  data?: any; // Using any for now to facilitate complex nested data
+}
+
+const Footer = ({ data }: FooterProps) => {
+  const branding = data?.footerBranding;
+  const earlyAccess = data?.applyForEarlyAccess;
+  const social = data?.socialMedia;
+  const footerLinksGroup = data?.footerLink?.footerLinks || [];
+
   return (
     <footer className="pt-10 pb-20 px-4">
       {/* SVG Gradient Definitions */}
@@ -34,41 +45,54 @@ const Footer = () => {
             <div className="flex items-center gap-2">
               <div className="relative w-8 h-8">
                 <Image 
-                  src="/assets/svg/logo.svg" 
+                  src={getStrapiMedia(branding?.logo?.url) || "/assets/svg/logo.svg"} 
                   alt="DoSales Logo" 
                   fill
                   className="object-contain"
                 />
               </div>
-              <span className="text-2xl font-bold text-[20px]">DoSales</span>
+              <span className="text-2xl font-bold text-[20px]">{branding?.content || "DoSales"}</span>
             </div>
             <p className="text-slate-medium text-sm leading-relaxed max-w-full">
-              AI-powered sales intelligence for emerging markets. Verified B2B data across MENA and Southeast Asia.
+              {branding?.description || "AI-powered sales intelligence for emerging markets. Verified B2B data across MENA and Southeast Asia."}
             </p>
           </div>
 
-          {/* Product Links */}
-          <div>
-            <h3 className="text-[20px] font-bold mb-3">Product</h3>
-            <ul className="space-y-[8px]">
-              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">Lead Database</a></li>
-              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">AI Prospecting</a></li>
-              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">Data Enrichment</a></li>
-              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">CRM Sync</a></li>
-              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">Market Intelligence</a></li>
-            </ul>
-          </div>
+          {/* Dynamic Links */}
+          {footerLinksGroup.map((group: any) => (
+            <div key={group.id}>
+              <h3 className="text-[20px] font-bold mb-3">{group.linkGroupName || group.title}</h3>
+              <ul className="space-y-[8px]">
+                {group.link?.map((link: any) => (
+                  <li key={link.id}>
+                    <a href={link.url || "#"} className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">
+                      {link.content || link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
 
-          {/* Company Links */}
-          <div>
-            <h3 className="text-[20px] font-bold mb-3">Company</h3>
-            <ul className="space-y-[8px]">
-              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">About</a></li>
-              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">Careers</a></li>
-              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">Contact</a></li>
-              <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">Partners</a></li>
-            </ul>
-          </div>
+          {/* If no dynamic links, show placeholders */}
+          {footerLinksGroup.length === 0 && (
+            <>
+              <div>
+                <h3 className="text-[20px] font-bold mb-3">Product</h3>
+                <ul className="space-y-[8px]">
+                  <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">Lead Database</a></li>
+                  <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">AI Prospecting</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-[20px] font-bold mb-3">Company</h3>
+                <ul className="space-y-[8px]">
+                  <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">About</a></li>
+                  <li><a href="#" className="text-slate-medium hover:text-primary-blue transition-colors text-[20px]">Careers</a></li>
+                </ul>
+              </div>
+            </>
+          )}
 
           {/* CTA & Socials */}
           <div className="space-y-[15px]">
@@ -85,20 +109,46 @@ const Footer = () => {
                 </div>
               </div>
               <span className=" sm:text-[20px] font-bold text-[23.81px] leading-[1.1]">
-                Apply for early<br/>access
+                {earlyAccess?.content || "Apply for early access"}
               </span>
             </div>
 
             {/* Social Links */}
             <div className="bg-white rounded-[24px] px-4 sm:px-8 py-4 sm:py-5 flex flex-wrap gap-2 items-center justify-start w-full max-w-[380px] shadow-sm">
-              <span className="text-slate-medium text-base sm:text-[16px] font-medium">Follow us on</span>
+              <span className="text-slate-medium text-base sm:text-[16px] font-medium">{social?.Content || "Follow us on"}</span>
               <div className="flex items-center gap-3">
-                <a href="#" className="text-[20px] hover:[&>svg]:fill-[url(#x-gradient)] transition-all duration-300 text-xl sm:text-2xl hover:scale-110">
-                  <FaXTwitter />
-                </a>
-                <a href="#" className="text-[20px] hover:[&>svg]:fill-[url(#github-gradient)] transition-all duration-300 text-xl sm:text-2xl hover:scale-110">
-                  <FaGithub />
-                </a>
+                {social?.socialMedias?.map((item: any) => {
+                  const logoUrl = getStrapiMedia(item.logo?.url);
+                  return (
+                    <a 
+                      key={item.id} 
+                      href={item.url || "#"} 
+                      className="text-[20px] hover:scale-110 transition-transform duration-300"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {logoUrl ? (
+                        <div className="relative w-6 h-6">
+                          <Image src={logoUrl} alt="Social logo" fill className="object-contain" />
+                        </div>
+                      ) : (
+                        item.url?.includes('x.com') || item.url?.includes('twitter.com') ? <FaXTwitter /> :
+                        item.url?.includes('github.com') ? <FaGithub /> :
+                        item.url?.includes('instagram.com') ? <FaInstagram /> :
+                        <span className="text-xs font-bold uppercase tracking-tighter">LINK</span>
+                      )}
+                    </a>
+                  );
+                }) || (
+                  <>
+                    <a href="#" className="text-[20px] hover:[&>svg]:fill-[url(#x-gradient)] transition-all duration-300 text-xl sm:text-2xl hover:scale-110">
+                      <FaXTwitter />
+                    </a>
+                    <a href="#" className="text-[20px] hover:[&>svg]:fill-[url(#github-gradient)] transition-all duration-300 text-xl sm:text-2xl hover:scale-110">
+                      <FaGithub />
+                    </a>
+                  </>
+                )}
               </div>
             </div>
           </div>

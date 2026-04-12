@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { Radar, IconContainer } from "../ui/radar-effect";
-
+import { WaterfallData } from "@/types/strapi";
 
 const RADAR_DURATION = 10; // seconds — must match CSS animation duration
 
@@ -13,7 +13,11 @@ const getSparkleDelay = (leftPct: number, bottomPct: number): number => {
   return ((angleDeg + 90) / 180) * RADAR_DURATION;
 };
 
-const WaterfallSection = () => {
+interface WaterfallSectionProps {
+  data?: WaterfallData;
+}
+
+const WaterfallSection = ({ data }: WaterfallSectionProps) => {
   return (
     <section id="waterfall-section" className="relative w-full bg-dark-navy py-16 md:py-34 px-4 overflow-hidden min-h-[500px] md:min-h-200 flex flex-col items-center justify-center ">
       {/* Background radial glow */}
@@ -325,15 +329,13 @@ const WaterfallSection = () => {
 
       <div className="relative z-10 flex flex-col items-center text-center max-w-6xl mt-16 md:mt-[50px]">
         <div className="px-3 py-1 bg-linear-to-r from-banner-from to-banner-to max-w-[300px] text-white text-[16px] font-semibold rounded-full border border-banner-border mb-[16px]  shadow-2xl tracking-wide">
-          Waterfall Enrichment
+          {data?.badgeContent || "Waterfall Enrichment"}
         </div>
         <h2 className="text-[32px] md:text-[48px] font-bold bg-gradient-to-r from-pure-white to-white-muted bg-clip-text text-transparent tracking-tight leading-[1.1] mb-6 max-w-[280px] md:max-w-none">
-          Chains 10+ data providers, 85%+ match rates
+          {data?.content || "Chains 10+ data providers, 85%+ match rates"}
         </h2>
         <p className="text-slate-muted text-[15px] md:text-[16px] leading-[1.6] max-w-2xl font-light opacity-80">
-          We don't rely on a single source. DoSales waterfalls through 10+ data
-          providers to verify emails, phones, and company intel across MENA and
-          Southeast Asia.
+          {data?.description || "We don't rely on a single source. DoSales waterfalls through 10+ data providers to verify emails, phones, and company intel across MENA and Southeast Asia."}
         </p>
       </div>
 

@@ -1,13 +1,19 @@
 import React from 'react';
 import Image from 'next/image';
+import { ClosingCTAData } from '@/types/strapi';
+import { getStrapiMedia } from '@/lib/strapi';
 
-const ClosingCTA = () => {
+interface ClosingCTAProps {
+  data?: ClosingCTAData;
+}
+
+const ClosingCTA = ({ data }: ClosingCTAProps) => {
   return (
     <section className="relative pt-5 pb-25 md:pt-24 md:pb-24 overflow-hidden bg-white">
       {/* Background SVG and Glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-100 pointer-events-none select-none overflow-hidden">
         <Image 
-          src="/assets/svg/upgradeYourLeadsBgImage.png" 
+          src={getStrapiMedia(data?.backgroundImage?.url) || "/assets/svg/upgradeYourLeadsBgImage.png"} 
           alt="Abstract background representing sale growth and lead optimization" 
           fill
           className="w-full h-full object-cover object-bottom [mask-image:linear-gradient(to_top,black,transparent_70%)]"
@@ -22,20 +28,32 @@ const ClosingCTA = () => {
         <div className="flex items-center justify-center gap-6 mb-7.5 w-full max-w-5xl mx-auto px-4">
           <div className="flex-1 h-0.5 bg-linear-to-l from-sky-light to-transparent opacity-60" />
           <div className="w-auto h-8 px-3.5 py-1.25 badge-gradient text-blue-deep text-sm font-medium rounded-[30px] border-[1.5px] border-white shadow-[0px_2px_4px_0px_var(--color-shadow-faint)] flex items-center justify-center gap-2.5">
-            Upgrade your Leads
+            {data?.badgeContent || "Upgrade your Leads"}
           </div>
           <div className="flex-1 h-0.5 bg-linear-to-r from-sky-light to-transparent opacity-60" />
         </div>
 
         {/* Heading */}
-        <h2 className="text-[58px] font-bold text-text-main mb-[16px] max-w-4xl mx-auto leading-[1.1]">
-          Start closing in emerging <br className="hidden md:block" /> markets today
+        <h2 className="text-[38px] lg:text-[58px] font-bold text-text-main mb-[16px] max-w-4xl mx-auto leading-[1.1]">
+          {data?.heading ? (
+            <span dangerouslySetInnerHTML={{ __html: data.heading.replace(/\n/g, '<br />') }} />
+          ) : (
+            <>Start closing in emerging <br className="hidden md:block" /> markets today</>
+          )}
         </h2>
 
         {/* Button */}
-        <button className="bg-text-main text-white w-[138px] h-[48px] rounded-xl font-bold text-sm hover:bg-slate-800 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 active:translate-y-0">
-          Get Early Access
-        </button>
+        {data?.ctaButton?.url ? (
+          <a href={data.ctaButton.url} className="inline-block">
+            <button className="bg-text-main text-white w-[160px] h-[48px] rounded-xl font-bold text-sm hover:bg-slate-800 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 active:translate-y-0">
+              {data.ctaButton.content || "Get Early Access"}
+            </button>
+          </a>
+        ) : (
+          <button className="bg-text-main text-white w-[160px] h-[48px] rounded-xl font-bold text-sm hover:bg-slate-800 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 active:translate-y-0">
+            {data?.ctaButton?.content || "Get Early Access"}
+          </button>
+        )}
       </div>
     </section>
   );

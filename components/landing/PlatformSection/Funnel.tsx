@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 interface FunnelProps {
   activeStep: number;
   onStepClick: (step: number) => void;
+  steps?: any[];
 }
 
 // Each step is a self-contained 3D box using:
@@ -140,12 +141,10 @@ const Step3DBox: React.FC<Step3DBoxProps> = ({
   );
 };
 
-const Funnel: React.FC<FunnelProps> = ({ activeStep, onStepClick }) => {
-  // Step 1 - full width: viewBox 515 wide
-  // Front path from _Path_-1.svg: M515 0 L483.176 86 H31.8205 L0 0 H515Z
-  //   but we offset front by 7 in y: M515 7 L483.176 93 H31.8205 L0 7 H515Z
-  // Top path from _Path_.svg: M515 7 L483.176 0 H31.8205 L0 7 H515Z
-  //   (top face goes from y=0 to y=7)
+const Funnel: React.FC<FunnelProps> = ({ activeStep, onStepClick, steps }) => {
+  const step1Label = steps?.[0]?.label || "1. Define & Discover";
+  const step2Label = steps?.[1]?.label || "2. Enrich and Qualify";
+  const step3Label = steps?.[2]?.label || "3. Research & Convert";
 
   return (
     <div className="w-full max-w-lg relative flex flex-col items-center gap-3">
@@ -157,7 +156,7 @@ const Funnel: React.FC<FunnelProps> = ({ activeStep, onStepClick }) => {
 
       {/* Step 1: Define & Discover (widest) */}
       <Step3DBox
-        label="1.  Define & Discover"
+        label={step1Label}
         stepNum={1}
         isActive={activeStep === 1}
         onClick={() => onStepClick(1)}
@@ -172,7 +171,7 @@ const Funnel: React.FC<FunnelProps> = ({ activeStep, onStepClick }) => {
 
       {/* Step 2: Enrich and Qualify (85% width) */}
       <Step3DBox
-        label="2. Enrich and Qualify"
+        label={step2Label}
         stepNum={2}
         isActive={activeStep === 2}
         onClick={() => onStepClick(2)}
@@ -186,7 +185,7 @@ const Funnel: React.FC<FunnelProps> = ({ activeStep, onStepClick }) => {
 
       {/* Step 3: Research & Convert (70% width) */}
       <Step3DBox
-        label="3. Research & Convert"
+        label={step3Label}
         stepNum={3}
         isActive={activeStep === 3}
         onClick={() => onStepClick(3)}

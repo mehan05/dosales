@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import { fetchStrapi } from "@/lib/strapi";
 
 const satoshi = localFont({
   src: [
@@ -119,17 +120,32 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [navbarRes, footerRes] = await Promise.all([
+    fetchStrapi("navbar", { 
+      "populate[logo][populate]": "*",
+      "populate[navlinks][populate]": "*",
+      "populate[ctaButton][populate]": "*"
+    }),
+    fetchStrapi("footer-section", { 
+      "populate[footerBranding][populate]": "*", 
+      "populate[socialMedia][populate][socialMedias][populate]": "*", 
+      "populate[footerLink][populate][footerLinks][populate][link][populate]": "*" 
+    }),
+  ]);
+
   return (
     <html lang="en" className={`${satoshi.variable} h-full antialiased overflow-x-hidden`}>
       <body className="min-h-full flex flex-col overflow-x-hidden">
+        <Navbar data={navbarRes?.data} />
         {children}
-        <Footer />
+        <Footer data={footerRes?.data} />
       </body>
     </html>
   );
 }
+
