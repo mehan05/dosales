@@ -586,7 +586,7 @@ export interface ApiFooterSectionFooterSection extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     footerBranding: Schema.Attribute.Component<'footer.footer-branding', false>;
-    footerLinks: Schema.Attribute.Component<'footer.footer-links', false>;
+    footerLink: Schema.Attribute.Component<'footer.footer-links', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -594,6 +594,7 @@ export interface ApiFooterSectionFooterSection extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    socialMedia: Schema.Attribute.Component<'footer.social-media', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -653,7 +654,7 @@ export interface ApiNavbarNavbar extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     logo: Schema.Attribute.Media<'images' | 'files'>;
-    navlinks: Schema.Attribute.Component<'layout.navlinks', false>;
+    navlinks: Schema.Attribute.Component<'layout.navlinks', true>;
     pageName: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
@@ -683,6 +684,7 @@ export interface ApiPlatformSectionPlatformSection
       'funnel.funnel-image-and-content',
       true
     >;
+    funnelMainContent: Schema.Attribute.String;
     heading: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<

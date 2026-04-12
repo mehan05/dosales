@@ -21,9 +21,14 @@
       "component": "footer.footer-branding",
       "repeatable": false
     },
-    "footerLinks": {
+    "footerLink": {
       "type": "component",
       "component": "footer.footer-links",
+      "repeatable": false
+    },
+    "socialMedia": {
+      "type": "component",
+      "component": "footer.social-media",
       "repeatable": false
     }
   }

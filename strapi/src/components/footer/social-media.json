@@ -9,6 +9,9 @@
       "type": "component",
       "component": "footer.social-media-logos-with-link",
       "repeatable": true
+    },
+    "Content": {
+      "type": "string"
     }
   },
   "config": {}

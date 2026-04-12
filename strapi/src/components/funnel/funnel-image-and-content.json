@@ -5,19 +5,12 @@
   },
   "options": {},
   "attributes": {
-    "funnelContent": {
-      "type": "string"
-    },
-    "funnelImage": {
+    "FunnelContentImages": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "allowedTypes": [
-        "images",
-        "files"
+        "images"
       ]
-    },
-    "funnelMainContent": {
-      "type": "string"
     }
   },
   "config": {}

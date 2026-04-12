@@ -22,7 +22,7 @@
     "navlinks": {
       "type": "component",
       "component": "layout.navlinks",
-      "repeatable": false
+      "repeatable": true
     },
     "ctaButton": {
       "type": "component",

@@ -6,7 +6,7 @@ export interface FooterFooterBranding extends Struct.ComponentSchema {
     displayName: 'footerBranding';
   };
   attributes: {
-    brandName: Schema.Attribute.String;
+    content: Schema.Attribute.String;
     logo: Schema.Attribute.Media<'images'>;
   };
 }
@@ -38,6 +38,7 @@ export interface FooterSocialMedia extends Struct.ComponentSchema {
     displayName: 'socialMedia';
   };
   attributes: {
+    Content: Schema.Attribute.String;
     socialMedias: Schema.Attribute.Component<
       'footer.social-media-logos-with-link',
       true
@@ -62,9 +63,7 @@ export interface FunnelFunnelImageAndContent extends Struct.ComponentSchema {
     displayName: 'funnelImageAndContent';
   };
   attributes: {
-    funnelContent: Schema.Attribute.String;
-    funnelImage: Schema.Attribute.Media<'images' | 'files'>;
-    funnelMainContent: Schema.Attribute.String;
+    FunnelContentImages: Schema.Attribute.Media<'images', true>;
   };
 }
 
