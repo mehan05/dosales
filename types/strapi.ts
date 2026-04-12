@@ -102,10 +102,9 @@ export interface DiscoveryData {
 
 export interface TestimonialCard {
   id: number;
-  name: string;
   role: string;
-  content: string;
-  avatar?: { url: string };
+  feedback?: string;
+  profile?: { url: string };
 }
 
 export interface RealPainPointData {

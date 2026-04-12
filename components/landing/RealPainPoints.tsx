@@ -38,26 +38,36 @@ const MarqueeRow = ({
           display: "inherit",
         }}
       >
-        {/* We duplicate the items to create a seamless loop */}
-        {[...items, ...items].map((testimonial, idx) => (
-          <div key={idx} className="w-[312px] lg:w-[350px] min-w-[312px] min-h-[186px] h-full shrink-0 " >
-            <TestimonialCard 
-              name={testimonial.name}
-              role={testimonial.role}
-              company={testimonial.company}
-              content={testimonial.content}
-              avatar={testimonial.avatar?.url}
-            />
-          </div>
-        ))}
+        {/* We repeat the items multiple times to ensure enough width for a seamless loop on large screens */}
+        {(() => {
+          const repetitions = Math.max(2, Math.ceil(12 / items.length)); // Ensure at least 12 items total for seamlessness
+          const loopedItems = Array(repetitions * 2).fill(items).flat();
+          return loopedItems.map((testimonial, idx) => (
+            <div key={idx} className="w-[312px] lg:w-[350px] min-w-[312px] min-h-[186px] shrink-0 h-full " >
+              <TestimonialCard 
+                role={testimonial.role}
+                feedback={testimonial.feedback}
+                profile={testimonial.profile?.url}
+              />
+            </div>
+          ));
+        })()}
       </div>
     </div>
   );
 };
 
 const RealPainPoints = ({ data }: RealPainPointsProps) => {
-  const testimonials = data?.testimonalCards || [];
+  const rawTestimonials = data?.testimonalCards || [];
   
+  // Ensure we have at least 3 items to fill all three rows
+  let testimonials = [...rawTestimonials];
+  if (testimonials.length > 0) {
+    while (testimonials.length < 3) {
+      testimonials = [...testimonials, ...rawTestimonials];
+    }
+  }
+
   // Split data into 3 rows for more visual interest
   const itemsPerRow = Math.ceil(testimonials.length / 3);
   const row1 = testimonials.slice(0, itemsPerRow);
@@ -101,9 +111,9 @@ const RealPainPoints = ({ data }: RealPainPointsProps) => {
                  background: ` linear-gradient(var(--color-slate-950), var(--color-slate-950)) padding-box, linear-gradient(to bottom, #C5E6F6, #F1FAFF) border-box`,
                }}
              >
-            {row1.length > 0 && <MarqueeRow items={row1} duration={40} className="flex-1 " />}
-            {row2.length > 0 && <MarqueeRow items={row2} duration={35} className="flex-1" />}
-            {row3.length > 0 && <MarqueeRow items={row3} duration={45} className="flex-1" />}
+            {row1.length > 0 && <MarqueeRow items={row1} duration={15} className="flex-1 " />}
+            {row2.length > 0 && <MarqueeRow items={row2} duration={12} className="flex-1" />}
+            {row3.length > 0 && <MarqueeRow items={row3} duration={18} className="flex-1" />}
           </div>
         </div>
       </section>

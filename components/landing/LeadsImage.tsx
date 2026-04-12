@@ -26,7 +26,7 @@ const LeadsImage = ({ imageUrl }: { imageUrl?: string | null }) => {
           className="absolute  -right-50 top-30 -translate-y-1/2 w-170 h-[400px] bg-bg-vivid/30 rounded-full blur-[100px] pointer-events-none -z-10"
         />
         
-        <div className="relative w-full rounded-[48px]  ]">
+        <div className="relative w-full rounded-[48px]">
           <div className="overflow-hidden rounded-[32px] w-full">
             <Image
               width={1300}

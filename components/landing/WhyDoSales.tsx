@@ -154,7 +154,8 @@ const WhyDoSales = ({ data, benefitsData }: WhyDoSalesProps) => {
                     {data?.heading1 || "Regional Dominance"}
                   </h3>
                   <p className="text-text-main text-[16px] leading-[1.6] max-w-md">
-                    {data?.content1 || "Built for MENA & Southeast Asia from day one — not bolted on as an afterthought. Coverage where Apollo and ZoomInfo have blind spots."}
+                    {data?.content1 ||
+                      "Built for MENA & Southeast Asia from day one — not bolted on as an afterthought. Coverage where Apollo and ZoomInfo have blind spots."}
                   </p>
                 </div>
               </div>
@@ -184,7 +185,8 @@ const WhyDoSales = ({ data, benefitsData }: WhyDoSalesProps) => {
                     {data?.heading2 || "Vertical Intelligence"}
                   </h3>
                   <p className="text-text-main text-[16px] leading-[1.6] max-w-md">
-                    {data?.content2 || "Deep data models for Fintech, PropTech, Trade Finance, and Supply Chain. Industry-specific signals that horizontal tools miss entirely."}
+                    {data?.content2 ||
+                      "Deep data models for Fintech, PropTech, Trade Finance, and Supply Chain. Industry-specific signals that horizontal tools miss entirely."}
                   </p>
                 </div>
               </div>
@@ -232,11 +234,12 @@ const WhyDoSales = ({ data, benefitsData }: WhyDoSalesProps) => {
                 }}
               />
               <div className="md:w-[40%] md:pl-12 md:pb-12">
-              <h3 className="text-[20px] font-bold text-heading  mb-2 md:mb-4 tracking-tight">
+                <h3 className="text-[20px] font-bold text-heading  mb-2 md:mb-4 tracking-tight">
                   {data?.heading3 || "AI Autonomy"}
                 </h3>
                 <p className="text-text-main text-[16px] leading-normal max-w-lg font-medium">
-                  {data?.content3 || "Autonomous prospecting that finds, enriches, scores, and engages leads. Your AI SDR works 24/7 while your team focuses on closing."}
+                  {data?.content3 ||
+                    "Autonomous prospecting that finds, enriches, scores, and engages leads. Your AI SDR works 24/7 while your team focuses on closing."}
                 </p>
               </div>
             </div>

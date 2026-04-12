@@ -3,33 +3,33 @@ import Image from 'next/image';
 import { getStrapiMedia } from '@/lib/strapi';
 
 interface TestimonialCardProps {
-  name: string;
   role: string;
-  company: string;
-  content: string;
-  avatar: string;
+  feedback?: string;
+  profile?: string;
 }
 
-const TestimonialCard: React.FC<TestimonialCardProps> = ({ name, role, company, content, avatar }) => {
+const TestimonialCard: React.FC<TestimonialCardProps> = ({ role, feedback, profile }) => {
   return (
     <div className="bg-slate-darkest-card p-3 rounded-2xl flex flex-col gap-3 border border-white/5 hover:border-white/10 transition-colors h-full">
       <p className="text-slate-text-muted text-[15px] leading-relaxed font-medium">
-        {content}
+        {feedback || "No feedback provided yet."}
       </p>
       
       <div className="flex items-center gap-3 mt-auto">
         <div className="relative w-10 h-10 rounded-full overflow-hidden shrink-0 transition-all duration-300">
           <Image
-            src={getStrapiMedia(avatar) || "https://i.pravatar.cc/150"}
-            alt={name || "User testimonial"}
+            src={getStrapiMedia(profile) || "https://i.pravatar.cc/150"}
+            alt={role || "User profile"}
             fill
             className="object-cover"
           />
         </div>
         <div className="flex flex-col">
-          <h4 className="text-white font-bold text-sm tracking-tight">{name}</h4>
+          <h4 className="text-white font-bold text-sm tracking-tight line-clamp-1">
+            {role || "Anonymous User"}
+          </h4>
           <p className="text-slate-gray text-[12px] font-medium">
-            {role}, {company}
+            Verified Customer
           </p>
         </div>
       </div>
