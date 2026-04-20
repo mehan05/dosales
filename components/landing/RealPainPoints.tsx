@@ -111,9 +111,9 @@ const RealPainPoints = ({ data }: RealPainPointsProps) => {
                  background: ` linear-gradient(var(--color-slate-950), var(--color-slate-950)) padding-box, linear-gradient(to bottom, #C5E6F6, #F1FAFF) border-box`,
                }}
              >
-            {row1.length > 0 && <MarqueeRow items={row1} duration={15} className="flex-1 " />}
-            {row2.length > 0 && <MarqueeRow items={row2} duration={12} className="flex-1" />}
-            {row3.length > 0 && <MarqueeRow items={row3} duration={18} className="flex-1" />}
+            {row1.length > 0 && <MarqueeRow items={row1} duration={50} className="flex-1 " />}
+            {row2.length > 0 && <MarqueeRow items={row2} duration={40} className="flex-1" />}
+            {row3.length > 0 && <MarqueeRow items={row3} duration={60} className="flex-1" />}
           </div>
         </div>
       </section>
